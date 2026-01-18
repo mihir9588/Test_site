@@ -66,9 +66,9 @@ a.text-warning { color: var(--brand) !important; }
 .bg-opacity-75 { background-color: rgba(35,35,35,0.75) !important; }
 .shadow, .shadow-sm, .shadow-lg { box-shadow: 0 2px 12px 0 rgba(0,0,0,0.12) !important; }
 .ratio { background: #232323; }
-footer { color: #ffb86b; }
-footer a { color: #ffb86b; }
-footer .bg-secondary { color: #ffb86b; }
+footer { color: #ff7f2a; }
+footer a { color: #ff7f2a; }
+footer .bg-secondary { color: #ff7f2a; }
 ::-webkit-scrollbar { width: 8px; background: #232323; }
 ::-webkit-scrollbar-thumb { background: #ff7f2a; border-radius: 8px; }
 .wlc-carousel img, .auto-carousel img, .smps-carousel img {
