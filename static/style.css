@@ -80,6 +80,11 @@ footer .bg-secondary { color: #ff7f2a; }
   .about-main-logo { max-width: 180px; }
 }
 
+/* Remove forced orange color from all h2/h3 except where inline style or .card-title is used */
+h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+
 /* Video Carousel: fade transition */
 #video-carousel-container {
   position: relative;
