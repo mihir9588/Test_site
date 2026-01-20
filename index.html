@@ -127,17 +127,19 @@
   <!-- About Section -->
   <section class="about py-5" id="about" aria-label="About Tantronics">
     <div class="container">
-      <div class="row g-5 align-items-center">
-        <!-- Logo -->
-        <div class="col-lg-4 text-center mb-4 mb-lg-0">
-          <img src="./static/Tantronics Logo.png"
-               alt="Tantronics Logo"
-               loading="lazy"
-               class="about-main-logo img-fluid rounded shadow border border-secondary" />
+      <div class="row g-5 align-items-stretch">
+        <!-- Logo (centered vertically, full height of About copy) -->
+        <div class="col-lg-4 d-flex align-items-center justify-content-center">
+          <div class="w-100 h-100 d-flex align-items-center justify-content-center" style="min-height:100%;">
+            <img src="./static/Tantronics Logo.png"
+                 alt="Tantronics Logo"
+                 loading="lazy"
+                 class="about-main-logo img-fluid rounded shadow border border-secondary" />
+          </div>
         </div>
-        <!-- About Copy & Card -->
-        <div class="col-lg-8">
-          <div class="mb-4">
+        <!-- About Copy -->
+        <div class="col-lg-8 d-flex align-items-stretch">
+          <div class="mb-4 d-flex flex-column justify-content-center w-100">
             <h2 class="fw-bold mb-3">About Tantronics</h2>
             <p class="lead text-light">
               Tantronics Industries LLP is a technology-driven company dedicated to delivering innovative solutions across the entire spectrum of electronics. Our expertise spans embedded systems, power electronics, research & development, and advanced electronic product design, enabling us to serve diverse industries with cutting-edge, reliable, and cost-effective technologies.
@@ -147,16 +149,104 @@
               Our Research & Development division is committed to exploring the latest trends in artificial intelligence, machine learning, robotics, automotive electronics, consumer electronics, and defense technologies, ensuring that we remain at the forefront of technological innovation. At Tantronics, we aim to be a one-stop destination for electronics innovation, empowering industries by providing end-to-end solutions from concept, prototyping, and product design, to manufacturing and deployment.
             </p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Competencies Card: separate section below About -->
+  <section class="py-0">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
           <div class="card bg-secondary bg-opacity-10 border-0 shadow-sm mb-4">
             <div class="card-body">
-              <h3 class="card-title fw-bold mb-3" style="color:var(--brand)">What we do</h3>
-              <ul class="mb-4">
-                <li>Design & manufacture of <strong>water level controllers</strong>, <strong>float switches</strong>, and <strong>sensor modules</strong>.</li>
-                <li>Custom <strong>embedded hardware & firmware</strong> for OEMs.</li>
-                <li><strong>IoT & industrial automation</strong> with dashboards and alerts.</li>
-                <li><strong>R&D & prototyping</strong> for new product development.</li>
-              </ul>
-              <div class="row text-center g-3">
+              <h3 class="card-title fw-bold mb-4" style="color:var(--brand);">Core Competencies</h3>
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Industrial Automation & Motion -->
+                <div class="col">
+                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fa-solid fa-gears fa-lg me-2 text-warning"></i>
+                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Industrial Automation & Motion</h5>
+                      </div>
+                      <ul class="mb-2 ps-3">
+                        <li><strong>Motor Control:</strong> AC/DC Servo & Stepper Motor Drivers.</li>
+                        <li><strong>Actuation:</strong> Single-phase Ball Screw Actuators & Electronic Throttle Bodies.</li>
+                        <li><strong>Specialized Machinery:</strong> Industrial Inflating/Deflating systems & Programmable Timers.</li>
+                        <li><strong>Solar Robotics:</strong> Autonomous Solar Panel Cleaning Robots.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- IoT & Data Intelligence -->
+                <div class="col">
+                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fa-solid fa-cloud fa-lg me-2 text-warning"></i>
+                        <h5 class="fw-bold mb-0" style="color:var(--brand);">IoT & Data Intelligence</h5>
+                      </div>
+                      <ul class="mb-2 ps-3">
+                        <li><strong>Smart Alerts:</strong> API & GSM-based IoT systems with real-time notifications.</li>
+                        <li><strong>Cloud Integration:</strong> Hardware and cloud-based data monitoring dashboards.</li>
+                        <li><strong>Energy Analytics:</strong> Smart Energy Meters and OLED-based Vol/Amp monitoring.</li>
+                        <li><strong>HMI Design:</strong> Custom Human-Machine Interface design and interfacing.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Power & Electronic Systems -->
+                <div class="col">
+                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fa-solid fa-bolt fa-lg me-2 text-warning"></i>
+                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Power & Electronic Systems</h5>
+                      </div>
+                      <ul class="mb-2 ps-3">
+                        <li><strong>Power Quality:</strong> Power Factor Correction (PFC) & Earth Leakage Detectors.</li>
+                        <li><strong>Power Supply:</strong> Industrial SMPS (12V/24V) & Battery Charger Systems.</li>
+                        <li><strong>Water Management:</strong> Automatic Water Level Controllers & Sensor Modules.</li>
+                        <li><strong>Safety Systems:</strong> Automobile Indication Alert Units for driving lights.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Public Infrastructure & Display -->
+                <div class="col">
+                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fa-solid fa-display fa-lg me-2 text-warning"></i>
+                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Public Infrastructure & Display</h5>
+                      </div>
+                      <ul class="mb-2 ps-3">
+                        <li><strong>Communication:</strong> Emergency Talk-Back units & Public Announcement (PA) systems.</li>
+                        <li><strong>Visual Systems:</strong> Dynamic Rolling LED/LCD Information Displays.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Custom OEM & R&D -->
+                <div class="col">
+                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fa-solid fa-flask fa-lg me-2 text-warning"></i>
+                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Custom OEM & R&D</h5>
+                      </div>
+                      <ul class="mb-2 ps-3">
+                        <li><strong>Product Development:</strong> Full-cycle R&D and rapid prototyping.</li>
+                        <li><strong>Custom Hardware:</strong> Bespoke embedded hardware and firmware for OEMs.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- KPIs row (unchanged) -->
+              <div class="row text-center g-3 mt-4">
                 <div class="col-6 col-md-3">
                   <div class="bg-dark rounded-3 py-3">
                     <h3 class="text-warning mb-1">2K+</h3>
@@ -325,10 +415,12 @@
       <div class="card bg-dark bg-opacity-75 border-0 shadow-lg">
         <div class="card-body d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
           <div>
-            <h2 class="fw-bold mb-2">Need help selecting the right solution?</h2>
+            <h2 class="fw-bold mb-2" style="color:var(--brand);">Need help selecting the right solution?</h2>
             <div class="lead text-light">Tell us your application, power requirements, and connectivity preferences—we’ll recommend the perfect electronics, embedded, or automation system for you.</div>
           </div>
-          <a href="#contact" class="btn btn-warning btn-lg fw-bold"><i class="fa-solid fa-comment-dots"></i> Talk to Sales</a>
+          <a href="#contact" class="btn btn-warning fw-bold px-5 py-3" style="font-size:1.35rem; white-space:nowrap;">
+            <i class="fa-solid fa-comment-dots"></i> Talk to Sales
+          </a>
         </div>
       </div>
     </div>
