@@ -107,13 +107,10 @@
             Your browser does not support the video tag.
           </video>
         </div>
-        <!-- Carousel Controls -->
+        <!-- Carousel Controls (remove play/pause button) -->
         <div class="d-flex justify-content-center gap-3 mt-3">
           <button class="btn btn-dark rounded-circle px-3 py-2" id="video-prev" aria-label="Previous video">
             <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="btn btn-dark rounded-circle px-3 py-2" id="video-playpause" aria-label="Pause video carousel">
-            <i class="fa-solid fa-pause"></i>
           </button>
           <button class="btn btn-dark rounded-circle px-3 py-2" id="video-next" aria-label="Next video">
             <i class="fa-solid fa-chevron-right"></i>
@@ -500,8 +497,7 @@
       const videos = document.querySelectorAll('#video-carousel-container .video-carousel-item');
       const prevBtn = document.getElementById('video-prev');
       const nextBtn = document.getElementById('video-next');
-      const playPauseBtn = document.getElementById('video-playpause');
-      const playPauseIcon = playPauseBtn.querySelector('i');
+      // Remove playPauseBtn and playPauseIcon
       let current = 0;
       let playing = true;
       let timer = null;
@@ -544,14 +540,9 @@
         nextVideo();
         startAuto();
       });
-      playPauseBtn.addEventListener('click', () => {
-        playing = !playing;
-        playPauseIcon.className = playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
-        if (playing) startAuto();
-        else if (timer) clearInterval(timer);
-      });
 
-      // Responsive: pause all videos on mobile orientation change
+      // Remove play/pause button logic
+
       window.addEventListener('orientationchange', () => {
         videos.forEach(vid => vid.pause());
         videos[current].play();
