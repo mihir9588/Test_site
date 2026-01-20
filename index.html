@@ -597,6 +597,9 @@
       let playing = true;
       let timer = null;
 
+      // Per-video durations (ms): 15s for first, 10s for others
+      const durations = [15000, 10000, 10000];
+
       function showVideo(idx) {
         videos.forEach((vid, i) => {
           vid.classList.toggle('d-none', i !== idx);
@@ -621,10 +624,11 @@
       }
 
       function startAuto() {
-        if (timer) clearInterval(timer);
-        timer = setInterval(() => {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
           if (playing) nextVideo();
-        }, 10000);
+          startAuto();
+        }, durations[current] || 10000);
       }
 
       prevBtn.addEventListener('click', () => {
