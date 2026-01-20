@@ -123,6 +123,30 @@ h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 2px var(--brand-2);
 }
 
+/* Remove Bootstrap ratio for video carousel, use flex centering and let video size dictate frame */
+#video-carousel-container {
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background: #232323;
+  min-height: 200px;
+  /* Remove aspect-ratio constraint */
+}
+
+/* Video: fit to container, never overflow, keep aspect */
+#video-carousel-container video {
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  display: block;
+  background: #232323;
+  margin: 0 auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 /* Responsive: reduce video height on small screens */
 @media (max-width: 600px) {
   #video-carousel-container .ratio-16x9 {
