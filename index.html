@@ -655,6 +655,129 @@
     </div>
   </section>
 
+<!-- ================= Director Section (Fortune-500 Style) ================= -->
+<section class="py-5 bg-dark border-top border-secondary">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-white">Leadership</h2>
+      <p class="text-light opacity-75 mb-0">Driving innovation, engineering excellence, and strategic vision</p>
+    </div>
+
+    <!-- Leadership Card -->
+    <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 overflow-hidden">
+
+      <div class="row g-0 align-items-stretch">
+
+        <!-- LEFT: Director Photo Panel -->
+        <div class="col-lg-4 director-left-panel d-flex align-items-center justify-content-center p-4">
+
+          <div class="director-photo-wrapper">
+            <img src="./static/Directors/Director_Image_1.png"
+                 alt="Mihir Bidwai"
+                 class="director-photo-img">
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Director Identity + Message -->
+        <div class="col-lg-8 p-5">
+
+          <!-- Name & Title -->
+          <div class="mb-4">
+            <h3 class="fw-bold text-warning mb-1">Mihir Bidwai</h3>
+            <div class="text-light opacity-75 fw-semibold">Founder & Director</div>
+          </div>
+
+          <!-- Divider -->
+          <div class="director-divider mb-3"></div>
+
+          <!-- Message Title -->
+          <h5 class="fw-bold text-warning mb-2">Director’s Message</h5>
+
+          <!-- Message Text -->
+          <p class="text-light fs-6 lh-lg mb-0">
+            At our organization, we are driven by a vision to innovate with purpose and deliver intelligent, reliable, and affordable technology solutions that create real-world impact. With a strong focus on Embedded Systems, Electronics, AI, and Robotics, we aim to bridge the gap between advanced innovation and practical applications, especially for the Indian market. Our commitment to quality, continuous improvement, and customer satisfaction guides every project we undertake, as we work passionately to transform ideas into future-ready solutions while building lasting relationships based on trust and technical excellence.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= Director Achievements ================= -->
+    <div class="mt-5">
+      <h4 class="fw-bold text-warning mb-3 text-center">Director’s Achievements</h4>
+
+      <div class="position-relative mx-auto" style="max-width: 900px;">
+        <div id="achievementCarousel"
+             class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-lg bg-secondary d-flex justify-content-center align-items-center"
+             style="min-height:200px;"
+             data-bs-ride="carousel"
+             data-bs-interval="5000"
+             data-bs-pause="false">
+
+          <div class="carousel-inner rounded-4">
+
+            <div class="carousel-item active">
+              <img src="./static/Directors/Patent/Patent Certificate.jpg"
+                   class="d-block w-100"
+                   style="max-height:500px; object-fit:contain; background:#181818;">
+            </div>
+
+            <div class="carousel-item">
+              <img src="./static/Directors/Achievements/News Paper Publication.jpg"
+                   class="d-block w-100"
+                   style="max-height:500px; object-fit:contain; background:#181818;">
+            </div>
+
+            <div class="carousel-item">
+              <img src="./static/Directors/Achievements/Image1.jpg"
+                   class="d-block w-100"
+                   style="max-height:500px; object-fit:contain; background:#181818;">
+            </div>
+
+            <div class="carousel-item">
+              <img src="./static/Directors/Achievements/Image2.jpg"
+                   class="d-block w-100"
+                   style="max-height:500px; object-fit:contain; background:#181818;">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#achievementCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#achievementCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================= End Director Section ================= -->
+<!-- Achievements Auto-scroll Script -->
+  <!-- Auto-scroll for achievements carousel -->
+  <script>
+    (() => {
+      const achievementCarousel = document.getElementById('achievementCarousel');
+      if (achievementCarousel) {
+        new bootstrap.Carousel(achievementCarousel, {
+          interval: 2000,
+          ride: 'carousel',
+          pause: false,
+          wrap: true
+        });
+      }
+    })();
+  </script>
+</section>
+
+
   <!-- CTA Banner -->
   <section class="cta py-5" id="enquiry" aria-label="Enquiry">
     <div class="container">

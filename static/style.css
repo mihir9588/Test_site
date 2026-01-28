@@ -153,3 +153,78 @@ h2, h3, h4, h5, h6 {
     min-height: 180px;
   }
 }
+
+/* Director Photo Frame */
+.director-photo-frame {
+  width: 100%;
+  max-width: 320px;   /* controls image size */
+  aspect-ratio: 3 / 4; /* professional portrait ratio */
+  background: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.director-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Align Director name and message perfectly */
+.director-name {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Force card content to align with name */
+.director-message-card {
+  margin-left: 0 !important;
+}
+
+/* Remove Bootstrap default heading offset inside card */
+.director-message-title {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+
+.director-name-card,
+.director-message-card {
+  margin-left: 0 !important;
+}
+
+/* ===== Fortune-500 Director Section Styles ===== */
+
+.director-left-panel {
+  background: linear-gradient(160deg, #111 0%, #1f1f1f 100%);
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Executive portrait frame */
+.director-photo-wrapper {
+  width: 260px;
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border: 2px solid rgba(255,193,7,0.25);
+}
+
+.director-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Divider under name */
+.director-divider {
+  width: 60px;
+  height: 3px;
+  background: #ffc107;
+  border-radius: 10px;
+}
