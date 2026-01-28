@@ -205,25 +205,31 @@ h2, h3, h4, h5, h6 {
 }
 
 /* Executive portrait frame */
+/* Director Image Frame - Safe Version */
 .director-photo-wrapper {
   width: 260px;
-  height: 340px;
+  max-width: 100%;
+  aspect-ratio: 3 / 4;
   border-radius: 16px;
   overflow: hidden;
   background: #000;
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  border: 2px solid rgba(255,193,7,0.25);
+  border: 2px solid rgba(255,193,7,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .director-photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* Divider under name */
 .director-divider {
-  width: 60px;
+  width: 60px; 
   height: 3px;
   background: #ffc107;
   border-radius: 10px;
