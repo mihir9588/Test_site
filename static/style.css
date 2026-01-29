@@ -330,8 +330,24 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
-.filter-btn.active {
-  background: #ffc107 !important;
+
+/* Filter Buttons - Custom Orange Theme */
+.filter-btn {
+  color: #ff7f2a !important;
+  border-color: #ff7f2a !important;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  background-color: #ff7f2a !important;
   color: #000 !important;
+}
+
+/* Active Filter Button */
+.filter-btn.active {
+  background-color: #ff7f2a !important;
+  color: #000 !important;
+  border-color: #ff7f2a !important;
   font-weight: 600;
 }
+
