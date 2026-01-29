@@ -269,7 +269,7 @@ h2, h3, h4, h5, h6 {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: #ffc107;
+  background: #ff7f2a;
   transition: width 0.25s ease;
 }
 
