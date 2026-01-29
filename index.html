@@ -30,138 +30,83 @@
   <link rel="stylesheet" href="./static/style.css">
 </head>
 <body>
-  <!-- Header/Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary py-2">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#home" aria-label="Tantronics home">
-          <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:48px;" loading="lazy">
-          <span>Tantronics Industries LLP</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-          <ul class="navbar-nav align-items-lg-center gap-lg-2">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#director">Director</a></li>
-            <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            
-            <li class="nav-item">
-              <a class="btn btn-warning fw-bold ms-lg-2" href="#enquiry">Get a Quote</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <!-- ================= Modern Navbar ================= -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-secondary navbar-glass">
+    <div class="container">
 
-  <!-- ================= Hero Section ================= -->
-<section class="py-5 bg-dark border-bottom border-secondary" id="home" role="banner" aria-label="Hero">
+      <!-- Brand -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#home" aria-label="Tantronics home">
+        <img src="./static/Tantronics logo icon-06.png"
+             alt="Tantronics Logo"
+             class="header-logo"
+             style="height:46px;">
+        <span class="brand-text">Tantronics Industries LLP</span>
+      </a>
 
-  <div class="container">
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="row align-items-center g-5">
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3">
 
-      <!-- LEFT: Strategic Messaging -->
-      <div class="col-lg-6">
+          <li class="nav-item">
+            <a class="nav-link nav-modern" href="#home">Home</a>
+          </li>
 
-        <span class="eyebrow mb-3 d-inline-block text-warning fw-semibold">
-          Electronics • Automation • Embedded Systems • Power Electronics
-        </span>
+          <li class="nav-item">
+            <a class="nav-link nav-modern" href="#about">About</a>
+          </li>
 
-        <h1 class="display-5 fw-bold text-white mb-3">
-          Engineering Intelligent <span class="text-warning">Industrial Solutions</span>
-        </h1>
+          <li class="nav-item">
+            <a class="nav-link nav-modern" href="#competencies">Capabilities</a>
+          </li>
 
-        <p class="lead text-light mb-4">
-          Tantronics Industries LLP designs and develops advanced electronic systems, automation technologies, 
-          embedded solutions, and IoT platforms engineered for reliability, scalability, and real-world industrial applications.
-        </p>
+          <li class="nav-item">
+            <a class="nav-link nav-modern" href="#products">Solutions</a>
+          </li>
 
-        <div class="d-flex flex-wrap gap-3 mt-2">
-          <a href="#products" class="btn btn-warning btn-lg fw-bold px-4">
-            <i class="fa-solid fa-store me-2"></i>Explore Solutions
-          </a>
-          <a href="#contact" class="btn btn-outline-light btn-lg fw-bold px-4">
-            <i class="fa-solid fa-envelope me-2"></i>Contact Us
-          </a>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link nav-modern" href="#director">Leadership</a>
+          </li>
 
-      </div>
+          <li class="nav-item">
+            <a class="nav-link nav-modern" href="#contact">Contact</a>
+          </li>
 
-      <!-- RIGHT: Capability Highlight Panel -->
-      <div class="col-lg-6">
+          <!-- CTA Button -->
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow-sm nav-cta" href="#enquiry">
+              Get a Quote
+            </a>
+          </li>
 
-        <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 overflow-hidden">
-
-          <div class="card-body p-4">
-
-            <h5 class="fw-bold text-warning mb-3">
-              Core Engineering Domains
-            </h5>
-
-            <div class="row g-3">
-
-              <div class="col-6">
-                <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
-                  <h6 class="fw-bold text-warning mb-1">
-                    <i class="fa-solid fa-microchip me-2"></i>Embedded Systems
-                  </h6>
-                  <p class="text-light small mb-0">
-                    Custom hardware and firmware solutions.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
-                  <h6 class="fw-bold text-warning mb-1">
-                    <i class="fa-solid fa-gears me-2"></i>Industrial Automation
-                  </h6>
-                  <p class="text-light small mb-0">
-                    Precision control and motion technologies.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
-                  <h6 class="fw-bold text-warning mb-1">
-                    <i class="fa-solid fa-cloud me-2"></i>IoT & Data Systems
-                  </h6>
-                  <p class="text-light small mb-0">
-                    Real-time monitoring and analytics.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
-                  <h6 class="fw-bold text-warning mb-1">
-                    <i class="fa-solid fa-bolt me-2"></i>Power Electronics
-                  </h6>
-                  <p class="text-light small mb-0">
-                    Efficient and reliable power solutions.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
+        </ul>
       </div>
 
     </div>
+  </nav>
+</header>
+<!-- ================= End Navbar ================= -->
 
-  </div>
-</section>
-<!-- ================= End Hero Section ================= -->
 
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center min-vh-75" id="home" role="banner" aria-label="Hero">
+    <div class="container text-center py-5">
+      <span class="eyebrow mb-3 d-inline-block">Electronics • Automation • Embedded Systems • Power Electronics • Medicare</span>
+      <h1 class="display-4 fw-bold text-warning mb-3">Industrial Automation Solutions</h1>
+      <p class="lead text-light mb-4">
+        From water level controllers and float sensors to custom embedded hardware and IoT systems, we build reliable, cost-effective products engineered for Indian conditions.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#products" class="btn btn-warning btn-lg fw-bold"><i class="fa-solid fa-store"></i> Explore Products</a>
+        <a href="#contact" class="btn btn-outline-light btn-lg fw-bold"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== Video Showcase Section ===== -->
   <section class="bg-dark border-bottom border-secondary py-4" id="video-showcase">
