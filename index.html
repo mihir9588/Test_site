@@ -72,162 +72,72 @@
     </div>
   </section>
 
-  <!-- ================= Video Showcase Section ================= -->
-<section class="py-5 bg-dark border-bottom border-secondary" id="video-showcase">
-
-  <div class="container">
-
-    <!-- Section Header -->
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-white">Technology in Action</h2>
-      <p class="text-warning fst-italic">
-        Real-world demonstration of engineering capabilities and system performance
-      </p>
-    </div>
-
-    <!-- Showcase Card -->
-    <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 overflow-hidden">
-
-      <div class="row g-0 align-items-stretch">
-
-        <!-- LEFT: Narrative Panel -->
-        <div class="col-lg-5 p-5 d-flex flex-column justify-content-center">
-
-          <h4 class="fw-bold text-warning mb-3">
-            Intelligent Systems. Practical Engineering.
-          </h4>
-
-          <p class="text-light fs-6 lh-lg mb-4">
-            Our solutions are designed, engineered, and tested for real industrial environments. 
-            From automation and embedded systems to IoT and power electronics, our technologies deliver 
-            reliability, efficiency, and scalability across diverse applications.
-          </p>
-
-          <div class="row g-3">
-
-            <div class="col-6">
-              <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
-                <h6 class="fw-bold text-warning mb-1">
-                  <i class="fa-solid fa-microchip me-2"></i>Embedded Systems
-                </h6>
-                <p class="text-light small mb-0">
-                  Custom hardware and firmware solutions.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
-                <h6 class="fw-bold text-warning mb-1">
-                  <i class="fa-solid fa-robot me-2"></i>Automation
-                </h6>
-                <p class="text-light small mb-0">
-                  Precision control and motion systems.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
-                <h6 class="fw-bold text-warning mb-1">
-                  <i class="fa-solid fa-cloud me-2"></i>IoT & Data
-                </h6>
-                <p class="text-light small mb-0">
-                  Real-time monitoring and analytics.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
-                <h6 class="fw-bold text-warning mb-1">
-                  <i class="fa-solid fa-bolt me-2"></i>Power Systems
-                </h6>
-                <p class="text-light small mb-0">
-                  Efficient and reliable power solutions.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
+  <!-- ===== Video Showcase Section ===== -->
+  <section class="bg-dark border-bottom border-secondary py-4" id="video-showcase">
+    <div class="container">
+      <div class="mb-3 text-center">
+        <h2 class="fw-bold mb-2">Our Capabilities in Action</h2>
+        <p class="lead text-light mb-0">See Tantronics solutions in real-world operation</p>
+      </div>
+      <div class="position-relative mx-auto" style="max-width: 900px;">
+        <div id="video-carousel-container" class="rounded overflow-hidden bg-secondary d-flex justify-content-center align-items-center" style="min-height:200px;">
+          <!-- Videos (only one visible at a time) -->
+          <video
+            class="video-carousel-item d-block"
+            src="./static/demo1.mp4"
+            poster="./static/video-thumb1.jpg"
+            preload="metadata"
+            muted
+            autoplay
+            loop
+            playsinline
+            aria-label="Showcase Video 1"
+            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
+          >
+            Your browser does not support the video tag.
+          </video>
+          <video
+            class="video-carousel-item d-none"
+            src="./static/demo2.mp4"
+            poster="./static/video-thumb2.jpg"
+            preload="metadata"
+            muted
+            autoplay
+            loop
+            playsinline
+            aria-label="Showcase Video 2"
+            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
+          >
+            Your browser does not support the video tag.
+          </video>
+          <video
+            class="video-carousel-item d-none"
+            src="./static/demo3.mp4"
+            poster="./static/video-thumb3.jpg"
+            preload="metadata"
+            muted
+            autoplay
+            loop
+            playsinline
+            aria-label="Showcase Video 3"
+            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
-
-        <!-- RIGHT: Video Panel -->
-        <div class="col-lg-7 p-4 d-flex flex-column justify-content-center">
-
-          <div class="position-relative rounded-4 overflow-hidden shadow-lg bg-dark">
-
-            <!-- Video Container -->
-            <div id="video-carousel-container" class="d-flex justify-content-center align-items-center" style="min-height:320px;">
-
-              <video
-                class="video-carousel-item d-block"
-                src="./static/demo1.mp4"
-                poster="./static/video-thumb1.jpg"
-                preload="metadata"
-                muted
-                autoplay
-                loop
-                playsinline
-                aria-label="Showcase Video 1"
-                style="width:100%; max-height:520px; object-fit:cover; background:#181818;"
-              ></video>
-
-              <video
-                class="video-carousel-item d-none"
-                src="./static/demo2.mp4"
-                poster="./static/video-thumb2.jpg"
-                preload="metadata"
-                muted
-                autoplay
-                loop
-                playsinline
-                aria-label="Showcase Video 2"
-                style="width:100%; max-height:520px; object-fit:cover; background:#181818;"
-              ></video>
-
-              <video
-                class="video-carousel-item d-none"
-                src="./static/demo3.mp4"
-                poster="./static/video-thumb3.jpg"
-                preload="metadata"
-                muted
-                autoplay
-                loop
-                playsinline
-                aria-label="Showcase Video 3"
-                style="width:100%; max-height:520px; object-fit:cover; background:#181818;"
-              ></video>
-
-            </div>
-
-            <!-- Gradient Overlay -->
-            <div class="position-absolute top-0 start-0 w-100 h-100"
-                 style="background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.6)); pointer-events:none;">
-            </div>
-
-          </div>
-
-          <!-- Controls -->
-          <div class="d-flex justify-content-center gap-3 mt-3">
-            <button class="btn btn-dark rounded-circle px-3 py-2 shadow-sm" id="video-prev" aria-label="Previous video">
-              <i class="fa-solid fa-chevron-left text-warning"></i>
-            </button>
-            <button class="btn btn-dark rounded-circle px-3 py-2 shadow-sm" id="video-next" aria-label="Next video">
-              <i class="fa-solid fa-chevron-right text-warning"></i>
-            </button>
-          </div>
-
+        <!-- Carousel Controls -->
+        <div class="d-flex justify-content-center gap-3 mt-3">
+          <button class="btn btn-dark rounded-circle px-3 py-2" id="video-prev" aria-label="Previous video">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="btn btn-dark rounded-circle px-3 py-2" id="video-next" aria-label="Next video">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
-
       </div>
     </div>
-
-  </div>
-</section>
-<!-- ================= End Video Showcase Section ================= -->
-
+  </section>
+  <!-- ===== End Video Showcase Section ===== -->
 
   <!-- ================= About Section (Fortune-500 Style) ================= -->
 <section class="py-5 bg-dark border-top border-secondary" id="about" aria-label="About Tantronics">
