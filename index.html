@@ -72,72 +72,162 @@
     </div>
   </section>
 
-  <!-- ===== Video Showcase Section ===== -->
-  <section class="bg-dark border-bottom border-secondary py-4" id="video-showcase">
-    <div class="container">
-      <div class="mb-3 text-center">
-        <h2 class="fw-bold mb-2">Our Capabilities in Action</h2>
-        <p class="lead text-light mb-0">See Tantronics solutions in real-world operation</p>
-      </div>
-      <div class="position-relative mx-auto" style="max-width: 900px;">
-        <div id="video-carousel-container" class="rounded overflow-hidden bg-secondary d-flex justify-content-center align-items-center" style="min-height:200px;">
-          <!-- Videos (only one visible at a time) -->
-          <video
-            class="video-carousel-item d-block"
-            src="./static/demo1.mp4"
-            poster="./static/video-thumb1.jpg"
-            preload="metadata"
-            muted
-            autoplay
-            loop
-            playsinline
-            aria-label="Showcase Video 1"
-            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
-          >
-            Your browser does not support the video tag.
-          </video>
-          <video
-            class="video-carousel-item d-none"
-            src="./static/demo2.mp4"
-            poster="./static/video-thumb2.jpg"
-            preload="metadata"
-            muted
-            autoplay
-            loop
-            playsinline
-            aria-label="Showcase Video 2"
-            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
-          >
-            Your browser does not support the video tag.
-          </video>
-          <video
-            class="video-carousel-item d-none"
-            src="./static/demo3.mp4"
-            poster="./static/video-thumb3.jpg"
-            preload="metadata"
-            muted
-            autoplay
-            loop
-            playsinline
-            aria-label="Showcase Video 3"
-            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
-          >
-            Your browser does not support the video tag.
-          </video>
+  <!-- ================= Video Showcase Section ================= -->
+<section class="py-5 bg-dark border-bottom border-secondary" id="video-showcase">
+
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-white">Technology in Action</h2>
+      <p class="text-warning fst-italic">
+        Real-world demonstration of engineering capabilities and system performance
+      </p>
+    </div>
+
+    <!-- Showcase Card -->
+    <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 overflow-hidden">
+
+      <div class="row g-0 align-items-stretch">
+
+        <!-- LEFT: Narrative Panel -->
+        <div class="col-lg-5 p-5 d-flex flex-column justify-content-center">
+
+          <h4 class="fw-bold text-warning mb-3">
+            Intelligent Systems. Practical Engineering.
+          </h4>
+
+          <p class="text-light fs-6 lh-lg mb-4">
+            Our solutions are designed, engineered, and tested for real industrial environments. 
+            From automation and embedded systems to IoT and power electronics, our technologies deliver 
+            reliability, efficiency, and scalability across diverse applications.
+          </p>
+
+          <div class="row g-3">
+
+            <div class="col-6">
+              <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
+                <h6 class="fw-bold text-warning mb-1">
+                  <i class="fa-solid fa-microchip me-2"></i>Embedded Systems
+                </h6>
+                <p class="text-light small mb-0">
+                  Custom hardware and firmware solutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
+                <h6 class="fw-bold text-warning mb-1">
+                  <i class="fa-solid fa-robot me-2"></i>Automation
+                </h6>
+                <p class="text-light small mb-0">
+                  Precision control and motion systems.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
+                <h6 class="fw-bold text-warning mb-1">
+                  <i class="fa-solid fa-cloud me-2"></i>IoT & Data
+                </h6>
+                <p class="text-light small mb-0">
+                  Real-time monitoring and analytics.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="bg-dark rounded-3 p-3 shadow-sm h-100">
+                <h6 class="fw-bold text-warning mb-1">
+                  <i class="fa-solid fa-bolt me-2"></i>Power Systems
+                </h6>
+                <p class="text-light small mb-0">
+                  Efficient and reliable power solutions.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
-        <!-- Carousel Controls -->
-        <div class="d-flex justify-content-center gap-3 mt-3">
-          <button class="btn btn-dark rounded-circle px-3 py-2" id="video-prev" aria-label="Previous video">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="btn btn-dark rounded-circle px-3 py-2" id="video-next" aria-label="Next video">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
+
+        <!-- RIGHT: Video Panel -->
+        <div class="col-lg-7 p-4 d-flex flex-column justify-content-center">
+
+          <div class="position-relative rounded-4 overflow-hidden shadow-lg bg-dark">
+
+            <!-- Video Container -->
+            <div id="video-carousel-container" class="d-flex justify-content-center align-items-center" style="min-height:320px;">
+
+              <video
+                class="video-carousel-item d-block"
+                src="./static/demo1.mp4"
+                poster="./static/video-thumb1.jpg"
+                preload="metadata"
+                muted
+                autoplay
+                loop
+                playsinline
+                aria-label="Showcase Video 1"
+                style="width:100%; max-height:520px; object-fit:cover; background:#181818;"
+              ></video>
+
+              <video
+                class="video-carousel-item d-none"
+                src="./static/demo2.mp4"
+                poster="./static/video-thumb2.jpg"
+                preload="metadata"
+                muted
+                autoplay
+                loop
+                playsinline
+                aria-label="Showcase Video 2"
+                style="width:100%; max-height:520px; object-fit:cover; background:#181818;"
+              ></video>
+
+              <video
+                class="video-carousel-item d-none"
+                src="./static/demo3.mp4"
+                poster="./static/video-thumb3.jpg"
+                preload="metadata"
+                muted
+                autoplay
+                loop
+                playsinline
+                aria-label="Showcase Video 3"
+                style="width:100%; max-height:520px; object-fit:cover; background:#181818;"
+              ></video>
+
+            </div>
+
+            <!-- Gradient Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                 style="background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.6)); pointer-events:none;">
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <div class="d-flex justify-content-center gap-3 mt-3">
+            <button class="btn btn-dark rounded-circle px-3 py-2 shadow-sm" id="video-prev" aria-label="Previous video">
+              <i class="fa-solid fa-chevron-left text-warning"></i>
+            </button>
+            <button class="btn btn-dark rounded-circle px-3 py-2 shadow-sm" id="video-next" aria-label="Next video">
+              <i class="fa-solid fa-chevron-right text-warning"></i>
+            </button>
+          </div>
+
         </div>
+
       </div>
     </div>
-  </section>
-  <!-- ===== End Video Showcase Section ===== -->
+
+  </div>
+</section>
+<!-- ================= End Video Showcase Section ================= -->
+
 
   <!-- ================= About Section (Fortune-500 Style) ================= -->
 <section class="py-5 bg-dark border-top border-secondary" id="about" aria-label="About Tantronics">
@@ -165,7 +255,7 @@
             <img src="./static/Tantronics Logo.png"
                  alt="Tantronics Logo"
                  class="img-fluid rounded-4 shadow mb-3"
-                 style="max-width:220px; border:2px solid rgba(255,193,7,0.3);">
+                 style="max-width:400px; border:2px solid rgba(255,193,7,0.3);">
 
             <h4 class="fw-bold text-warning mb-2">Tantronics Industries LLP</h4>
 
@@ -249,145 +339,122 @@
 <!-- ================= End About Section ================= -->
 
 
-  <!-- Core Competencies Card: separate section below About -->
-  <section class="py-0">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="card bg-secondary bg-opacity-10 border-0 shadow-sm mb-4">
-            <div class="card-body text-white">
-              <h3 class="card-title fw-bold mb-4 text-white" style="color:var(--brand) !important;">Core Competencies</h3>
-              <div class="row row-cols-1 row-cols-md-2 g-4">
-                <!-- Industrial Automation & Motion -->
-                <div class="col">
-                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fa-solid fa-gears fa-lg me-2 text-warning"></i>
-                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Industrial Automation & Motion</h5>
-                      </div>
-                      <ul class="mb-2 ps-3">
-                        <li><strong>Motor Control:</strong> AC/DC Servo & Stepper Motor Drivers.</li>
-                        <li><strong>Actuation:</strong> Single-phase Ball Screw Actuators & Electronic Throttle Bodies.</li>
-                        <li><strong>Specialized Machinery:</strong> Industrial Inflating/Deflating systems & Programmable Timers.</li>
-                        <li><strong>Solar Robotics:</strong> Autonomous Solar Panel Cleaning Robots.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- IoT & Data Intelligence -->
-                <div class="col">
-                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fa-solid fa-cloud fa-lg me-2 text-warning"></i>
-                        <h5 class="fw-bold mb-0" style="color:var(--brand);">IoT & Data Intelligence</h5>
-                      </div>
-                      <ul class="mb-2 ps-3">
-                        <li><strong>Smart Alerts:</strong> API & GSM-based IoT systems with real-time notifications.</li>
-                        <li><strong>Cloud Integration:</strong> Hardware and cloud-based data monitoring dashboards.</li>
-                        <li><strong>Energy Analytics:</strong> Smart Energy Meters and OLED-based Vol/Amp monitoring.</li>
-                        <li><strong>HMI Design:</strong> Custom Human-Machine Interface design and interfacing.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Power & Electronic Systems -->
-                <div class="col">
-                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fa-solid fa-bolt fa-lg me-2 text-warning"></i>
-                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Power & Electronic Systems</h5>
-                      </div>
-                      <ul class="mb-2 ps-3">
-                        <li><strong>Power Quality:</strong> Power Factor Correction (PFC) & Earth Leakage Detectors.</li>
-                        <li><strong>Power Supply:</strong> Industrial SMPS (12V/24V) & Battery Charger Systems.</li>
-                        <li><strong>Water Management:</strong> Automatic Water Level Controllers & Sensor Modules.</li>
-                        <!--<li><strong>Safety Systems:</strong> Automobile Indication Alert Units for driving lights.</li>-->
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Public Infrastructure & Display -->
-                <div class="col">
-                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fa-solid fa-display fa-lg me-2 text-warning"></i>
-                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Public Infrastructure & Display</h5>
-                      </div>
-                      <ul class="mb-2 ps-3">
-                        <li><strong>Communication:</strong> Emergency Talk-Back units & Public Announcement (PA) systems.</li>
-                        <li><strong>Visual Systems:</strong> Dynamic Rolling LED/LCD Information Displays.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Custom OEM & R&D -->
-                <div class="col">
-                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fa-solid fa-flask fa-lg me-2 text-warning"></i>
-                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Custom OEM & R&D</h5>
-                      </div>
-                      <ul class="mb-2 ps-3">
-                        <li><strong>Product Development:</strong> Full-cycle R&D and rapid prototyping.</li>
-                        <li><strong>Custom Hardware:</strong> Bespoke embedded hardware and firmware for OEMs.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- Web Development & Digital Solutions -->
-                <div class="col">
-                  <div class="card h-100 bg-dark border-0 text-white shadow-sm">
-                    <div class="card-body">
-                      <div class="d-flex align-items-center mb-2">
-                        <i class="fa-solid fa-globe fa-lg me-2 text-warning"></i>
-                        <h5 class="fw-bold mb-0" style="color:var(--brand);">Web Development & Digital Solutions</h5>
-                      </div>
-                      <ul class="mb-2 ps-3">
-                        <li><strong>Electronics-Centric Platforms:</strong> Specialized web development for IoT dashboards and electronics-related interfaces.</li>
-                        <li><strong>Portfolio & Deployment:</strong> Professional portfolio creation with end-to-end hosting and deployment services.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- KPIs row (unchanged) 
-              <div class="row text-center g-3 mt-4">
-                <div class="col-6 col-md-3">
-                  <div class="bg-dark rounded-3 py-3">
-                    <h3 class="text-warning mb-1">2K+</h3>
-                    <div class="small text-light">Units deployed</div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="bg-dark rounded-3 py-3">
-                    <h3 class="text-warning mb-1">25+</h3>
-                    <div class="small text-light">SKUs & variants</div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="bg-dark rounded-3 py-3">
-                    <h3 class="text-warning mb-1">4+ yrs</h3>
-                    <div class="small text-light">Engineering Team</div>
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="bg-dark rounded-3 py-3">
-                    <h3 class="text-warning mb-1">Pan-India</h3>
-                    <div class="small text-light">Service & Shipping</div>
-                  </div>
-                </div>
-              </div>-->
+  <!-- ================= Core Competencies Section ================= -->
+<section class="py-5 bg-dark border-top border-secondary" id="competencies">
+
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-white">Core Competencies</h2>
+      <p class="text-warning fst-italic">
+        Technical expertise across electronics, automation, and intelligent systems
+      </p>
+    </div>
+
+    <!-- Competencies Card -->
+    <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 overflow-hidden">
+
+      <div class="card-body p-5 text-white">
+
+        <div class="row g-4">
+
+          <!-- Automation & Motion -->
+          <div class="col-lg-6">
+            <div class="bg-dark rounded-3 p-4 h-100 shadow-sm">
+              <h5 class="fw-bold text-warning mb-3">
+                <i class="fa-solid fa-gears me-2"></i>Industrial Automation & Motion
+              </h5>
+              <ul class="text-light mb-0 ps-3">
+                <li>AC/DC Servo & Stepper Motor Drivers</li>
+                <li>Ball Screw Actuators & Electronic Throttle Systems</li>
+                <li>Industrial Inflating/Deflating Machines</li>
+                <li>Solar Panel Cleaning Robotics</li>
+              </ul>
             </div>
           </div>
+
+          <!-- IoT & Data Systems -->
+          <div class="col-lg-6">
+            <div class="bg-dark rounded-3 p-4 h-100 shadow-sm">
+              <h5 class="fw-bold text-warning mb-3">
+                <i class="fa-solid fa-cloud me-2"></i>IoT & Data Intelligence
+              </h5>
+              <ul class="text-light mb-0 ps-3">
+                <li>API & GSM-based IoT Alert Systems</li>
+                <li>Cloud-enabled Data Monitoring Platforms</li>
+                <li>Smart Energy Metering & Analytics</li>
+                <li>Custom HMI Design & Integration</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Power & Electronics -->
+          <div class="col-lg-6">
+            <div class="bg-dark rounded-3 p-4 h-100 shadow-sm">
+              <h5 class="fw-bold text-warning mb-3">
+                <i class="fa-solid fa-bolt me-2"></i>Power & Electronic Systems
+              </h5>
+              <ul class="text-light mb-0 ps-3">
+                <li>Power Factor Correction Systems</li>
+                <li>Industrial SMPS & Battery Chargers</li>
+                <li>Earth Leakage Detection Systems</li>
+                <li>Water Level Control & Sensor Modules</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Communication & Display -->
+          <div class="col-lg-6">
+            <div class="bg-dark rounded-3 p-4 h-100 shadow-sm">
+              <h5 class="fw-bold text-warning mb-3">
+                <i class="fa-solid fa-display me-2"></i>Communication & Display Systems
+              </h5>
+              <ul class="text-light mb-0 ps-3">
+                <li>Public Announcement & Emergency Talk-back Systems</li>
+                <li>LED/LCD Rolling Display Solutions</li>
+                <li>TFT Real-time Information Displays</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- OEM & R&D -->
+          <div class="col-lg-6">
+            <div class="bg-dark rounded-3 p-4 h-100 shadow-sm">
+              <h5 class="fw-bold text-warning mb-3">
+                <i class="fa-solid fa-flask me-2"></i>Custom OEM & R&D
+              </h5>
+              <ul class="text-light mb-0 ps-3">
+                <li>End-to-end Product Development</li>
+                <li>Embedded Hardware & Firmware Design</li>
+                <li>Rapid Prototyping & Industrial Deployment</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Digital & Web -->
+          <div class="col-lg-6">
+            <div class="bg-dark rounded-3 p-4 h-100 shadow-sm">
+              <h5 class="fw-bold text-warning mb-3">
+                <i class="fa-solid fa-globe me-2"></i>Digital & Web Solutions
+              </h5>
+              <ul class="text-light mb-0 ps-3">
+                <li>IoT Dashboards & Electronics Platforms</li>
+                <li>Technical Web Applications & Portfolios</li>
+                <li>System Deployment & Integration</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
+<!-- ================= End Core Competencies Section ================= -->
+
 
   <!-- ================= Director Section (Fortune-500 Style) ================= -->
 <section class="py-5 bg-dark border-top border-secondary" id="director">
@@ -886,37 +953,81 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact py-5" id="contact">
-    <div class="container">
-      <div class="mb-5 text-center">
-        <h2 class="fw-bold mb-3">Contact & Enquiry</h2>
-        <p class="lead text-light">Reach out to us and our team will get back within 1/2 business days.</p>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-7 col-lg-5">
-          <div class="card bg-secondary bg-opacity-10 border-0 shadow-sm mb-4">
-            <div class="card-body text-center">
-              <h3 class="text-warning fw-bold mb-3">Office</h3>
-              <p class="text-light mb-2">
-                Mihir Bidwai<br>
-                Founder & Director / Electronics Engineer<br>
-                <a href="tel:+917820912136" class="text-warning text-decoration-none"><i class="fa-solid fa-phone"></i> +91 7820912136</a><br>
-                <a href="mailto:tantronicsindustries@gmail.com" class="text-warning text-decoration-none"><i class="fa-solid fa-envelope"></i> tantronicsindustries@gmail.com</a><br>
-                Warje, Pune, Maharashtra 411058<br>
-                <br>
-                <strong>Opening Hours:</strong> 10:00AM - 6:00PM
-              </p>
-              <div class="ratio ratio-4x3 rounded overflow-hidden border border-secondary mb-3">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.154432274673!2d73.79742399999999!3d18.476662700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2950ca7c99333%3A0xc91c6645095e74cc!2sTantronics%20Industries!5e0!3m2!1sen!2sin!4v1755714398449!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-              <p class="form-note small text-warning"></p>
+  <!-- ================= Contact Section ================= -->
+<section class="py-5 bg-dark border-top border-secondary" id="contact">
+
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-white">Contact & Enquiry</h2>
+      <p class="text-warning fst-italic">
+        Let’s discuss your requirements and build intelligent solutions together
+      </p>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+
+      <!-- LEFT: Contact Information -->
+      <div class="col-lg-5">
+        <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body p-4 text-light">
+
+            <h4 class="fw-bold text-warning mb-3">Tantronics Industries LLP</h4>
+
+            <p class="mb-3">
+              <strong>Mihir Bidwai</strong><br>
+              Founder & Director / Electronics Engineer
+            </p>
+
+            <p class="mb-2">
+              <i class="fa-solid fa-phone text-warning me-2"></i>
+              <a href="tel:+917820912136" class="text-warning text-decoration-none">
+                +91 7820912136
+              </a>
+            </p>
+
+            <p class="mb-2">
+              <i class="fa-solid fa-envelope text-warning me-2"></i>
+              <a href="mailto:tantronicsindustries@gmail.com" class="text-warning text-decoration-none">
+                tantronicsindustries@gmail.com
+              </a>
+            </p>
+
+            <p class="mb-3">
+              <i class="fa-solid fa-location-dot text-warning me-2"></i>
+              Warje, Pune, Maharashtra 411058
+            </p>
+
+            <div class="bg-dark rounded-3 p-3 shadow-sm">
+              <strong class="text-warning">Business Hours</strong><br>
+              <span class="text-light">10:00 AM – 6:00 PM (IST)</span>
             </div>
+
           </div>
         </div>
       </div>
+
+      <!-- RIGHT: Map Panel -->
+      <div class="col-lg-7">
+        <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 h-100 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.154432274673!2d73.79742399999999!3d18.476662700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2950ca7c99333%3A0xc91c6645095e74cc!2sTantronics%20Industries!5e0!3m2!1sen!2sin!4v1755714398449!5m2!1sen!2sin"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
+<!-- ================= End Contact Section ================= -->
+
 
   <!-- Footer -->
   <footer class="bg-dark border-top border-secondary text-warning">
