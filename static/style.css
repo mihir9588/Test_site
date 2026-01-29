@@ -287,3 +287,24 @@ h2, h3, h4, h5, h6 {
 body {
   padding-top: 80px;
 }
+
+
+.footer-link {
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  color: #fff !important;
+  padding-left: 4px;
+}
+#home,
+#video-showcase,
+#about,
+#competencies,
+#director,
+#products,
+#contact,
+#enquiry {
+  scroll-margin-top: 90px;
+}
