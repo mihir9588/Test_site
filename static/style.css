@@ -248,6 +248,7 @@ h2, h3, h4, h5, h6 {
 .brand-text {
   font-size: 1.05rem;
   letter-spacing: 0.3px;
+  color: var(--brand) !important;
 }
 
 .nav-modern {
