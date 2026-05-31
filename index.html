@@ -117,72 +117,104 @@
   </section>
 
   <!-- ===== Video Showcase Section ===== -->
-  <section class="bg-dark border-bottom border-secondary py-4" id="video-showcase">
-    <div class="container">
-      <div class="mb-3 text-center">
-        <h2 class="fw-bold mb-2">Our Capabilities in Action</h2>
-        <p class="lead text-light mb-0">See Tantronics solutions in real-world operation</p>
+<section class="video-showcase py-5 bg-dark border-top border-secondary text-white" aria-label="Advanced Applications Showcase">
+  <div class="container py-4">
+    
+    <div class="row mb-4 text-center">
+      <div class="col-12">
+        <span class="text-primary text-uppercase fw-bold tracking-wider small">See Tantronics solutions in real-world operation</span>
+        <h4 class="display-5 fw-bold mt-2 mb-3">Our Capabilities in Action</h4>
       </div>
-      <div class="position-relative mx-auto" style="max-width: 900px;">
-        <div id="video-carousel-container" class="rounded overflow-hidden bg-secondary d-flex justify-content-center align-items-center" style="min-height:200px;">
-          <!-- Videos (only one visible at a time) -->
-          <video
-            class="video-carousel-item d-block"
-            src="./static/demo1.mp4"
-            poster="./static/video-thumb1.jpg"
-            preload="metadata"
-            muted
-            autoplay
-            loop
-            playsinline
-            aria-label="Showcase Video 1"
-            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
-          >
-            Your browser does not support the video tag.
-          </video>
-          <video
-            class="video-carousel-item d-none"
-            src="./static/demo2.mp4"
-            poster="./static/video-thumb2.jpg"
-            preload="metadata"
-            muted
-            autoplay
-            loop
-            playsinline
-            aria-label="Showcase Video 2"
-            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
-          >
-            Your browser does not support the video tag.
-          </video>
-          <video
-            class="video-carousel-item d-none"
-            src="./static/demo3.mp4"
-            poster="./static/video-thumb3.jpg"
-            preload="metadata"
-            muted
-            autoplay
-            loop
-            playsinline
-            aria-label="Showcase Video 3"
-            style="max-width:100%;max-height:500px;width:auto;height:auto;display:block;background:#232323;"
-          >
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <!-- Carousel Controls -->
-        <div class="d-flex justify-content-center gap-3 mt-3">
-          <button class="btn btn-dark rounded-circle px-3 py-2" id="video-prev" aria-label="Previous video">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="btn btn-dark rounded-circle px-3 py-2" id="video-next" aria-label="Next video">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-9">
+        <div class="card bg-black border-0 shadow-lg rounded-4 overflow-hidden">
+          <div class="ratio ratio-16x9 bg-black">
+            <div id="systemPlayer2"></div>
+          </div>
+          <!--<div class="card-body p-3 bg-secondary bg-opacity-10 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+              <span class="spinner-grow spinner-grow-sm text-info" role="status"></span>
+              <small class="text-white fw-medium"></small>
+            </div>
+            <small class="text-secondary" id="trackerPlayer2"></small>
+          </div>-->
         </div>
       </div>
     </div>
-  </section>
-  <!-- ===== End Video Showcase Section ===== -->
 
+  </div>
+  <script>
+
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('loopedYoutubePlayer', {
+      height: '100%',
+      width: '100%',
+      videoId: videoPlaylist[currentVideoIndex],
+      playerVars: {
+        'autoplay': 1,        // Request autoplay status
+        'controls': 1,        // Give users video scrub controls if they want them
+        'rel': 0,             // Prevent showing random unrelated videos
+        'modestbranding': 1,  // Clean layout look
+        'origin': window.location.origin
+      },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  // Fired when the player first boots up successfully
+  function onPlayerReady(event) {
+    updateStatusTracker();
+    
+    // NOTE ABOUT AUTOPLAY: 
+    // Browsers require users to click *somewhere* on the live page before allowing sound to play.
+    // This command attempts to play immediately. If the user hasn't clicked yet, it will pause 
+    // until their first screen interaction, keeping the volume full.
+    event.target.unMute(); 
+    event.target.setVolume(100); // Guarantees maximum volume execution
+    event.target.playVideo();
+  }
+
+  // Active listener tracking video playback updates
+  function onPlayerStateChange(event) {
+    // Check if the current video has finished executing (YT.PlayerState.ENDED is 0)
+    if (event.data === YT.PlayerState.ENDED) {
+      advancePlaylist();
+    }
+  }
+
+  // Shifts to the next track or drops back to 0 if at the end of the array
+  function advancePlaylist() {
+    currentVideoIndex++;
+    
+    // If we have finished all 5 videos, loop back cleanly to the first video (Index 0)
+    if (currentVideoIndex >= videoPlaylist.length) {
+      currentVideoIndex = 0;
+    }
+    
+    // Force switch the player to load the next ID and spin up full audio playback
+    player.loadVideoById({
+      videoId: videoPlaylist[currentVideoIndex]
+    });
+    
+    player.unMute();
+    player.setVolume(100);
+    updateStatusTracker();
+  }
+
+  // Simple tracker output utility for your users
+  function updateStatusTracker() {
+    const trackDisplay = document.getElementById('playbackTracker');
+    if (trackDisplay) {
+      trackDisplay.innerText = "Playing Video " + (currentVideoIndex + 1) + " of " + videoPlaylist.length;
+    }
+  }
+</script>
+</section>
   <!-- ================= About Section (Fortune-500 Style) ================= -->
 <section class="py-5 bg-dark border-top border-secondary" id="about" aria-label="About Tantronics">
 
@@ -216,6 +248,8 @@
             <p class="text-light small opacity-75 mb-0">
               Electronics • Automation • Embedded Systems • Power Electronics
             </p>
+            
+
 
           </div>
 
@@ -289,7 +323,34 @@
     </div>
 
   </div>
+  
+  <div class="container py-4">
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-9">
+        <div class="card bg-black border-0 shadow-lg rounded-4 overflow-hidden">
+          
+          <div class="ratio ratio-16x9 bg-black">
+            <div id="systemPlayer1"></div>
+          </div>
+          
+          <!--<div class="card-body p-3 bg-secondary bg-opacity-10 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+              <span class="spinner-grow spinner-grow-sm text-primary" role="status"></span>
+              <small class="text-white fw-medium"></small>
+            </div>
+            <small class="text-secondary" id="trackerPlayer1">Loading phase track...</small>
+          </div>-->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </section>
+
+
 <!-- ================= End About Section ================= -->
 
 
@@ -1180,70 +1241,7 @@
     });
     showAutoImg(autoIndex);
 
-    // ===== Video Carousel Logic =====
-    (function() {
-      const videos = document.querySelectorAll('#video-carousel-container .video-carousel-item');
-      const prevBtn = document.getElementById('video-prev');
-      const nextBtn = document.getElementById('video-next');
-      // Remove playPauseBtn and playPauseIcon
-      let current = 0;
-      let playing = true;
-      let timer = null;
-
-      // Per-video durations (ms): 15s for first, 10s for others
-      const durations = [20000, 10000, 10000];
-
-      function showVideo(idx) {
-        videos.forEach((vid, i) => {
-          vid.classList.toggle('d-none', i !== idx);
-          vid.classList.toggle('d-block', i === idx);
-          if (i === idx) {
-            vid.currentTime = 0;
-            vid.play();
-          } else {
-            vid.pause();
-          }
-        });
-      }
-
-      function nextVideo() {
-        current = (current + 1) % videos.length;
-        showVideo(current);
-      }
-
-      function prevVideo() {
-        current = (current - 1 + videos.length) % videos.length;
-        showVideo(current);
-      }
-
-      function startAuto() {
-        if (timer) clearTimeout(timer);
-        timer = setTimeout(() => {
-          if (playing) nextVideo();
-          startAuto();
-        }, durations[current] || 10000);
-      }
-
-      prevBtn.addEventListener('click', () => {
-        prevVideo();
-        startAuto();
-      });
-      nextBtn.addEventListener('click', () => {
-        nextVideo();
-        startAuto();
-      });
-
-      // Remove play/pause button logic
-
-      window.addEventListener('orientationchange', () => {
-        videos.forEach(vid => vid.pause());
-        videos[current].play();
-      });
-
-      // Init
-      showVideo(current);
-      startAuto();
-    })();
+    ;
   </script>
   <script>
 document.querySelectorAll(".filter-btn").forEach(btn => {
@@ -1267,6 +1265,114 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
     });
   });
 });
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+  // Divided Playlists
+  const playlistSection1 = ['04JqvGE2R2I', 'NUmsNhCrySc', 'JvsuX5kTEnE']; // Videos 1, 2, 3
+  const playlistSection2 = ['kuA6cqfg9zk', 'dAUUQtMtDrk'];               // Videos 4, 5
+
+  let indexPlayer1 = 0;
+  let indexPlayer2 = 0;
+  
+  let player1;
+  let player2;
+
+  function onYouTubeIframeAPIReady() {
+    // Initialize Player 1 (NO AUTOPLAY - Waits for manual click)
+    player1 = new YT.Player('systemPlayer1', {
+      height: '100%',
+      width: '100%',
+      videoId: playlistSection1[indexPlayer1],
+      playerVars: { 
+        'autoplay': 0,
+        'controls': 1, 
+        'rel': 0, 
+        'modestbranding': 1, 
+        'origin': window.location.origin 
+      },
+      events: {
+        'onReady': function(e) { setupInitialAudio(e); },
+        'onStateChange': onPlayer1StateChange
+      }
+    });
+
+    // Initialize Player 2 (FORCED INSTANT AUTOPLAY ON RELOAD)
+    player2 = new YT.Player('systemPlayer2', {
+      height: '100%',
+      width: '100%',
+      videoId: playlistSection2[indexPlayer2],
+      playerVars: { 
+        'autoplay': 1, 
+        'mute': 1,             // CRITICAL: Must be muted for browsers to allow instant autoplay on load
+        'controls': 1, 
+        'rel': 0, 
+        'modestbranding': 1, 
+        'origin': window.location.origin 
+      },
+      events: {
+        'onReady': function(e) { setupInstantAutoPlay(e); },
+        'onStateChange': onPlayer2StateChange
+      }
+    });
+  }
+
+  // Pre-configures Player 1 audio settings
+  function setupInitialAudio(event) {
+    event.target.unMute();
+    event.target.setVolume(100);
+  }
+
+  // Forces Player 2 to start playing instantly on reload
+  function setupInstantAutoPlay(event) {
+    event.target.playVideo();
+  }
+
+  // Monitor playback and state coordination for Player 1
+  function onPlayer1StateChange(event) {
+    // Cross-Muting Logic: If player 1 is clicked and plays, instantly mute player 2
+    if (event.data === YT.PlayerState.PLAYING) {
+      if (player2 && typeof player2.mute === 'function') {
+        player2.mute();
+      }
+    }
+
+    // Handle loop rotation when a video ends
+    if (event.data === YT.PlayerState.ENDED) {
+      indexPlayer1++;
+      if (indexPlayer1 >= playlistSection1.length) {
+        indexPlayer1 = 0; 
+      }
+      player1.loadVideoById({ videoId: playlistSection1[indexPlayer1] });
+      player1.unMute();
+      player1.setVolume(100);
+    }
+  }
+
+  // Monitor playback and state coordination for Player 2
+  function onPlayer2StateChange(event) {
+    // Cross-Muting Logic: If player 2 starts playing (or gets unmuted/clicked), instantly mute player 1
+    if (event.data === YT.PlayerState.PLAYING) {
+      if (player1 && typeof player1.mute === 'function') {
+        player1.mute();
+      }
+    }
+
+    // Handle loop rotation when a video ends
+    if (event.data === YT.PlayerState.ENDED) {
+      indexPlayer2++;
+      if (indexPlayer2 >= playlistSection2.length) {
+        indexPlayer2 = 0; 
+      }
+      // Note: Once the page is loaded and the user has interacted with the site,
+      // subsequent videos in the auto-loop sequence will carry sound onwards automatically.
+      player2.loadVideoById({ videoId: playlistSection2[indexPlayer2] });
+      player2.unMute();
+      player2.setVolume(100);
+    }
+  }
 </script>
 </body>
 </html>
