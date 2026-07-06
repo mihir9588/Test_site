@@ -64,6 +64,7 @@
 </header>
 
 <main>
+  <!-- Hero Section -->
   <section class="hero d-flex align-items-center min-vh-75" id="home">
     <div class="container text-center py-5">
       <span class="eyebrow mb-3 d-inline-block text-uppercase text-warning tracking-wider small fw-bold">
@@ -82,6 +83,7 @@
     </div>
   </section>
 
+  <!-- Video Showcase -->
   <section class="video-showcase py-5 bg-dark border-top border-secondary text-white">
     <div class="container py-4">
       <div class="row mb-4 text-center">
@@ -108,7 +110,7 @@
     </div>
   </section>
 
-  <!-- ===== REDESIGNED: CORE PRODUCT ECOSYSTEM SNAPSHOT ===== -->
+  <!-- Product Ecosystem Snapshot -->
   <section class="py-5 bg-dark border-top border-secondary text-white" id="product-ecosystem">
     <div class="container">
       <div class="mb-5 text-center">
@@ -116,7 +118,6 @@
         <p class="text-warning fst-italic">A deep look at our industrial inventory lines and R&D capability frameworks</p>
       </div>
 
-      <!-- Left Column: OEM Hardware Supply Snapshot -->
       <div class="row g-5">
         <div class="col-lg-6">
           <div class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-warning border-opacity-25 h-100 d-flex flex-column justify-content-between shadow">
@@ -149,7 +150,6 @@
           </div>
         </div>
 
-        <!-- Right Column: Custom Electronics R&D Snapshot -->
         <div class="col-lg-6">
           <div class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-info border-opacity-25 h-100 d-flex flex-column justify-content-between shadow">
             <div>
@@ -181,38 +181,70 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Web3Forms Form -->
+  <!-- Business Enquiry Section with Complete Form Fields -->
   <section class="py-5 bg-dark border-top border-secondary">
     <div class="container text-white">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center mb-4">
-          <h2 class="fw-bold text-white">Quick Project Enquiry</h2>
-          <p class="text-warning">Drop your basic details for a prompt engineering check to tantronicsindustries@gmail.com</p>
+          <h2 class="fw-bold text-white">Quick Business Enquiry</h2>
+          <p class="text-warning">Drop your details below for a fast engineering assessment sent to tantronicsindustries@gmail.com</p>
         </div>
-        <div class="col-lg-7">
+        <div class="col-lg-8">
           <div class="card bg-secondary bg-opacity-10 border-0 p-4 shadow-lg rounded-4">
             <form id="homeEnquiryForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-              <input type="hidden" name="access_key" value="99d00da4-2f26-4990-8545-d1424b16ee40">
+              <input type="hidden" name="access_key" value="7c3d528d-a304-47bf-a8ce-eeff35098a3a">
               <input type="hidden" name="redirect" value="https://tantronicsindustries.com/thankyou.html">
               
-              <div class="mb-3">
-                <label class="form-label text-warning small fw-bold">Full Name</label>
-                <input type="text" name="name" class="form-control bg-dark text-white border-secondary" required>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label text-warning small fw-bold">Full Name</label>
+                  <input type="text" name="name" class="form-control bg-dark text-white border-secondary" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-warning small fw-bold">Phone Number</label>
+                  <input type="tel" name="phone" class="form-control bg-dark text-white border-secondary" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-warning small fw-bold">Corporate Email</label>
+                  <input type="email" name="email" class="form-control bg-dark text-white border-secondary" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-warning small fw-bold">Product or Project Category Requirement</label>
+                  <select name="product_category" class="form-select bg-dark text-white border-secondary" required>
+                    <option value="" selected disabled>-- Select a Supply Component or R&D Vertical --</option>
+                    <optgroup label="OEM Hardware Supply Lines">
+                      <option value="OEM: PLCs">PLCs (Programmable Logic Controllers)</option>
+                      <option value="OEM: VFDs / AC Drives">VFDs / AC Drives</option>
+                      <option value="OEM: HMIs">HMIs (Human Machine Interfaces)</option>
+                      <option value="OEM: SMPS Power Supplies">SMPS Power Supplies</option>
+                      <option value="OEM: Industrial Relays">Industrial Relays & SIM Relays</option>
+                      <option value="OEM: Connectors & Cables">Industrial Connectors & Cables</option>
+                      <option value="OEM: Servo Motors & Drives">Servo Motors & Servo Drives</option>
+                      <option value="OEM: Industrial Sensors">Industrial Sensors (Temp, Pressure, Level, etc.)</option>
+                      <option value="OEM: Industrial IoT Modules">Industrial IoT & Monitoring Solutions Hardware</option>
+                    </optgroup>
+                    <optgroup label="Custom Electronics R&D Verticals">
+                      <option value="R&D: Product Design">Product Design & Development</option>
+                      <option value="R&D: Industrial Automation">Industrial Automation Projects</option>
+                      <option value="R&D: IoT Monitoring Systems">IoT-Based Monitoring Systems</option>
+                      <option value="R&D: Climate Solutions">Temperature & Humidity Monitoring Solutions</option>
+                      <option value="R&D: Cloud-Based Data Logging">Data Logging & Cloud-Based Monitoring Systems</option>
+                      <option value="R&D: Custom HW/SW Engineering">Customized Electronic Hardware & Software Development</option>
+                      <option value="R&D: Panel Solutions">Industrial Control Panel Solutions</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-warning small fw-bold">Requirements / Project Brief</label>
+                  <textarea name="message" class="form-control bg-dark text-white border-secondary" rows="4" required></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-3">Submit Inquiry</button>
+                </div>
               </div>
-              <div class="mb-3">
-                <label class="form-label text-warning small fw-bold">Email Address</label>
-                <input type="email" name="email" class="form-control bg-dark text-white border-secondary" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label text-warning small fw-bold">Requirements / Project Brief</label>
-                <textarea name="message" class="form-control bg-dark text-white border-secondary" rows="4" required></textarea>
-              </div>
-              
-              <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-3">Submit Form</button>
               <div id="homeFormStatus" class="mt-3 text-center small fw-bold"></div>
             </form>
           </div>

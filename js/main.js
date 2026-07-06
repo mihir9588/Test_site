@@ -1,63 +1,76 @@
 /**
- * Tantronics - Re-engineered Interactive Grid Script
+ * Tantronics - Multi-Page Core Script Logic with Web3Forms AJAX Handling & Redirects
  */
-document.addEventListener("DOMContentLoaded", () => {
-  const yearEl = document.getElementById('year');
-  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
 
-  const formsSetup = [
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Footer Year Configuration
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // 2. Web3Forms Asynchronous AJAX Processing Engine
+  const formsConfig = [
     { formId: 'contactForm', statusId: 'formStatus' },
     { formId: 'homeEnquiryForm', statusId: 'homeFormStatus' }
   ];
 
-  formsSetup.forEach(({ formId, statusId }) => {
-    const activeForm = document.getElementById(formId);
-    const activeStatus = document.getElementById(statusId);
+  formsConfig.forEach(({ formId, statusId }) => {
+    const formNode = document.getElementById(formId);
+    const statusNode = document.getElementById(statusId);
 
-    activeForm?.addEventListener('submit', function(e) {
-      e.preventDefault();
-      if (!activeStatus) return;
+    formNode?.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevents page reload
+      if (!statusNode) return;
 
+      // Front-end Native Field Check
       if (!this.checkValidity()) {
-        activeStatus.className = "mt-3 text-center text-danger small fw-bold";
-        activeStatus.textContent = "Please fill inside all validation loops correctly.";
+        statusNode.className = "mt-3 text-center text-danger small fw-bold";
+        statusNode.textContent = "Please fill in all fields correctly.";
         return;
       }
 
-      activeStatus.className = "mt-3 text-center text-warning small fw-bold";
-      activeStatus.textContent = "Processing parameter transmission across API node...";
+      statusNode.className = "mt-3 text-center text-warning small fw-bold";
+      statusNode.textContent = "Processing technical parameters transmission...";
 
-      const rawPayload = new FormData(this);
+      const formData = new FormData(this);
 
+      // Async Request Delivery to Web3Forms Gateway
       fetch(this.action, {
         method: this.method,
-        body: rawPayload,
+        body: formData,
         headers: { 'Accept': 'application/json' }
       })
-      .then(async (res) => {
-        if (res.status === 200) {
-          activeStatus.className = "mt-3 text-center text-success small fw-bold";
-          activeStatus.textContent = "Transmission successful! Transferring client layout window...";
+      .then(async (response) => {
+        if (response.status === 200) {
+          statusNode.className = "mt-3 text-center text-success small fw-bold";
+          statusNode.textContent = "Success! Forwarding to confirmation page...";
           
-          const redirectTarget = activeForm.querySelector('input[name="redirect"]')?.value;
+          // FORCED MANUAL REDIRECT FIX:
+          // This safely extracts the exact destination value you put in your HTML hidden input
+          const redirectTarget = formNode.querySelector('input[name="redirect"]')?.value;
+          
           if (redirectTarget) {
-            window.location.href = redirectTarget;
+            // Instantly route the tab to your thankyou.html page
+            window.location.href = redirectTarget; 
           } else {
-            activeForm.reset();
+            // Fallback layout clean if redirect value is missing
+            formNode.reset();
           }
         } else {
-          const parsingErr = await res.json();
-          activeStatus.className = "mt-3 text-center text-danger small fw-bold";
-          activeStatus.textContent = parsingErr.message || "An transmission mismatch logic occurred.";
+          const json = await response.json();
+          statusNode.className = "mt-3 text-center text-danger small fw-bold";
+          statusNode.textContent = json.message || "Transmission network anomaly encountered.";
         }
       })
       .catch(() => {
-        activeStatus.className = "mt-3 text-center text-danger small fw-bold";
-        activeStatus.textContent = "Gateway communication fault detected.";
+        statusNode.className = "mt-3 text-center text-danger small fw-bold";
+        statusNode.textContent = "Error establishing gateway link.";
       });
     });
   });
 
+  // 3. Product Catalog Category Filtering (Only triggers on product catalog pages)
   const productGrid = document.getElementById("productGrid");
   if (productGrid) {
     document.querySelectorAll(".filter-btn").forEach(btn => {
@@ -65,13 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
-        const categoryToken = btn.dataset.filter;
-        document.querySelectorAll(".product-item").forEach(card => {
-          if (categoryToken === "all" || card.dataset.category === categoryToken) {
-            card.style.display = "block";
-            card.classList.add("fade-in");
+        const filter = btn.dataset.filter;
+        document.querySelectorAll(".product-item").forEach(item => {
+          if (filter === "all" || item.dataset.category === filter) {
+            item.style.display = "block";
+            item.classList.add("fade-in");
           } else {
-            card.style.display = "none";
+            item.style.display = "none";
           }
         });
       });
