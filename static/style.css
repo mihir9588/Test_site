@@ -1,68 +1,44 @@
-/**
- * Tantronics Advanced Applications Showcase - Video Players Logic
- */
-
-const playlistSection1 = ['04JqvGE2R2I', 'NUmsNhCrySc', 'JvsuX5kTEnE'];
-const playlistSection2 = ['kuA6cqfg9zk', 'AC8NVjzxGSk', 'dAUUQtMtDrk'];
-
-let indexPlayer1 = 0;
-let indexPlayer2 = 0;
-let player1, player2;
-
-function onYouTubeIframeAPIReady() {
-  if (document.getElementById('systemPlayer1')) {
-    player1 = new YT.Player('systemPlayer1', {
-      height: '100%', width: '100%',
-      videoId: playlistSection1[indexPlayer1],
-      playerVars: { 'autoplay': 1, 'mute': 1, 'controls': 1, 'rel': 0, 'modestbranding': 1, 'origin': window.location.origin },
-      events: { 'onReady': (e) => e.target.playVideo(), 'onStateChange': onPlayer1StateChange }
-    });
-  }
-
-  if (document.getElementById('systemPlayer2')) {
-    player2 = new YT.Player('systemPlayer2', {
-      height: '100%', width: '100%',
-      videoId: playlistSection2[indexPlayer2],
-      playerVars: { 'autoplay': 1, 'mute': 1, 'controls': 1, 'rel': 0, 'modestbranding': 1, 'origin': window.location.origin },
-      events: { 'onReady': (e) => e.target.playVideo(), 'onStateChange': onPlayer2StateChange }
-    });
-  }
+/* Tantronics Industries LLP Unified Multi-Page CSS Architecture Framework */
+:root {
+  --brand: #ff7f2a;
+  --brand-2: #ff7f2a;
+  --bg: #181818;
+  --surface: #232323;
+  --muted: #ffffff;
 }
 
-function onPlayer1StateChange(event) {
-  if (event.data === YT.PlayerState.PLAYING && player1 && !player1.isMuted?.() && player2?.mute) {
-    player2.mute();
-  }
-  if (event.data === YT.PlayerState.ENDED) nextVideoPlayer1();
+body {
+  background: var(--bg);
+  color: var(--muted);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  padding-top: 90px;
 }
 
-function onPlayer2StateChange(event) {
-  if (event.data === YT.PlayerState.PLAYING && player2 && !player2.isMuted?.() && player1?.mute) {
-    player1.mute();
-  }
-  if (event.data === YT.PlayerState.ENDED) nextVideoPlayer2();
-}
+a { color: var(--brand); }
+.bg-dark { background-color: #181818 !important; }
+.bg-secondary { background-color: #232323 !important; }
+.text-warning { color: var(--brand) !important; }
+.btn-warning { background: linear-gradient(90deg, var(--brand), var(--brand-2)); color: #181818 !important; border: none; }
+.btn-outline-light:hover { background: #232323 !important; color: var(--brand) !important; }
 
-function nextVideoPlayer1() {
-  indexPlayer1 = (indexPlayer1 + 1) % playlistSection1.length;
-  loadMutedVideo(player1, playlistSection1[indexPlayer1]);
+/* Navbar Styling & Glassmorphism Properties */
+.navbar-glass {
+  background: rgba(24, 24, 24, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-function prevVideoPlayer1() {
-  indexPlayer1 = (indexPlayer1 - 1 + playlistSection1.length) % playlistSection1.length;
-  loadMutedVideo(player1, playlistSection1[indexPlayer1]);
-}
-function nextVideoPlayer2() {
-  indexPlayer2 = (indexPlayer2 + 1) % playlistSection2.length;
-  loadMutedVideo(player2, playlistSection2[indexPlayer2]);
-}
-function prevVideoPlayer2() {
-  indexPlayer2 = (indexPlayer2 - 1 + playlistSection2.length) % playlistSection2.length;
-  loadMutedVideo(player2, playlistSection2[indexPlayer2]);
-}
+.brand-text { font-size: 1.05rem; color: var(--brand) !important; }
+.nav-modern { position: relative; color: #ddd !important; transition: color 0.25s ease; }
+.nav-modern:hover, .nav-modern.active { color: var(--brand) !important; }
 
-function loadMutedVideo(playerInstance, videoId) {
-  if (playerInstance?.loadVideoById) {
-    playerInstance.loadVideoById({ videoId: videoId });
-    playerInstance.mute(); 
-  }
-}
+/* Product Grid System Interface Animations */
+.product-card { transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease; border-radius: 16px; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important; }
+.filter-btn.active { background-color: var(--brand) !important; color: #000 !important; border-color: var(--brand) !important; font-weight: 600; }
+
+.fade-in { animation: customFade 0.4s ease forwards; }
+@keyframes customFade { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+
+/* Scrollbar Framework Custom Design Parameters */
+::-webkit-scrollbar { width: 8px; background: #232323; }
+::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 8px; }
