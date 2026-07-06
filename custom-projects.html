@@ -18,23 +18,54 @@
         <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:46px;">
         <span class="brand-text">Tantronics Industries LLP</span>
       </a>
+
       <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
         <ul class="navbar-nav align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-modern active" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown">Solutions</a>
-            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-2" aria-labelledby="productDropdown">
-              <li><a class="dropdown-item fw-bold text-warning" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Catalog</a></li>
-              <li><hr class="dropdown-divider border-secondary opacity-50"></li>
-              <li><a class="dropdown-item fw-bold text-info" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
-            </ul>
+          
+          <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link dropdown-toggle nav-modern" href="#" id="productDropdown" role="button" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-3 dropdown-scrollable" aria-labelledby="productDropdown">
+              <li><a class="dropdown-item fw-bold text-warning text-uppercase tracking-wider small" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Supply</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-motor">» Mitsubishi Servo Motors</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-vfd">» Mitsubishi VFDs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-vfd">» Delta VFDs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-drives">» Servo Drives</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-plc">» Mitsubishi PLCs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-plc">» Delta PLCs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-hmi">» Delta HMIs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-hmi">» Mitsubishi HMIs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=smps">» Power Supplies (SMPS)</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=siemens-servo">» Siemens Servo Motors</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=fl-switch">» Industrial FL Switches</a></li>
+              
+              <li><hr class="dropdown-divider border-secondary my-2 opacity-50"></li>
+              
+              <li><a class="dropdown-item fw-bold text-info text-uppercase tracking-wider small" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
+              <!--<li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=design">» Product Design & Prototyping</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=automation">» Industrial Automation Projects</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=iot-sys">» IoT-Based Monitoring Systems</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=env">» Temperature & Humidity Tracking</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=cloud">» Data Logging & Cloud Systems</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=dev">» Custom Hardware & Software Dev</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=panel">» Industrial Control Panel Solutions</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=power-systems">» Power & Charger Configurations</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=industrial-safety">» Industrial Safety & Protection</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=motion-control">» Motion & Actuation Architectures</a></li>
+            --></ul>
           </li>
+
           <li class="nav-item"><a class="nav-link nav-modern" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-warning fw-bold px-4 py-2 rounded-pill nav-cta" href="contact.html">Get a Quote</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow-sm nav-cta" href="contact.html">Get a Quote</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -58,9 +89,13 @@
         <button class="btn btn-outline-info filter-btn" data-filter="cloud">Cloud Base Logging</button>
         <button class="btn btn-outline-info filter-btn" data-filter="dev">Hardware & Software</button>
         <button class="btn btn-outline-info filter-btn" data-filter="panel">Control Panels</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="power-systems">Power Systems</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="industrial-safety">Industrial Safety</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="motion-control">Motion Control</button>
       </div>
 
       <div class="row g-4 d-flex align-items-stretch" id="productGrid">
+        
         <div class="col-md-6 col-lg-4 product-item" data-category="design">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
             <img src="./static/Images/customOEM.jpg" alt="Product Design Development" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
@@ -72,71 +107,348 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="automation">
+        <div class="col-md-6 col-lg-4 product-item" data-category="power-systems">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <img src="./static/Images/Single phase Ball Screw Actuators.png" alt="Industrial Automation Projects" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-info text-dark mb-2">Automation</span>
-              <h3 class="text-info fw-bold fs-5">Industrial Automation Projects</h3>
-              <p class="text-light opacity-90">Turnkey commissioning of motion control lines, automated positioning actuators, and machine filters sequencing.</p>
+            <div>
+              <img src="./static/Images/power factor image.png" alt="Power Factor" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Power Systems</span>
+                <h3 class="text-info fw-bold fs-5">Power Factor Correction System</h3>
+                <p class="text-light opacity-90">Industrial solutions to enhance power efficiency and optimize electrical performance.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Reactive power optimization</li>
+                  <li>Improved energy efficiency</li>
+                  <li>Industrial-grade reliability</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="iot-sys">
+        <div class="col-md-6 col-lg-4 product-item" data-category="power-systems">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <img src="./static/Images/Data Monitoring system (hardwarecloudbase) for industry.png" alt="IoT Systems" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-info text-dark mb-2">IoT Systems</span>
-              <h3 class="text-info fw-bold fs-5">IoT-Based Monitoring Systems</h3>
-              <p class="text-light opacity-90">Integrated local tracking sensor telemetry configurations streaming directly into distributed computing loops.</p>
+            <div>
+              <img src="./static/Images/Battery Charger Systems.png" alt="Battery Chargers" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Power Systems</span>
+                <h3 class="text-info fw-bold fs-5">Battery Charger Systems</h3>
+                <p class="text-light opacity-90">Efficient charging solutions for industrial and backup power applications.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Intelligent charging algorithms</li>
+                  <li>Protection against overcharge</li>
+                  <li>Supports multiple battery types</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="env">
+        <div class="col-md-6 col-lg-4 product-item" data-category="power-systems">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <img src="./static/Images/th-mon.jpg" alt="TH Monitoring" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-info text-dark mb-2">Environmental Tracking</span>
-              <h3 class="text-info fw-bold fs-5">Temperature & Humidity Solutions</h3>
-              <p class="text-light opacity-90">High-stability sensor mapping designed for cold chain analytics and environmental manufacturing checks.</p>
+            <div>
+              <img src="./static/Images/Industrial SMPS (12V24V).png" alt="Industrial SMPS" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Power Systems</span>
+                <h3 class="text-info fw-bold fs-5">Industrial SMPS</h3>
+                <p class="text-light opacity-90">High-efficiency power supplies for industrial electronic systems.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Stable DC output (12V/24V Execution)</li>
+                  <li>Advanced hardware protection</li>
+                  <li>Continuous-duty layout framework</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="cloud">
+        <div class="col-md-6 col-lg-4 product-item" data-category="motion-control">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <img src="./static/Images/Smart Energy Meter.png" alt="Cloud Base Tracking" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-info text-dark mb-2">Cloud Infrastructure</span>
-              <h3 class="text-info fw-bold fs-5">Data Logging & Cloud Monitoring</h3>
-              <p class="text-light opacity-90">Asynchronous database parameters logging, alert generation triggers, and web layout dashboard integration.</p>
+            <div>
+              <img src="./static/Images/ACDC Servo and Stepper Motor Drivers.png" alt="Servo Drivers" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Motion Control</span>
+                <h3 class="text-info fw-bold fs-5">AC/DC Servo & Stepper Drivers</h3>
+                <p class="text-light opacity-90">Precision motor control solutions for automation and robotics configurations.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Accurate speed and torque processing</li>
+                  <li>PLC loop compatibility</li>
+                  <li>Reliable thermals performance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="motion-control">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/Single phase Ball Screw Actuators.png" alt="Actuators" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Motion Control</span>
+                <h3 class="text-info fw-bold fs-5">Ball Screw Actuators</h3>
+                <p class="text-light opacity-90">Precision linear motion hardware frameworks for heavy positioning arrays.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Sub-millimeter micro accuracy</li>
+                  <li>Smooth operational translation profile</li>
+                  <li>Compact integrated mechanical footprint</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="motion-control">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/Electronic Throttle Body.png" alt="Throttle Body" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Motion Control</span>
+                <h3 class="text-info fw-bold fs-5">Electronic Throttle Body</h3>
+                <p class="text-light opacity-90">Electronically managed fluidic valve actuation modules for engine dynamics.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Precise airflow response optimization</li>
+                  <li>Embedded sensor array ECU links</li>
+                  <li>Robust structural shell casing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="industrial-safety">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/Earth Leakage detector.png" alt="Leakage Detector" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Industrial Safety</span>
+                <h3 class="text-info fw-bold fs-5">Earth Leakage Detector</h3>
+                <p class="text-light opacity-90">Advanced isolation failure monitoring architectures for critical protection loops.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Ultra-fast circuit interruption</li>
+                  <li>Enhanced personnel safety metrics</li>
+                  <li>Regulatory standards compliance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="industrial-safety">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/Emergency Talk back unit.png" alt="Talkback" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Industrial Safety</span>
+                <h3 class="text-info fw-bold fs-5">Emergency Talk Back System</h3>
+                <p class="text-light opacity-90">Duplex resilient audio networks optimized for heavy ambient noise processing zones.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>High-clarity isolated line voice filtering</li>
+                  <li>Rugged design footprint metrics</li>
+                  <li>Instant connection fallback properties</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="industrial-safety">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/public announcement and public information systems.png" alt="PA System" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Industrial Safety</span>
+                <h3 class="text-info fw-bold fs-5">Public Announcement Systems</h3>
+                <p class="text-light opacity-90">Centralized broadcast matrices integrated with dynamic informational feed nodes.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Clean sound distribution matching</li>
+                  <li>Multi-zone dynamic digital matrix array</li>
+                  <li>Scalable architecture linking components</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4 product-item" data-category="dev">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <img src="./static/Images/power factor image.png" alt="Custom HW SW Dev" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-info text-dark mb-2">Engineering</span>
-              <h3 class="text-info fw-bold fs-5">Electronic Hardware & Software Dev</h3>
-              <p class="text-light opacity-90">Embedded bare-metal C/C++ firmware compiler generation matched with system interaction desktop dashboards.</p>
+            <div>
+              <img src="./static/Images/led scrolling display.png" alt="LED Ticker" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Custom Dev</span>
+                <h3 class="text-info fw-bold fs-5">LED/LCD Rolling Displays</h3>
+                <p class="text-light opacity-90">Dynamic messaging boards parsing serial or wireless dynamic buffer arrays.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Real-time content string updating loops</li>
+                  <li>Flexible font configuration parameters</li>
+                  <li>High-lumen day visibility matrix</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="dev">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/TFT LCD real-time information display.png" alt="TFT LCD" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Custom Dev</span>
+                <h3 class="text-info fw-bold fs-5">TFT LCD Display</h3>
+                <p class="text-light opacity-90">High-resolution dynamic screens supporting real-time hardware logging parameters rendering.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Rich visualization dashboard matrix</li>
+                  <li>High-refresh bus timing processing</li>
+                  <li>Tailored user viewport formats</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="automation">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/inflatingdeflating machine for industrial purposes.png" alt="Pressure" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Industrial Automation</span>
+                <h3 class="text-info fw-bold fs-5">Inflating / Deflating Machine</h3>
+                <p class="text-light opacity-90">Microprocessor-regulated pressure systems tailored for repetitive precision process lines loop.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Closed-loop transducer parsing feedback</li>
+                  <li>Long-life cycle valve manifold execution</li>
+                  <li>Heavy manufacturing structural frame</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="iot-sys">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/API and GSM based IOT Alert System.png" alt="IoT Alert" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">IoT Monitoring</span>
+                <h3 class="text-info fw-bold fs-5">IoT Alert System</h3>
+                <p class="text-light opacity-90">Distributed warning architectures interfacing using GSM cellular transceivers and cloud REST endpoint hooks.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Instant text message warning dispatches</li>
+                  <li>Low-latency telemetry API layers</li>
+                  <li>Secure encrypted remote parameters</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="cloud">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/Data Monitoring system (hardwarecloudbase) for industry.png" alt="Data Logger" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Cloud Systems</span>
+                <h3 class="text-info fw-bold fs-5">Data Monitoring System</h3>
+                <p class="text-light opacity-90">Integrated local sensor aggregations channeling parameter matrix sets directly into live databases platforms.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Continuous parameter track visualizations</li>
+                  <li>Secure cloud infrastructure pipelines</li>
+                  <li>Custom automated trend parsing triggers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="env">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/ACDC VOLAMP monitoring system using OLED Display.png" alt="VoltAmp" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Tracking & Analytics</span>
+                <h3 class="text-info fw-bold fs-5">Voltage & Current Monitoring</h3>
+                <p class="text-light opacity-90">High-precision diagnostic tracking networks reading concurrent lines flow via crystal sharp screen outputs.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>True RMS tracking calculations loop</li>
+                  <li>Luminescent wide-angle display panel</li>
+                  <li>Bi-directional AC & isolated DC sampling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="automation">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/Solar Panel Cleaning Robot.png" alt="Solar Robot" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Industrial Automation</span>
+                <h3 class="text-info fw-bold fs-5">Solar Panel Cleaning Robot</h3>
+                <p class="text-light opacity-90">Self-guided crawl track hardware maximizing field panel yield ratios without abrasive contact risks.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Intelligent edge alignment algorithms</li>
+                  <li>Waterless clean brush configurations</li>
+                  <li>Wireless diagnostic telemetry nodes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="env">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/Smart Energy Meter.png" alt="Energy Meter" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Tracking & Analytics</span>
+                <h3 class="text-info fw-bold fs-5">Smart Energy Meter</h3>
+                <p class="text-light opacity-90">Next-gen instrumentation tracing real-time wattage usages, power harmonics factors, and line analytics.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Non-volatile internal memory storage</li>
+                  <li>Integrated system transceiver buses</li>
+                  <li>Precise compliance calibration logging</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4 product-item" data-category="panel">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <img src="./static/Images/led scrolling display.png" alt="Control Panel Solutions" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-info text-dark mb-2">Panels</span>
-              <h3 class="text-info fw-bold fs-5">Industrial Control Panel Solutions</h3>
-              <p class="text-light opacity-90">Custom layout wire dressing, busbar routing, protection logic mapping, and robust testing metrics verification.</p>
+            <div>
+              <img src="./static/Images/waterlevel1.jpg" alt="Water Controller" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Panel Solutions</span>
+                <h3 class="text-info fw-bold fs-5">Automatic Water Level Controller</h3>
+                <p class="text-light opacity-90">Smart pump management mechanisms preventing dry-cycling over-runs and overflow reservoir waste loops.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>Automated relational state switching</li>
+                  <li>Thermal load current buffers</li>
+                  <li>Robust terminal isolation switch design</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="panel">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <div>
+              <img src="./static/Images/Microcontroller Based Programmable Timer.png" alt="Timer Relay" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Panel Solutions</span>
+                <h3 class="text-info fw-bold fs-5">Programmable Timer</h3>
+                <p class="text-light opacity-90">Microcontroller timekeeping relay matrices executing customized cycling instructions safely.</p>
+                <ul class="ps-3 text-light small mb-0 lh-lg">
+                  <li>High accuracy quartz clock counting</li>
+                  <li>Flexible trigger profile selections</li>
+                  <li>Heavy contact isolation protection</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us & Capabilities – Tantronics Industries LLP</title>
-  <meta name="description" content="Learn about Tantronics Industries LLP, our technical corporate roadmap, core competencies, engineering infrastructure, and research framework achievements." />
+  <meta name="description" content="Learn about Tantronics Industries LLP, our technical roadmap, core competencies, engineering infrastructure, and achievements." />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -19,23 +19,51 @@
         <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:46px;">
         <span class="brand-text">Tantronics Industries LLP</span>
       </a>
+
       <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
         <ul class="navbar-nav align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link nav-modern active" href="about.html">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-modern" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown">Solutions</a>
-            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-2" aria-labelledby="productDropdown">
-              <li><a class="dropdown-item fw-bold text-warning" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Catalog</a></li>
-              <li><hr class="dropdown-divider border-secondary opacity-50"></li>
-              <li><a class="dropdown-item fw-bold text-info" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
-            </ul>
+          <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
+          
+          <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link dropdown-toggle nav-modern" href="#" id="productDropdown" role="button" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-3 dropdown-scrollable" aria-labelledby="productDropdown">
+              <li><a class="dropdown-item fw-bold text-warning text-uppercase tracking-wider small" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Supply</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-motor">» Mitsubishi Servo Motors</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-vfd">» Mitsubishi VFDs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-vfd">» Delta VFDs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-drives">» Servo Drives</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-plc">» Mitsubishi PLCs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-plc">» Delta PLCs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-hmi">» Delta HMIs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-hmi">» Mitsubishi HMIs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=smps">» Power Supplies (SMPS)</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=siemens-servo">» Siemens Servo Motors</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=fl-switch">» Industrial FL Switches</a></li>
+              
+              <li><hr class="dropdown-divider border-secondary my-2 opacity-50"></li>
+              
+              <li><a class="dropdown-item fw-bold text-info text-uppercase tracking-wider small" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
+              <!--<li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=design">» Product Design & Prototyping</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=automation">» Industrial Automation Projects</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=iot-sys">» IoT-Based Monitoring Systems</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=env">» Temperature & Humidity Tracking</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=cloud">» Data Logging & Cloud Systems</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=dev">» Custom Hardware & Software Dev</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=panel">» Industrial Control Panel Solutions</a></li>
+            --></ul>
           </li>
+
           <li class="nav-item"><a class="nav-link nav-modern" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-warning fw-bold px-4 py-2 rounded-pill nav-cta" href="contact.html">Get a Quote</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow-sm nav-cta" href="contact.html">Get a Quote</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -88,12 +116,10 @@
     </div>
   </section>
 
-  <!-- ===== FULLY RESTORED: CORE COMPETENCIES GRID ===== -->
   <section class="py-5 bg-dark border-top border-secondary" id="competencies">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="fw-bold text-white">Core Competencies</h2>
-        <p class="text-warning fst-italic">Technical Expertise across Electronics, Automation, and Intelligent Systems</p>
       </div>
       <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 overflow-hidden">
         <div class="card-body p-5 text-white">
@@ -141,33 +167,12 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="bg-dark rounded-3 p-4 h-100 shadow-sm border border-secondary border-opacity-10">
-                <h3 class="fw-bold text-warning h5 mb-3"><i class="fa-solid fa-flask me-2"></i>Custom OEM & R&D</h3>
-                <ul class="text-light mb-0 ps-3 lh-lg">
-                  <li>End-to-end Product Development</li>
-                  <li>Embedded Hardware & Firmware Design</li>
-                  <li>Rapid Prototyping & Industrial Deployment</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="bg-dark rounded-3 p-4 h-100 shadow-sm border border-secondary border-opacity-10">
-                <h3 class="fw-bold text-warning h5 mb-3"><i class="fa-solid fa-globe me-2"></i>Digital & Web Solutions</h3>
-                <ul class="text-light mb-0 ps-3 lh-lg">
-                  <li>IoT Dashboards & Electronics Platforms</li>
-                  <li>Technical Web Applications & Portfolios</li>
-                  <li>System Deployment & Integration</li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Leadership Section -->
   <section class="py-5 bg-dark border-top border-secondary" id="director">
     <div class="container">
       <div class="text-center mb-5">
@@ -186,13 +191,12 @@
             <hr class="border-secondary border-opacity-50 mb-4">
             <h4 class="fw-bold text-warning h5 mb-2">Director’s Message</h4>
             <p class="text-light fs-6 lh-lg mb-0">
-              At our organization, we are driven by a vision to innovate with purpose and deliver intelligent, reliable, and affordable technology solutions that create real-world impact. With a strong focus on Embedded Systems, Electronics, AI, and Robotics, we aim to bridge the gap between advanced innovation and practical applications, especially for the Indian market. Our commitment to quality, continuous improvement, and customer satisfaction guides every project we undertake, as we work passionately to transform ideas into future-ready solutions while building lasting relationships based on trust and technical excellence.
+              Our commitment to quality, continuous improvement, and customer satisfaction guides every project we undertake, as we work passionately to transform ideas into future-ready solutions while building lasting relationships based on trust and technical excellence.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- ===== FULLY RESTORED: DIRECTOR'S ACHIEVEMENTS CAROUSEL ===== -->
       <div class="mt-5">
         <h3 class="fw-bold text-warning mb-3 h4 text-center">Director’s Achievements</h3>
         <div class="position-relative mx-auto" style="max-width: 900px;">
@@ -220,7 +224,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </main>

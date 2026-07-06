@@ -30,8 +30,30 @@ a { color: var(--brand); }
   -webkit-backdrop-filter: blur(10px);
 }
 .brand-text { font-size: 1.05rem; color: var(--brand) !important; }
-.nav-modern { position: relative; color: #ddd !important; transition: color 0.25s ease; }
-.nav-modern:hover, .nav-modern.active { color: var(--brand) !important; }
+
+/* Redesigned Nav Links Style with Kinetic Bottom Accent Underlines */
+.nav-modern { 
+  position: relative; 
+  color: #ddd !important; 
+  transition: color 0.25s ease;
+  padding-bottom: 6px !important;
+}
+.nav-modern::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--brand);
+  transition: width 0.25s ease;
+}
+.nav-modern:hover::after, .nav-modern.active::after {
+  width: 100%;
+}
+.nav-modern:hover, .nav-modern.active { 
+  color: var(--brand) !important; 
+}
 
 .product-card { transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease; border-radius: 16px; background-color: #232323 !important; }
 .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important; }
@@ -43,3 +65,60 @@ a { color: var(--brand); }
 
 ::-webkit-scrollbar { width: 8px; background: #232323; }
 ::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 8px; }
+
+
+/* ===== REDESIGNED PURE CSS NAVBAR HOVER ACCELERATION ENGINE ===== */
+@media (min-width: 992px) {
+  /* Instantly matches the orange link transition speed */
+  .nav-item.dropdown.hover-dropdown:hover > .dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Smooth slide down card menu configuration */
+  .nav-item.dropdown.hover-dropdown > .dropdown-menu {
+    display: block !important; /* Keep active on the DOM but hide with opacity */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(15px);
+    margin-top: 0 !important; /* Eliminates blank dead-zones that cause flickering */
+    background-color: rgba(35, 35, 35, 0.96) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 127, 42, 0.15) !important;
+    transition: opacity 0.25s cubic-bezier(0.25, 1, 0.5, 1), transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.25s;
+  }
+}
+
+/* Redesigned clean white layout specifications for subcategories */
+.sub-indent {
+  padding-left: 2rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.85) !important; /* Updated from muted gray to clean white */
+  transition: all 0.2s ease-in-out;
+}
+
+.sub-indent:hover {
+  color: #ff7f2a !important; /* Elegant signature orange on highlight hover */
+  background-color: rgba(255, 127, 42, 0.08) !important;
+  padding-left: 2.25rem !important; /* Subtle dynamic micro-slide effect on mouse over */
+}
+
+/* Scroll handling wrapper configuration */
+.dropdown-scrollable {
+  max-height: 440px;
+  overflow-y: auto;
+}
+.dropdown-scrollable::-webkit-scrollbar {
+  width: 5px;
+}
+.dropdown-scrollable::-webkit-scrollbar-thumb {
+  background: #ff7f2a;
+  border-radius: 4px;
+}

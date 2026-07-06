@@ -18,23 +18,55 @@
         <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:46px;">
         <span class="brand-text">Tantronics Industries LLP</span>
       </a>
+
       <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="mainNav">
         <ul class="navbar-nav align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-modern active" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown">Solutions</a>
-            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-2" aria-labelledby="productDropdown">
-              <li><a class="dropdown-item fw-bold text-warning" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Catalog</a></li>
-              <li><hr class="dropdown-divider border-secondary opacity-50"></li>
-              <li><a class="dropdown-item fw-bold text-info" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
-            </ul>
+          
+          <li class="nav-item dropdown hover-dropdown">
+            <a class="nav-link dropdown-toggle nav-modern" href="#" id="productDropdown" role="button" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-3 dropdown-scrollable" aria-labelledby="productDropdown">
+              <li><a class="dropdown-item fw-bold text-warning text-uppercase tracking-wider small" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Supply</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-motor">» Mitsubishi Servo Motors</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-vfd">» Mitsubishi VFDs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-vfd">» Delta VFDs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-drives">» Servo Drives</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-plc">» Mitsubishi PLCs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-plc">» Delta PLCs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-hmi">» Delta HMIs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-hmi">» Mitsubishi HMIs</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=smps">» Power Supplies (SMPS)</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=siemens-servo">» Siemens Servo Motors</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=fl-switch">» Industrial FL Switches</a></li>
+              
+              
+              <li><hr class="dropdown-divider border-secondary my-2 opacity-50"></li>
+              
+              <li><a class="dropdown-item fw-bold text-info text-uppercase tracking-wider small" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
+              <!--<li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=design">» Product Design & Prototyping</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=automation">» Industrial Automation Projects</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=iot-sys">» IoT-Based Monitoring Systems</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=env">» Temperature & Humidity Tracking</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=cloud">» Data Logging & Cloud Systems</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=dev">» Custom Hardware & Software Dev</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=panel">» Industrial Control Panel Solutions</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=power-systems">» Power & Charger Configurations</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=industrial-safety">» Industrial Safety & Protection</a></li>
+              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=motion-control">» Motion & Actuation Architectures</a></li>
+            --></ul>
           </li>
+
           <li class="nav-item"><a class="nav-link nav-modern" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-warning fw-bold px-4 py-2 rounded-pill nav-cta" href="contact.html">Get a Quote</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow-sm nav-cta" href="contact.html">Get a Quote</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -46,121 +78,252 @@
     <div class="container">
       <div class="mb-5 text-center">
         <h1 class="fw-bold text-white display-6">OEM Supply Portfolio</h1>
-        <p class="text-warning fst-italic">Quality-Assured Industrial Electronics Components & Core Assemblies</p>
+        <p class="text-warning fst-italic">Quality-Assured Industrial Components Filter Matrix (Genico Structural Mapping)</p>
       </div>
 
       <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" role="tablist">
-        <button class="btn btn-outline-warning filter-btn active" data-filter="all">All OEM Supply</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="plc">PLCs</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="vfd">VFDs / AC Drives</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="hmi">HMIs</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="smps">SMPS Power Supplies</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="relays">Relays & SIM Matrix</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="cables">Connectors & Cables</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="servo">Servo Motors & Drives</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="sensors">Industrial Sensors</button>
-        <button class="btn btn-outline-warning filter-btn" data-filter="iot-sol">IoT Supply Systems</button>
+        <button class="btn btn-outline-warning filter-btn active" data-filter="all">All Hardware</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="servo-motor">Mitsubishi Servo Motor</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="mitsubishi-vfd">Mitsubishi VFD</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="delta-vfd">Delta VFD</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="servo-drives">Servo Drives</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="mitsubishi-plc">Mitsubishi PLC</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="delta-plc">Delta PLC</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="delta-hmi">Delta HMI</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="mitsubishi-hmi">Mitsubishi HMI</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="smps">Power Supply (SMPS)</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="siemens-servo">Siemens Servo</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="fl-switch">FL Switch</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="high-voltage-circuit-breakers">Circuit Breakers</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="relay">Relays</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="signal-isolator">Signal Isolators</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="industrial-wireless-devices">Wireless Remote</button>
       </div>
 
       <div class="row g-4 d-flex align-items-stretch" id="productGrid">
-        <div class="col-md-6 col-lg-4 product-item" data-category="plc">
+        
+        <div class="col-md-6 col-lg-4 product-item" data-category="servo-motor">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/plc-supply.jpg" alt="Programmable Logic Controllers" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <img src="./static/Images/plc-supply.jpg" alt="Mitsubishi Servo" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
             <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">PLCs</span>
-              <h3 class="text-warning fw-bold fs-5">Programmable Logic Controllers</h3>
-              <p class="text-light opacity-90">High-reliability logic execution modules for systematic industrial sequencing plant safety.</p>
+              <span class="badge bg-warning text-dark mb-2">Servo Motor</span>
+              <h3 class="text-warning fw-bold fs-5">Mitsubishi HG-KN Series</h3>
+              <p class="text-light opacity-90">Low-inertia AC servo motors for precise high-response motion loop execution grids.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>Available Model Variations:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 row row-cols-2 list-unstyled">
+                  <li>• HG-KN13</li><li>• HG-KN13B</li><li>• HG-KN13D</li><li>• HG-KN13BD</li>
+                  <li>• HG-KN23</li><li>• HG-KN23B</li><li>• HG-KN23BK</li><li>• HG-KN43</li>
+                  <li>• HG-KN43B</li><li>• HG-KN43BK</li><li>• HG-KN73J</li><li>• HG-KN73JK</li>
+                  <li>• HG-KN73BJK</li><li>• HG-KN73BJ</li><li>• HG-KR43J</li><li>• HGKN23K</li>
+                  <li>• HGKN43K</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="vfd">
+        <div class="col-md-6 col-lg-4 product-item" data-category="mitsubishi-vfd">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/vfd-drive.jpg" alt="VFD AC Drives" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <img src="./static/Images/vfd-drive.jpg" alt="Mitsubishi VFD" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
             <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">Drives</span>
-              <h3 class="text-warning fw-bold fs-5">VFDs / AC Drives</h3>
-              <p class="text-light opacity-90">Microprocessor-controlled alternate frequency modules regulating heavy three-phase inductive energy lines.</p>
+              <span class="badge bg-warning text-dark mb-2">VFD</span>
+              <h3 class="text-warning fw-bold fs-5">Mitsubishi Variable Frequency Drives</h3>
+              <p class="text-light opacity-90">Compact single-phase and three-phase motor frequency controllers for scalable speed matching grids.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>FR-D700 &amp; FR-E700 &amp; FR-E840 Lineup:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 small list-unstyled" style="max-height:150px; overflow-y:auto;">
+                  <li>• FR-D720S-042-E16</li><li>• FR-D720S-070-E16</li><li>• FR-D720S-100-E16</li>
+                  <li>• FR-D740-022-E16</li><li>• FR-D740-036-E16</li><li>• FR-D740-050-E16</li>
+                  <li>• FR-D740-080-E16</li><li>• FR-D740-120-E16</li><li>• FR-D740-160-E16</li>
+                  <li>• FR-E740-026-E16</li><li>• FR-E740-040-E16</li><li>• FR-E740-060-E16</li>
+                  <li>• FR-E740-095-E16</li><li>• FR-E740-120-E16</li><li>• FR-E740-230-E16</li>
+                  <li>• FR-E740-300-E16</li><li>• FR-E840-0016-E16</li><li>• FR-E840-0026-E16</li>
+                  <li>• FR-E840-0040-E16</li><li>• FR-E840-0060-E16</li><li>• FR-E840-0095-E16</li>
+                  <li>• FR-E840-0120-E16</li><li>• FR-E840-0300-E16</li><li>• FR-E840-0380-E16</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="hmi">
+        <div class="col-md-6 col-lg-4 product-item" data-category="delta-vfd">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/HMI Designing and interfacing.png" alt="HMI Terminals" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <img src="./static/Images/vfd-drive.jpg" alt="Delta VFD" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
             <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">HMIs</span>
-              <h3 class="text-warning fw-bold fs-5">Human Machine Interfaces (HMI)</h3>
-              <p class="text-light opacity-90">Touch panel matrix components supporting industrial standard fieldbus communication integration.</p>
+              <span class="badge bg-warning text-dark mb-2">Delta VFD</span>
+              <h3 class="text-warning fw-bold fs-5">Delta MS300 &amp; EL Series VFD</h3>
+              <p class="text-light opacity-90">Micro compact AC motor drives processing high performance vector control frameworks.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>Inventory Models:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 list-unstyled">
+                  <li>• VFD5A5MS43ANSAA VFD</li>
+                  <li>• VFD007EL21W1 VFD</li>
+                  <li>• Vfd1a5ms43ansaa MS300</li>
+                  <li>• Vfd2a7ms43ansaa MS300</li>
+                  <li>• Vfd4a2ms43ansaa MS300</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="servo-drives">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/ACDC Servo and Stepper Motor Drivers.png" alt="Servo Drives" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Servo Drives</span>
+              <h3 class="text-warning fw-bold fs-5">Mitsubishi HJ-KS &amp; HG-SN Series</h3>
+              <p class="text-light opacity-90">High-inertia power matched drive amplifiers and associated heavy motion loops elements.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>HJ-KS &amp; HG-SN Unified Matrix:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 small list-unstyled" style="max-height:140px; overflow-y:auto;">
+                  <li>• HJ-KS13J AC Servo</li><li>• HJ-KS-13BJ AC Servo</li><li>• HJ-KS23J AC Servo</li>
+                  <li>• HJ-KS102J AC Servo</li><li>• HJ-KS152J AC Servo</li><li>• HJ-KS152BJ AC Servo</li>
+                  <li>• HJ-KS103J AC Servo</li><li>• HJ-KS103BJ AC Servo</li><li>• HJ-KS103AJ AC Servo</li>
+                  <li>• HJ-KS103ABJ AC Servo</li><li>• HJ-KS153J AC Servo</li><li>• HJ-KS153BJ AC Servo</li>
+                  <li>• HJ-KS203J AC Servo</li><li>• HJ-KS203BJ AC Servo</li><li>• HG-SN52J Drive</li>
+                  <li>• HG-SN52BJ Drive</li><li>• HG-SN52JK Drive</li><li>• HG-SN52BJK Drive</li>
+                  <li>• HG-SN102J Drive</li><li>• HG-SN102BJ Drive</li><li>• HG-SN102JK Drive</li>
+                  <li>• HG-SN102BJK Drive</li><li>• HG-SN152BJ Drive</li><li>• HG-SN152JK Drive</li>
+                  <li>• HG-SN152BJK Drive</li><li>• HG-SN202J Drive</li><li>• HG-SN202BJ Drive</li>
+                  <li>• HG-SN202BJK Drive</li><li>• HG-SN302J Drive</li><li>• HG-SN302BJ Drive</li>
+                  <li>• HG-SN302JK Drive</li><li>• HG-SN302BJK Drive</li><li>• HS-SN202JK Drive</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="mitsubishi-plc">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/plc-supply.jpg" alt="Mitsubishi PLC" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Mitsubishi PLC</span>
+              <h3 class="text-warning fw-bold fs-5">MELSEC iQ-F Main Units</h3>
+              <p class="text-light opacity-90">Next-gen programmable controllers featuring high-speed bus processing logs.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>Current Models:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 list-unstyled">
+                  <li>• FX5U32MR PLC Base Block</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="delta-plc">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/plc-supply.jpg" alt="Delta PLC" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Delta PLC</span>
+              <h3 class="text-warning fw-bold fs-5">Delta DVP Slim Architecture</h3>
+              <p class="text-light opacity-90">High-efficiency analog/digital expansion modules structured for sequence routines execution.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>Available Registers:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 list-unstyled">
+                  <li>• DVP04ADS Expansion Module</li>
+                  <li>• DVP14SS211R Logic Controller</li>
+                  <li>• DVP16SP11R Digital Block</li>
+                  <li>• DVP06XAS Mixed Extension</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="delta-hmi">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/HMI Designing and interfacing.png" alt="Delta HMI" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Delta HMI</span>
+              <h3 class="text-warning fw-bold fs-5">DOP-100 Operator Displays</h3>
+              <p class="text-light opacity-90">High-resolution color touch panels parsing multi-protocol register bindings.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>Current Configuration:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 list-unstyled">
+                  <li>• DOP107EV 7-inch Widescreen Panel</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="mitsubishi-hmi">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/HMI Designing and interfacing.png" alt="Mitsubishi HMI" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Mitsubishi HMI</span>
+              <h3 class="text-warning fw-bold fs-5">GOT2000 Smart Graphics Interface</h3>
+              <p class="text-light opacity-90">Highly robust terminal panels tailored to run operations inside noisy ambient electrical zones.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>GOT Series Units:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 list-unstyled">
+                  <li>• GS2110WTBDN Touch Panel</li>
+                  <li>• GS2107-WTBD Touch Screen Display</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4 product-item" data-category="smps">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/Industrial SMPS (12V24V).png" alt="SMPS Power Supply" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <img src="./static/Images/Industrial SMPS (12V24V).png" alt="Mean Well Power Supply" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
             <div class="card-body">
               <span class="badge bg-warning text-dark mb-2">SMPS</span>
-              <h3 class="text-warning fw-bold fs-5">SMPS Power Supplies</h3>
-              <p class="text-light opacity-90">Stable regulated continuous DC voltage units (12V/24V) with built-in current overload protection filters.</p>
+              <h3 class="text-warning fw-bold fs-5">Industrial Switched-Mode Power Systems</h3>
+              <p class="text-light opacity-90">60W DIN-rail industrial switch layouts feeding stable continuous DC outputs.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>Regulated Hardware Lines:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 list-unstyled">
+                  <li>• MDR-60 Series Mean Well SMPS</li>
+                  <li>• Shavison BL2450 SMPS Module</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="relays">
+        <div class="col-md-6 col-lg-4 product-item" data-category="fl-switch">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/Microcontroller Based Programmable Timer.png" alt="Industrial Relays" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <img src="./static/Images/customOEM.jpg" alt="Phoenix Contact FL Switch" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
             <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">Relays</span>
-              <h3 class="text-warning fw-bold fs-5">Industrial Relays & SIM Relays</h3>
-              <p class="text-light opacity-90">Isolation switching relay assemblies matching compact din-rail configurations.</p>
+              <span class="badge bg-warning text-dark mb-2">FL Switch</span>
+              <h3 class="text-warning fw-bold fs-5">Phoenix Contact Ethernet Switches</h3>
+              <p class="text-light opacity-90">Narrow unmanaged network infrastructure nodes configured for rapid industrial data transfer.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>Ethernet Bus Options:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 list-unstyled">
+                  <li>• FL SWITCH 1005N (1085039)</li>
+                  <li>• FL SWITCH 1008N (1085256)</li>
+                  <li>• FL Switch 1005N Base</li>
+                  <li>• FL Switch 1008N Base</li>
+                  <li>• FL Switch 1016N High-Port Density</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="cables">
+        <div class="col-md-6 col-lg-4 product-item" data-category="high-voltage-circuit-breakers">
           <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/cables.jpg" alt="Industrial Connectors" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <img src="./static/Images/Earth Leakage detector.png" alt="Circuit Breakers" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
             <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">Cables</span>
-              <h3 class="text-warning fw-bold fs-5">Industrial Connectors & Cables</h3>
-              <p class="text-light opacity-90">Shielded noise-immune communication and heavy interface link assemblies.</p>
+              <span class="badge bg-warning text-dark mb-2">Circuit Breakers</span>
+              <h3 class="text-warning fw-bold fs-5">High Voltage Breaker Systems</h3>
+              <p class="text-light opacity-90">Heavy isolation protection blocks, surge limiters, and safety interlock frameworks.</p>
+              <div class="mt-3 text-muted small border-top border-secondary pt-2">
+                <strong>Safety Modules:</strong>
+                <ul class="text-light ps-3 mt-1 mb-0 list-unstyled">
+                  <li>• Standard High Voltage Breaker Blocks</li>
+                  <li>• Contact Surge Arrester Modules</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="servo">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/ACDC Servo and Stepper Motor Drivers.png" alt="Servo Drivers" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">Motion Control</span>
-              <h3 class="text-warning fw-bold fs-5">Servo Motors & Servo Drives</h3>
-              <p class="text-light opacity-90">Closed-loop angular motion units providing synchronous acceleration profile tracking metrics.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 product-item" data-category="sensors">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/Earth Leakage detector.png" alt="Industrial Sensors" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">Sensors</span>
-              <h3 class="text-warning fw-bold fs-5">Industrial Sensors</h3>
-              <p class="text-light opacity-90">Precision tracking matrix (Proximity, Temperature, Pressure, Photoelectric, Flow, and Level transceivers).</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 product-item" data-category="iot-sol">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
-            <img src="./static/Images/API and GSM based IOT Alert System.png" alt="IoT Hardware" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-warning text-dark mb-2">IoT Supply</span>
-              <h3 class="text-warning fw-bold fs-5">Industrial IoT & Monitoring Solutions</h3>
-              <p class="text-light opacity-90">GSM/GPRS micro-controller transmission nodes ready for factory bus telemetry mapping.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
