@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OEM Products Portfolio – Tantronics Industries LLP</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-secondary navbar-glass">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:46px;">
+        <span class="brand-text">Tantronics Industries LLP</span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-modern active" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown">Solutions</a>
+            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-2" aria-labelledby="productDropdown">
+              <li><a class="dropdown-item fw-bold text-warning" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Catalog</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-50"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link nav-modern" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-warning fw-bold px-4 py-2 rounded-pill nav-cta" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="py-5">
+  <section class="products py-5 bg-dark" id="products">
+    <div class="container">
+      <div class="mb-5 text-center">
+        <h1 class="fw-bold text-white display-6">OEM Supply Portfolio</h1>
+        <p class="text-warning fst-italic">Quality-Assured Industrial Electronics Components & Core Assemblies</p>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" role="tablist">
+        <button class="btn btn-outline-warning filter-btn active" data-filter="all">All OEM Supply</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="plc">PLCs</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="vfd">VFDs / AC Drives</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="hmi">HMIs</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="smps">SMPS Power Supplies</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="relays">Relays & SIM Matrix</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="cables">Connectors & Cables</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="servo">Servo Motors & Drives</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="sensors">Industrial Sensors</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="iot-sol">IoT Supply Systems</button>
+      </div>
+
+      <div class="row g-4 d-flex align-items-stretch" id="productGrid">
+        <div class="col-md-6 col-lg-4 product-item" data-category="plc">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/plc-supply.jpg" alt="Programmable Logic Controllers" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">PLCs</span>
+              <h3 class="text-warning fw-bold fs-5">Programmable Logic Controllers</h3>
+              <p class="text-light opacity-90">High-reliability logic execution modules for systematic industrial sequencing plant safety.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="vfd">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/vfd-drive.jpg" alt="VFD AC Drives" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Drives</span>
+              <h3 class="text-warning fw-bold fs-5">VFDs / AC Drives</h3>
+              <p class="text-light opacity-90">Microprocessor-controlled alternate frequency modules regulating heavy three-phase inductive energy lines.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="hmi">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/HMI Designing and interfacing.png" alt="HMI Terminals" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">HMIs</span>
+              <h3 class="text-warning fw-bold fs-5">Human Machine Interfaces (HMI)</h3>
+              <p class="text-light opacity-90">Touch panel matrix components supporting industrial standard fieldbus communication integration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="smps">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/Industrial SMPS (12V24V).png" alt="SMPS Power Supply" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">SMPS</span>
+              <h3 class="text-warning fw-bold fs-5">SMPS Power Supplies</h3>
+              <p class="text-light opacity-90">Stable regulated continuous DC voltage units (12V/24V) with built-in current overload protection filters.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="relays">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/Microcontroller Based Programmable Timer.png" alt="Industrial Relays" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Relays</span>
+              <h3 class="text-warning fw-bold fs-5">Industrial Relays & SIM Relays</h3>
+              <p class="text-light opacity-90">Isolation switching relay assemblies matching compact din-rail configurations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="cables">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/cables.jpg" alt="Industrial Connectors" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Cables</span>
+              <h3 class="text-warning fw-bold fs-5">Industrial Connectors & Cables</h3>
+              <p class="text-light opacity-90">Shielded noise-immune communication and heavy interface link assemblies.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="servo">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/ACDC Servo and Stepper Motor Drivers.png" alt="Servo Drivers" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Motion Control</span>
+              <h3 class="text-warning fw-bold fs-5">Servo Motors & Servo Drives</h3>
+              <p class="text-light opacity-90">Closed-loop angular motion units providing synchronous acceleration profile tracking metrics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="sensors">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/Earth Leakage detector.png" alt="Industrial Sensors" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Sensors</span>
+              <h3 class="text-warning fw-bold fs-5">Industrial Sensors</h3>
+              <p class="text-light opacity-90">Precision tracking matrix (Proximity, Temperature, Pressure, Photoelectric, Flow, and Level transceivers).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="iot-sol">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between">
+            <img src="./static/Images/API and GSM based IOT Alert System.png" alt="IoT Hardware" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">IoT Supply</span>
+              <h3 class="text-warning fw-bold fs-5">Industrial IoT & Monitoring Solutions</h3>
+              <p class="text-light opacity-90">GSM/GPRS micro-controller transmission nodes ready for factory bus telemetry mapping.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark border-top border-secondary text-warning py-3 text-center small">
+  <div class="text-light opacity-75">© <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

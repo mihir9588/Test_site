@@ -16,7 +16,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-secondary navbar-glass">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
-        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo Icon" class="header-logo" style="height:46px;">
+        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:46px;">
         <span class="brand-text">Tantronics Industries LLP</span>
       </a>
       <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -26,20 +26,17 @@
         <ul class="navbar-nav align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
+          
+          <!-- DROPDOWN NAVIGATION ROUTING MATRIX -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-modern" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown">Products</a>
+            <a class="nav-link dropdown-toggle nav-modern" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown">Solutions</a>
             <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-2" aria-labelledby="productDropdown">
-              <li><a class="dropdown-item fw-bold text-warning" href="products.html?category=oem"><i class="fa-solid fa-microchip me-2"></i>OEM Products</a></li>
+              <li><a class="dropdown-item fw-bold text-warning" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Catalog</a></li>
               <li><hr class="dropdown-divider border-secondary opacity-50"></li>
-              <li><h6 class="dropdown-header text-uppercase tracking-wider small opacity-75">Custom Projects</h6></li>
-              <li><a class="dropdown-item ps-4" href="products.html?category=power">Power Systems</a></li>
-              <li><a class="dropdown-item ps-4" href="products.html?category=automation">Industrial Automation</a></li>
-              <li><a class="dropdown-item ps-4" href="products.html?category=automotive">Automotive Electronics</a></li>
-              <li><a class="dropdown-item ps-4" href="products.html?category=safety">Safety & Intercoms</a></li>
-              <li><a class="dropdown-item ps-4" href="products.html?category=iot">IoT & Telemetry</a></li>
-              <li><a class="dropdown-item ps-4" href="products.html?category=robotics">Robotics Applications</a></li>
+              <li><a class="dropdown-item fw-bold text-info" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
             </ul>
           </li>
+          
           <li class="nav-item"><a class="nav-link nav-modern active" href="contact.html">Contact</a></li>
           <li class="nav-item ms-lg-2"><a class="btn btn-warning fw-bold px-4 py-2 rounded-pill nav-cta" href="contact.html">Get a Quote</a></li>
         </ul>
@@ -55,74 +52,95 @@
         <h1 class="fw-bold text-white display-6">Contact & Detailed Enquiry</h1>
         <p class="text-warning fst-italic">Let’s Discuss Your Requirements and Build Intelligent Solutions Together</p>
       </div>
+      
       <div class="row g-4 align-items-stretch">
+        <!-- Office Info & Restored Business Hours Column -->
         <div class="col-lg-5">
-          <div class="card bg-secondary bg-opacity-10 border-0 shadow-lg rounded-4 h-100">
-            <div class="card-body p-4 text-light">
-              <h3 class="fw-bold text-warning h4 mb-3">Tantronics Industries LLP</h3>
-              <p class="mb-3 lh-relaxed">
-                <strong>Mihir Bidwai</strong><br>
-                Founder & Director / Electronics Engineer
-              </p>
-              <p class="mb-2">
-                <i class="fa-solid fa-phone text-warning me-2"></i>
-                <a href="tel:+917820912136" class="text-warning text-decoration-none">+91 7820912136</a>
-              </p>
-              <p class="mb-2">
-                <i class="fa-solid fa-envelope text-warning me-2"></i>
-                <a href="mailto:tantronicsindustries@gmail.com" class="text-warning text-decoration-none">tantronicsindustries@gmail.com</a>
-              </p>
-              <p class="mb-3">
-                <i class="fa-solid fa-location-dot text-warning me-2"></i>
-                Warje, Pune, Maharashtra 411058
-              </p>
-              <div class="bg-dark rounded-3 p-3 shadow-sm border border-secondary border-opacity-25 mb-3">
-                <strong class="text-warning">Business Hours</strong><br>
-                <span class="text-light">10:00 AM – 6:00 PM (IST)</span>
+          <div class="card bg-secondary bg-opacity-10 border border-secondary border-opacity-50 shadow-lg rounded-4 h-100">
+            <div class="card-body p-4 text-light d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="fw-bold text-warning h4 mb-3">Tantronics Industries LLP</h3>
+                <p class="mb-4 lh-relaxed text-light opacity-90">
+                  <strong>Mihir Bidwai</strong><br>
+                  Founder & Director / Electronics Engineer
+                </p>
+                
+                <hr class="border-secondary opacity-50 mb-4">
+                
+                <p class="mb-3 d-flex align-items-center">
+                  <i class="fa-solid fa-phone text-warning me-3 fs-5"></i>
+                  <a href="tel:+917820912136" class="text-warning text-decoration-none fw-semibold">+91 7820912136</a>
+                </p>
+                <p class="mb-3 d-flex align-items-center">
+                  <i class="fa-solid fa-envelope text-warning me-3 fs-5"></i>
+                  <a href="mailto:tantronicsindustries@gmail.com" class="text-warning text-decoration-none fw-semibold">tantronicsindustries@gmail.com</a>
+                </p>
+                <p class="mb-4 d-flex align-items-start">
+                  <i class="fa-solid fa-location-dot text-warning me-3 fs-5 mt-1"></i>
+                  <span class="text-light opacity-90">Warje, Pune, Maharashtra 411058</span>
+                </p>
+              </div>
+              
+              <!-- SPECIFIED BUSINESS HOURS CONTAINER CARD -->
+              <div class="bg-dark rounded-3 p-3 border border-warning border-opacity-25 shadow-sm">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <i class="fa-solid fa-clock text-warning"></i>
+                  <strong class="text-warning text-uppercase tracking-wider small">Operational Business Hours</strong>
+                </div>
+                <span class="text-light opacity-90 fs-6">10:00 AM – 6:00 PM (IST)</span>
+                <span class="text-muted d-block small mt-1">Monday – Saturday</span>
               </div>
             </div>
           </div>
         </div>
         
+        <!-- Web3Forms API Lead Form Block -->
         <div class="col-lg-7">
-          <div class="card bg-secondary bg-opacity-10 border-0 p-4 shadow-lg rounded-4 h-100">
+          <div class="card bg-secondary bg-opacity-10 border border-secondary border-opacity-50 p-4 shadow-lg rounded-4 h-100">
             <h3 class="fw-bold text-warning h4 mb-3">Request a Technical Quote</h3>
-            <form id="homeEnquiryForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <!-- Web3Forms Core Submission Tokens -->
               <input type="hidden" name="access_key" value="99d00da4-2f26-4990-8545-d1424b16ee40">
+              <input type="hidden" name="redirect" value="https://tantronicsindustries.com/thankyou.html">
               
-              <div class="mb-3">
-                <label for="homeName" class="form-label text-warning small fw-bold">Full Name</label>
-                <input type="text" name="name" class="form-control bg-dark text-white border-secondary" id="homeName" required>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label text-warning small fw-bold">Contact Name</label>
+                  <input type="text" name="name" class="form-control bg-dark text-white border-secondary py-2" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-warning small fw-bold">Email Address</label>
+                  <input type="email" name="email" class="form-control bg-dark text-white border-secondary py-2" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-warning small fw-bold">Comprehensive Project Specifications</label>
+                  <textarea name="message" class="form-control bg-dark text-white border-secondary" rows="5" placeholder="Please outline your component supply details or engineering design parameters..." required></textarea>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-warning w-100 fw-bold py-2.5 rounded-3 shadow-sm">Submit Form</button>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="homeEmail" class="form-label text-warning small fw-bold">Corporate Email</label>
-                <input type="email" name="email" class="form-control bg-dark text-white border-secondary" id="homeEmail" required>
-              </div>
-              <div class="mb-3">
-                <label for="homeMessage" class="form-label text-warning small fw-bold">Requirements / Project Brief</label>
-                <textarea name="message" class="form-control bg-dark text-white border-secondary" id="homeMessage" rows="4" required></textarea>
-              </div>
-              
-              <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-3">Submit Form</button>
-              <div id="homeFormStatus" class="mt-3 text-center small fw-bold"></div>
+              <div id="formStatus" class="mt-3 text-center small fw-bold"></div>
             </form>
           </div>
         </div>
       </div>
 
-      <div class="row mt-4">
+      <!-- FULLY RESTORED: INTERACTIVE GOOGLE MAPS IFRAME -->
+      <div class="row mt-5">
         <div class="col-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.1544326584835!2d73.79484907534446!3d18.476662682608424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2950ca7c99333%3A0xc91c6645095e74cc!2sTantronics%20Industries!5e0!3m2!1sen!2sin!4v1782917607491!5m2!1sen!2sin" width="100%" height="400" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy"></iframe>
+          <div class="card bg-transparent border-0 shadow-lg rounded-4 overflow-hidden">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.1544326584835!2d73.79484907534446!3d18.476662682608424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2950ca7c99333%3A0xc91c6645095e74cc!2sTantronics%20Industries!5e0!3m2!1sen!2sin!4v1782917607491!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 </main>
 
-<footer class="bg-dark border-top border-secondary text-warning">
-  <div class="container py-3 text-center small">
-    <div class="text-light opacity-75">© <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
-  </div>
+<footer class="bg-dark border-top border-secondary text-warning py-3 text-center small">
+  <div class="text-light opacity-75">© <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

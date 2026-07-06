@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custom Projects & R&D – Tantronics Industries LLP</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-secondary navbar-glass">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:46px;">
+        <span class="brand-text">Tantronics Industries LLP</span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-modern active" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown">Solutions</a>
+            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-2" aria-labelledby="productDropdown">
+              <li><a class="dropdown-item fw-bold text-warning" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Catalog</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-50"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link nav-modern" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-warning fw-bold px-4 py-2 rounded-pill nav-cta" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="py-5">
+  <section class="products py-5 bg-dark" id="custom-projects">
+    <div class="container">
+      <div class="mb-5 text-center">
+        <h1 class="fw-bold text-white display-6 text-info">Custom Electronics Research & Development</h1>
+        <p class="text-info opacity-75 fst-italic">Engineering Tailored Embedded Infrastructures & Integrated Control Architectures</p>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" role="tablist">
+        <button class="btn btn-outline-info filter-btn active" data-filter="all">All R&D Services</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="design">Product Design</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="automation">Automation Projects</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="iot-sys">IoT Monitoring</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="env">Climate/TH Tracking</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="cloud">Cloud Base Logging</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="dev">Hardware & Software</button>
+        <button class="btn btn-outline-info filter-btn" data-filter="panel">Control Panels</button>
+      </div>
+
+      <div class="row g-4 d-flex align-items-stretch" id="productGrid">
+        <div class="col-md-6 col-lg-4 product-item" data-category="design">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <img src="./static/Images/customOEM.jpg" alt="Product Design Development" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-info text-dark mb-2">R&D Design</span>
+              <h3 class="text-info fw-bold fs-5">Product Design & Development</h3>
+              <p class="text-light opacity-90">End-to-end prototyping transforming proprietary concept schematics into production multi-layer multi-trace PCB track modules.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="automation">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <img src="./static/Images/Single phase Ball Screw Actuators.png" alt="Industrial Automation Projects" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-info text-dark mb-2">Automation</span>
+              <h3 class="text-info fw-bold fs-5">Industrial Automation Projects</h3>
+              <p class="text-light opacity-90">Turnkey commissioning of motion control lines, automated positioning actuators, and machine filters sequencing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="iot-sys">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <img src="./static/Images/Data Monitoring system (hardwarecloudbase) for industry.png" alt="IoT Systems" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-info text-dark mb-2">IoT Systems</span>
+              <h3 class="text-info fw-bold fs-5">IoT-Based Monitoring Systems</h3>
+              <p class="text-light opacity-90">Integrated local tracking sensor telemetry configurations streaming directly into distributed computing loops.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="env">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <img src="./static/Images/th-mon.jpg" alt="TH Monitoring" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-info text-dark mb-2">Environmental Tracking</span>
+              <h3 class="text-info fw-bold fs-5">Temperature & Humidity Solutions</h3>
+              <p class="text-light opacity-90">High-stability sensor mapping designed for cold chain analytics and environmental manufacturing checks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="cloud">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <img src="./static/Images/Smart Energy Meter.png" alt="Cloud Base Tracking" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-info text-dark mb-2">Cloud Infrastructure</span>
+              <h3 class="text-info fw-bold fs-5">Data Logging & Cloud Monitoring</h3>
+              <p class="text-light opacity-90">Asynchronous database parameters logging, alert generation triggers, and web layout dashboard integration.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="dev">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <img src="./static/Images/power factor image.png" alt="Custom HW SW Dev" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-info text-dark mb-2">Engineering</span>
+              <h3 class="text-info fw-bold fs-5">Electronic Hardware & Software Dev</h3>
+              <p class="text-light opacity-90">Embedded bare-metal C/C++ firmware compiler generation matched with system interaction desktop dashboards.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 product-item" data-category="panel">
+          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
+            <img src="./static/Images/led scrolling display.png" alt="Control Panel Solutions" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
+            <div class="card-body">
+              <span class="badge bg-info text-dark mb-2">Panels</span>
+              <h3 class="text-info fw-bold fs-5">Industrial Control Panel Solutions</h3>
+              <p class="text-light opacity-90">Custom layout wire dressing, busbar routing, protection logic mapping, and robust testing metrics verification.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark border-top border-secondary text-warning py-3 text-center small">
+  <div class="text-light opacity-75">© <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
