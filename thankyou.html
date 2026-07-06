@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You for Your Enquiry – Tantronics Industries LLP</title>
+  <meta name="description" content="Thank you for contacting Tantronics Industries LLP. Your technical parameters have been received successfully." />
+  <meta name="robots" content="noindex, follow" /> <!-- Prevents search engines from indexing the page out of context -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="./static/Tantronics Logo.png">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./static/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 justify-content-between">
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-secondary navbar-glass">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html" aria-label="Tantronics Home Page">
+        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo Icon" class="header-logo" style="height:46px;">
+        <span class="brand-text">Tantronics Industries LLP</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main class="flex-grow-1 d-flex align-items-center bg-dark py-5">
+  <div class="container text-center fade-in">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        
+        <!-- Animated Success Emblem Icon -->
+        <div class="mb-4 d-inline-block text-warning bg-secondary bg-opacity-10 p-4 rounded-circle border border-secondary border-opacity-50 shadow" style="font-size: 3.5rem; width: 110px; height: 110px; line-height: 1.1;">
+          <i class="fa-solid fa-envelope-circle-check"></i>
+        </div>
+
+        <h1 class="display-6 fw-bold text-white mb-3">Enquiry Received Successfully</h1>
+        
+        <p class="lead text-light opacity-90 mb-4 fs-6 lh-lg">
+          Thank you for reaching out to us. Your design layout specifications and requirements have been transmitted to our systems. An electronics design engineer will review your project parameters and contact you shortly.
+        </p>
+
+        <hr class="border-secondary border-opacity-50 my-4">
+
+        <div class="bg-secondary bg-opacity-10 rounded-4 p-3 border border-secondary border-opacity-25 text-start mb-4 mx-auto" style="max-width: 480px;">
+          <small class="text-warning text-uppercase tracking-wider fw-bold d-block mb-1"><i class="fa-solid fa-circle-info me-2"></i>What's Next?</small>
+          <ul class="text-light small mb-0 ps-3 lh-relaxed opacity-75">
+            <li>Our standard evaluation roadmap typically takes 24 business hours.</li>
+            <li>For critical or high-volume industrial contract inquiries, you can bypass the response queue by directly dialing <strong class="text-warning">+91 7820912136</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- The Requested "Go Back" Button Interface Link Element -->
+        <div class="mt-4">
+          <a href="index.html" class="btn btn-warning btn-lg px-4 py-2 rounded-pill fw-bold shadow-sm nav-cta">
+            <i class="fa-solid fa-chevron-left me-2 small"></i>Go Back to Home Page
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-dark border-top border-secondary text-warning py-3 text-center small">
+  <div class="text-light opacity-75">© <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Instant local calculation for the footer timestamp parameters
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
