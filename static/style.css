@@ -1,354 +1,68 @@
-/* Tantronics Industries LLP Styles */
-:root{
-  --brand:#ff7f2a;
-  --brand-2:#ff7f2a;
-  --ink:#ff7f2a;
-  --muted:#fff;
-  --bg:#181818;
-  --surface:#232323;
-  --hero:#181818;
-}
-body {
-  background: var(--bg);
-  color: var(--muted);
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-a { color: var(--brand); }
-a.text-warning { color: var(--brand) !important; }
-.bg-dark { background-color: #181818 !important; }
-.bg-secondary { background-color: #232323 !important; }
-.text-warning { color: var(--brand) !important; }
-.btn-warning, .badge.bg-warning { background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: #181818 !important; border: none; }
-.btn-outline-light { border-color: #fff !important; color: #fff !important; }
-.btn-outline-light:hover { background: #232323 !important; color: var(--brand) !important; }
-.eyebrow {
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: .8rem;
-  color: var(--brand);
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
-  padding: .35rem .6rem;
-  border-radius: 999px;
-}
-.header-logo { height: 48px; width: auto; }
-@media (max-width: 900px) {
-  .header-logo { height: 40px; }
-}
-.hero {
-  background: linear-gradient(180deg, rgba(24,24,24,.85), rgba(24,24,24,.95));
-}
-.about-main-logo {
-  max-width: 380px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  background: var(--surface);
-  border: 1px solid #232323;
-  padding: 0.6rem;
-  margin: 0 auto;
-  display: block;
-}
-@media (max-width: 900px) {
-  .about-main-logo { max-width: 240px; }
-}
-.card, .about-card {
-  border-radius: 16px;
-}
-.card-title { color: var(--brand); }
-.badge.bg-secondary {
-  background: #232323 !important;
-  color: var(--brand) !important;
-  border: 1px solid #232323;
-}
-.bg-opacity-10 { background-color: rgba(35,35,35,0.10) !important; }
-.bg-opacity-75 { background-color: rgba(35,35,35,0.75) !important; }
-.shadow, .shadow-sm, .shadow-lg { box-shadow: 0 2px 12px 0 rgba(0,0,0,0.12) !important; }
-.ratio { background: #232323; }
-footer { color: #ff7f2a; }
-footer a { color: #ff7f2a; }
-footer .bg-secondary { color: #ff7f2a; }
-::-webkit-scrollbar { width: 8px; background: #232323; }
-::-webkit-scrollbar-thumb { background: #ff7f2a; border-radius: 8px; }
-.wlc-carousel img, .auto-carousel img, .smps-carousel img {
-  transition: opacity 0.2s;
-}
-.btn-dark { background: #232323 !important; border: none; }
-.btn-dark:hover { background: #181818 !important; color: var(--brand) !important; }
-@media (max-width: 640px) {
-  .about-main-logo { max-width: 180px; }
-}
+/**
+ * Tantronics Advanced Applications Showcase - Video Players Logic
+ */
 
-/* Remove forced orange color from all h2/h3 except where inline style or .card-title is used */
-h2, h3, h4, h5, h6 {
-  color: inherit;
-}
+const playlistSection1 = ['04JqvGE2R2I', 'NUmsNhCrySc', 'JvsuX5kTEnE'];
+const playlistSection2 = ['kuA6cqfg9zk', 'AC8NVjzxGSk', 'dAUUQtMtDrk'];
 
-/* Video Carousel: fade transition */
-#video-carousel-container {
-  position: relative;
-}
-#video-carousel-container .video-carousel-item {
-  transition: opacity 0.5s;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: #232323;
-}
-#video-carousel-container .video-carousel-item.d-block {
-  opacity: 1;
-  pointer-events: auto;
-  position: relative;
-  z-index: 2;
-}
-#video-carousel-container .video-carousel-item.d-none {
-  opacity: 0;
-  pointer-events: none;
-  z-index: 1;
-}
+let indexPlayer1 = 0;
+let indexPlayer2 = 0;
+let player1, player2;
 
-/* Ensure carousel controls are prominent on mobile */
-#video-showcase .btn {
-  min-width: 44px;
-  min-height: 44px;
-  font-size: 1.25rem;
-  background: #232323 !important;
-  color: var(--brand) !important;
-  border: none;
-}
-#video-showcase .btn:focus {
-  outline: 2px solid var(--brand-2);
-  box-shadow: 0 0 0 2px var(--brand-2);
-}
+function onYouTubeIframeAPIReady() {
+  if (document.getElementById('systemPlayer1')) {
+    player1 = new YT.Player('systemPlayer1', {
+      height: '100%', width: '100%',
+      videoId: playlistSection1[indexPlayer1],
+      playerVars: { 'autoplay': 1, 'mute': 1, 'controls': 1, 'rel': 0, 'modestbranding': 1, 'origin': window.location.origin },
+      events: { 'onReady': (e) => e.target.playVideo(), 'onStateChange': onPlayer1StateChange }
+    });
+  }
 
-/* Remove Bootstrap ratio for video carousel, use flex centering and let video size dictate frame */
-#video-carousel-container {
-  position: relative;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  background: #232323;
-  min-height: 200px;
-  /* Remove aspect-ratio constraint */
-}
-
-/* Video: fit to container, never overflow, keep aspect */
-#video-carousel-container video,
-#video-carousel-container iframe {
-  max-width: 100%;
-  max-height: 500px;
-  width: auto;
-  height: auto;
-  display: block;
-  background: #232323;
-  margin: 0 auto;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* Responsive: reduce video height on small screens */
-@media (max-width: 600px) {
-  #video-carousel-container .ratio-16x9 {
-    min-height: 180px;
+  if (document.getElementById('systemPlayer2')) {
+    player2 = new YT.Player('systemPlayer2', {
+      height: '100%', width: '100%',
+      videoId: playlistSection2[indexPlayer2],
+      playerVars: { 'autoplay': 1, 'mute': 1, 'controls': 1, 'rel': 0, 'modestbranding': 1, 'origin': window.location.origin },
+      events: { 'onReady': (e) => e.target.playVideo(), 'onStateChange': onPlayer2StateChange }
+    });
   }
 }
 
-/* Director Photo Frame */
-.director-photo-frame {
-  width: 100%;
-  max-width: 320px;   /* controls image size */
-  aspect-ratio: 3 / 4; /* professional portrait ratio */
-  background: #1f1f1f;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+function onPlayer1StateChange(event) {
+  if (event.data === YT.PlayerState.PLAYING && player1 && !player1.isMuted?.() && player2?.mute) {
+    player2.mute();
+  }
+  if (event.data === YT.PlayerState.ENDED) nextVideoPlayer1();
 }
 
-.director-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+function onPlayer2StateChange(event) {
+  if (event.data === YT.PlayerState.PLAYING && player2 && !player2.isMuted?.() && player1?.mute) {
+    player1.mute();
+  }
+  if (event.data === YT.PlayerState.ENDED) nextVideoPlayer2();
 }
 
-
-/* Align Director name and message perfectly */
-.director-name {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
+function nextVideoPlayer1() {
+  indexPlayer1 = (indexPlayer1 + 1) % playlistSection1.length;
+  loadMutedVideo(player1, playlistSection1[indexPlayer1]);
+}
+function prevVideoPlayer1() {
+  indexPlayer1 = (indexPlayer1 - 1 + playlistSection1.length) % playlistSection1.length;
+  loadMutedVideo(player1, playlistSection1[indexPlayer1]);
+}
+function nextVideoPlayer2() {
+  indexPlayer2 = (indexPlayer2 + 1) % playlistSection2.length;
+  loadMutedVideo(player2, playlistSection2[indexPlayer2]);
+}
+function prevVideoPlayer2() {
+  indexPlayer2 = (indexPlayer2 - 1 + playlistSection2.length) % playlistSection2.length;
+  loadMutedVideo(player2, playlistSection2[indexPlayer2]);
 }
 
-/* Force card content to align with name */
-.director-message-card {
-  margin-left: 0 !important;
+function loadMutedVideo(playerInstance, videoId) {
+  if (playerInstance?.loadVideoById) {
+    playerInstance.loadVideoById({ videoId: videoId });
+    playerInstance.mute(); 
+  }
 }
-
-/* Remove Bootstrap default heading offset inside card */
-.director-message-title {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-
-.director-name-card,
-.director-message-card {
-  margin-left: 0 !important;
-}
-
-/* ===== Fortune-500 Director Section Styles ===== */
-
-.director-left-panel {
-  background: linear-gradient(160deg, #111 0%, #1f1f1f 100%);
-  border-right: 1px solid rgba(255,255,255,0.08);
-}
-
-/* Executive portrait frame */
-/* Director Image Frame - Safe Version */
-.director-photo-wrapper {
-  width: 260px;
-  max-width: 100%;
-  aspect-ratio: 3 / 4;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  border: 2px solid rgba(255,193,7,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.director-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Divider under name */
-.director-divider {
-  width: 60px; 
-  height: 3px;
-  background: #ffc107;
-  border-radius: 10px;
-}
-
-
-/* ================= Modern Navbar Styles ================= */
-
-.navbar-glass {
-  background: rgba(20, 20, 20, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-}
-
-.brand-text {
-  font-size: 1.05rem;
-  letter-spacing: 0.3px;
-  color: var(--brand) !important;
-}
-
-.nav-modern {
-  position: relative;
-  font-weight: 500;
-  color: #ddd !important;
-  transition: all 0.25s ease;
-}
-
-.nav-modern:hover {
-  color: #ff7f2a !important;
-}
-
-.nav-modern::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: #ff7f2a;
-  transition: width 0.25s ease;
-}
-
-.nav-modern:hover::after {
-  width: 100%;
-}
-
-.nav-cta {
-  transition: all 0.25s ease;
-}
-
-.nav-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(255, 193, 7, 0.35);
-}
-body {
-  padding-top: 80px;
-}
-
-
-.footer-link {
-  transition: all 0.2s ease;
-  font-weight: 500;
-}
-
-.footer-link:hover {
-  color: #fff !important;
-  padding-left: 4px;
-}
-#home,
-#video-showcase,
-#about,
-#competencies,
-#director,
-#products,
-#contact,
-#enquiry {
-  scroll-margin-top: 73px;
-}
-
-
-.product-card {
-  transition: all 0.35s ease;
-  border-radius: 16px;
-}
-
-.product-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
-}
-
-.fade-in {
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.98); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-
-/* Filter Buttons - Custom Orange Theme */
-.filter-btn {
-  color: #ff7f2a !important;
-  border-color: #ff7f2a !important;
-  transition: all 0.25s ease;
-}
-
-.filter-btn:hover {
-  background-color: #ff7f2a !important;
-  color: #000 !important;
-}
-
-/* Active Filter Button */
-.filter-btn.active {
-  background-color: #ff7f2a !important;
-  color: #000 !important;
-  border-color: #ff7f2a !important;
-  font-weight: 600;
-}
-
