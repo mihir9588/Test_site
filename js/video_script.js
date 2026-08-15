@@ -1,5 +1,6 @@
 /**
  * Tantronics Video System Parallel Sync Controller Matrix
+ * Fully integrated for Tailwind & WebGL multi-page architecture.
  */
 const playlistSection1 = ['04JqvGE2R2I', 'NUmsNhCrySc', 'JvsuX5kTEnE'];
 const playlistSection2 = ['kuA6cqfg9zk', 'AC8NVjzxGSk', 'dAUUQtMtDrk'];

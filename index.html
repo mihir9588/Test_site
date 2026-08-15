@@ -1,441 +1,666 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tantronics Industries LLP – Electronics • Automation • Embedded Systems</title>
-  <meta name="description" content="Tantronics Industries LLP delivers innovative electronics: embedded systems, power electronics, IoT and custom R&D-driven products for industry." />
-  <meta name="theme-color" content="#181818" />
-
+  
+  <!-- Advanced SEO Meta Tags -->
+  <title>Tantronics Industries LLP – Advanced Electronics, Industrial Automation & Embedded R&D Systems</title>
+  <meta name="description" content="Tantronics Industries LLP delivers high-precision OEM component supply, custom R&D electronics, embedded automation, power electronics, and IoT telemetry systems engineered for maximum industrial performance." />
+  <meta name="keywords" content="Tantronics Industries LLP, Industrial Automation, Embedded Systems, Power Electronics, OEM Products Supply, Mitsubishi Servo Motors, Mitsubishi VFD, PLC Systems, Custom Electronics R&D, Pune Engineering, IoT Alert Systems" />
+  <meta name="author" content="Tantronics Industries LLP" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://tantronicsindustries.com/" />
 
+  <!-- Open Graph / Social SEO -->
+  <meta property="og:site_name" content="Tantronics Industries LLP" />
   <meta property="og:title" content="Tantronics Industries LLP – Electronics • Automation • Embedded Systems" />
-  <meta property="og:description" content="Tantronics Industries LLP delivers innovative electronics: embedded systems, power electronics, IoT and custom R&D-driven products for industry." />
-  <meta property="og:image" content="https://tantronicsindustries.com/static/waterlevel1" />
+  <meta property="og:description" content="Discover premier industrial automation, OEM components, and custom R&D hardware solutions engineered by Tantronics Industries LLP." />
+  <meta property="og:image" content="https://tantronicsindustries.com/static/waterlevel1.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tantronicsindustries.com/" />
-  <meta name="robots" content="max-image-preview:large" />
+  <meta property="og:locale" content="en_IN" />
 
+  <!-- Twitter Card SEO -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tantronics Industries LLP – Intelligent Automation & Embedded R&D" />
+  <meta name="twitter:description" content="High-precision OEM component supply, custom R&D electronics, and industrial automation solutions." />
+  <meta name="twitter:image" content="https://tantronicsindustries.com/static/waterlevel1.jpg" />
+
+  <meta name="theme-color" content="#09090b" />
+
+  <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="./static/Tantronics Logo.png">
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./static/style.css">
-</head>
-<body>
+  <!-- Tailwind CSS v4 Play CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <!-- Three.js CDN for High-Performance 3D WebGL Background Processing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-secondary navbar-glass">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
-        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:46px;">
-        <span class="brand-text">Tantronics Industries LLP</span>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #ff7f2a;
+      --color-brand-dark: #e0681a;
+      --color-surface: #18181b;
+      --color-cardbg: #202024;
+      --color-darkbg: #09090b;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #09090b;
+      color: #f4f4f5;
+    }
+    .glass-nav {
+      background: rgba(9, 9, 11, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .glass-card {
+      background: rgba(32, 32, 36, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 127, 42, 0.15);
+    }
+    .glass-card:hover {
+      border-color: rgba(255, 127, 42, 0.4);
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; background: #09090b; }
+    ::-webkit-scrollbar-thumb { background: #ff7f2a; border-radius: 4px; }
+  </style>
+
+  <!-- Structured Data (JSON-LD) for Enhanced SEO & Knowledge Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tantronics Industries LLP",
+    "url": "https://tantronicsindustries.com/",
+    "logo": "https://tantronicsindustries.com/static/Tantronics%20Logo.png",
+    "description": "Specialists in Electronics, Embedded Systems, Power Electronics & R&D. Manufacturer and supplier of intelligent automation and industrial solutions.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Warje, Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411058",
+      "addressCountry": "IN"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Mihir Bidwai"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-7820912136",
+      "contactType": "sales",
+      "email": "sales@tantronicsindustries.com"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/tantronics-industries-llp/",
+      "https://www.youtube.com/@TantronicsIndustries",
+      "https://www.instagram.com/tantronicsindustries/"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-[#09090b] text-zinc-100 antialiased selection:bg-[#ff7f2a] selection:text-black">
+
+  <!-- 3D WebGL Canvas Container Background Layer -->
+  <div id="webgl-container" class="fixed inset-0 pointer-events-none z-0 opacity-40"></div>
+
+  <!-- Header & Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="h-11 w-auto transition-transform duration-300 group-hover:scale-105">
+        <span class="text-lg font-bold tracking-tight text-[#ff7f2a]">Tantronics Industries LLP</span>
       </a>
 
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="text-sm font-medium text-[#ff7f2a] transition-colors">Home</a>
+        <a href="about.html" class="text-sm font-medium text-zinc-300 hover:text-[#ff7f2a] transition-colors">About</a>
+        
+        <!-- Products Dropdown Menu -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 group-hover:text-[#ff7f2a] transition-colors focus:outline-none">
+            Products <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          
+          <div class="absolute top-full left-0 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+            <div class="glass-card rounded-2xl p-3 shadow-2xl border border-zinc-700/50 max-h-[420px] overflow-y-auto">
+              <a href="oem-products.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-[#ff7f2a] hover:bg-zinc-800/80 transition-colors">
+                <i class="fa-solid fa-microchip"></i> OEM Products Supply
+              </a>
+              <div class="my-1 border-t border-zinc-800"></div>
+              <a href="oem-products.html?category=servo-motor" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Mitsubishi Servo Motors</a>
+              <a href="oem-products.html?category=mitsubishi-vfd" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Mitsubishi VFDs</a>
+              <a href="oem-products.html?category=delta-vfd" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Delta VFDs</a>
+              <a href="oem-products.html?category=servo-drives" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Servo Drives</a>
+              <a href="oem-products.html?category=mitsubishi-plc" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Mitsubishi PLCs</a>
+              <a href="oem-products.html?category=delta-plc" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Delta PLCs</a>
+              <a href="oem-products.html?category=delta-hmi" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Delta HMIs</a>
+              <a href="oem-products.html?category=mitsubishi-hmi" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Mitsubishi HMIs</a>
+              <a href="oem-products.html?category=smps" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Power Supplies (SMPS)</a>
+              <a href="oem-products.html?category=siemens-servo" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Siemens Servo Motors</a>
+              <a href="oem-products.html?category=fl-switch" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Industrial FL Switches</a>
+              
+              <div class="my-2 border-t border-zinc-800"></div>
+              <a href="custom-projects.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-cyan-400 hover:bg-zinc-800/80 transition-colors">
+                <i class="fa-solid fa-gears"></i> Custom Projects & R&D
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="contact.html" class="text-sm font-medium text-zinc-300 hover:text-[#ff7f2a] transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA Quote Button -->
+      <div class="hidden lg:flex items-center">
+        <a href="contact.html" class="bg-gradient-to-r from-[#ff7f2a] to-[#e0681a] text-zinc-950 font-bold px-6 py-2.5 rounded-full shadow-lg hover:shadow-[#ff7f2a]/20 hover:scale-105 transition-all duration-200">
+          Get a Quote
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuBtn" class="lg:hidden text-zinc-300 hover:text-[#ff7f2a] focus:outline-none p-2">
+        <i class="fa-solid fa-bars text-2xl"></i>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-        <ul class="navbar-nav align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
-          
-          <li class="nav-item dropdown hover-dropdown">
-            <a class="nav-link dropdown-toggle nav-modern" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Products
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-3 dropdown-scrollable" aria-labelledby="productDropdown">
-              <li><a class="dropdown-item fw-bold text-warning text-uppercase tracking-wider small" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Supply</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-motor">» Mitsubishi Servo Motors</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-vfd">» Mitsubishi VFDs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-vfd">» Delta VFDs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-drives">» Servo Drives</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-plc">» Mitsubishi PLCs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-plc">» Delta PLCs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-hmi">» Delta HMIs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-hmi">» Mitsubishi HMIs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=smps">» Power Supplies (SMPS)</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=siemens-servo">» Siemens Servo Motors</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=fl-switch">» Industrial FL Switches</a></li>              
-              <li><hr class="dropdown-divider border-secondary my-2 opacity-50"></li>
-              
-              <li><a class="dropdown-item fw-bold text-info text-uppercase tracking-wider small" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
-            </ul>
-          </li>
+    </div>
 
-          <li class="nav-item"><a class="nav-link nav-modern" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-2">
-            <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow-sm nav-cta" href="contact.html">Get a Quote</a>
-          </li>
-        </ul>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden glass-nav border-b border-zinc-800 px-6 py-5 space-y-4 shadow-2xl">
+      <a href="index.html" class="block text-base font-semibold text-[#ff7f2a]">Home</a>
+      <a href="about.html" class="block text-base font-semibold text-zinc-300 hover:text-[#ff7f2a]">About</a>
+      <div class="space-y-2 pt-2 border-t border-zinc-800">
+        <span class="text-xs font-bold tracking-wider text-[#ff7f2a] uppercase">Products & Services</span>
+        <a href="oem-products.html" class="block pl-3 text-sm text-zinc-300 hover:text-[#ff7f2a]">» OEM Products Supply Catalog</a>
+        <a href="custom-projects.html" class="block pl-3 text-sm text-cyan-400 hover:text-cyan-300">» Custom R&D Engineering Hub</a>
+      </div>
+      <a href="contact.html" class="block text-base font-semibold text-zinc-300 hover:text-[#ff7f2a]">Contact</a>
+      <div class="pt-2">
+        <a href="contact.html" class="block text-center bg-gradient-to-r from-[#ff7f2a] to-[#e0681a] text-zinc-950 font-bold py-3 rounded-xl shadow-md">
+          Get a Quote
+        </a>
       </div>
     </div>
-  </nav>
-</header>
+  </header>
 
-<main>
-  <section class="hero d-flex align-items-center min-vh-75" id="home">
-    <div class="container text-center py-5">
-      <span class="eyebrow mb-3 d-inline-block text-uppercase text-warning tracking-wider small fw-bold">
-        Electronics • Automation • Embedded Systems • Power Electronics • R&D
-      </span>
-      <h1 class="display-5 fw-bold mb-3 text-white">
-        Engineering <span class="text-warning">Intelligent Automation</span> Solutions
-      </h1>
-      <p class="lead text-light mb-4 mx-auto" style="max-width: 800px;">
-        From standard OEM components to complete custom electronics research and development, we build reliable, scalable systems engineered for optimal industrial performance.
-      </p>
-      <div class="d-flex flex-wrap justify-content-center gap-3">
-        <a href="oem-products.html" class="btn btn-warning btn-lg fw-bold"><i class="fa-solid fa-microchip me-2"></i>OEM Supply Catalog</a>
-        <a href="custom-projects.html" class="btn btn-outline-info btn-lg fw-bold text-info border-info"><i class="fa-solid fa-gears me-2"></i>Custom R&D Engineering</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="video-showcase py-5 bg-dark border-top border-secondary text-white">
-    <div class="container py-4">
-      <div class="row mb-4 text-center">
-        <div class="col-12">
-          <span class="text-primary text-uppercase fw-bold tracking-wider small">Real-world systems operation roadmap</span>
-          <h2 class="display-6 fw-bold mt-2 mb-3 text-white">Our Capabilities in Action</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-9">
-          <div class="card bg-black border-0 shadow-lg rounded-4 overflow-hidden position-relative">
-            <button class="btn btn-dark bg-opacity-50 text-white position-absolute start-0 top-50 translate-middle-y m-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; z-index: 10; border: 1px solid rgba(255,255,255,0.2);" onclick="prevVideoPlayer2()">
-              <span class="fs-4">‹</span>
-            </button>
-            <div class="ratio ratio-16x9 bg-black">
-              <div id="systemPlayer2"></div>
-            </div>
-            <button class="btn btn-dark bg-opacity-50 text-white position-absolute end-0 top-50 translate-middle-y m-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; z-index: 10; border: 1px solid rgba(255,255,255,0.2);" onclick="nextVideoPlayer2()">
-              <span class="fs-4">›</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5 bg-dark border-top border-secondary text-white" id="product-ecosystem">
-    <div class="container">
-      <div class="mb-5 text-center">
-        <h2 class="fw-bold text-white">Our Product Ecosystem</h2>
-        <p class="text-warning fst-italic">A deep look at our industrial inventory lines and R&D capability frameworks</p>
-      </div>
-
-      <!-- ================= MAIN SECTION 1: OEM PRODUCT SUPPLY ================= -->
-      <div class="mb-5 p-4 rounded-4 bg-secondary bg-opacity-10 border border-warning border-opacity-25 shadow">
-        <div class="d-flex align-items-center gap-3 mb-4">
-          <div class="bg-warning text-dark rounded-3 px-3 py-2 fs-4"><i class="fa-solid fa-microchip"></i></div>
-          <div>
-            <h3 class="text-warning fw-bold fs-4 mb-0">OEM Product Supply</h3>
-            <p class="text-muted small mb-0">High-precision industrial hardware distributed directly to your systems framework.</p>
-          </div>
-        </div>
-        
-        <div class="row g-4 mb-4">
-          <!-- OEM Sub-Product 1: Servo Motors -->
-          <div class="col-xl-3 col-md-6">
-            <div class="card h-100 bg-dark border-secondary overflow-hidden d-flex flex-column justify-content-between text-start" style="border-radius: 12px;">
-              <div>
-                <img src="./static/Images/oem_images/mitsubishi servo motor.jpg" alt="Mitsubishi HG-KN13 Servo Motor" class="card-img-top" style="aspect-ratio:16/10; object-fit:cover;">
-                <div class="p-3">
-                  <span class="text-warning font-monospace tracking-wider small text-uppercase fw-bold d-block mb-1">Servo Motors</span>
-                  <h4 class="h6 fw-bold text-white mb-2">Mitsubishi HG-KN13</h4>
-                  <p class="text-light opacity-75 small mb-0">100W low-inertia AC rotary servo motor engineered for high-response precision systems.</p>
-                </div>
-              </div>
-              <div class="p-3 pt-0">
-                <a href="oem-products.html?category=servo-motor" class="text-warning small text-decoration-none fw-bold">View Motors Supply »</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- OEM Sub-Product 2: PLCs & VFDs -->
-          <div class="col-xl-3 col-md-6">
-            <div class="card h-100 bg-dark border-secondary overflow-hidden d-flex flex-column justify-content-between text-start" style="border-radius: 12px;">
-              <div>
-                <img src="./static/Images/oem_images/mitsubishi vfd.png" alt="Mitsubishi FR-D720S VFD" class="card-img-top" style="aspect-ratio:16/10; object-fit:cover;">
-                <div class="p-3">
-                  <span class="text-warning font-monospace tracking-wider small text-uppercase fw-bold d-block mb-1">PLCs & VFDs</span>
-                  <h4 class="h6 fw-bold text-white mb-2">Mitsubishi FR-D720S</h4>
-                  <p class="text-light opacity-75 small mb-0">Compact single-phase 200V variable frequency changer modules built for rapid speed scaling.</p>
-                </div>
-              </div>
-              <div class="p-3 pt-0">
-                <a href="oem-products.html?category=mitsubishi-vfd" class="text-warning small text-decoration-none fw-bold">View VFD Modules »</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- OEM Sub-Product 3: Power Supplies -->
-          <div class="col-xl-3 col-md-6">
-            <div class="card h-100 bg-dark border-secondary overflow-hidden d-flex flex-column justify-content-between text-start" style="border-radius: 12px;">
-              <div>
-                <img src="./static/Images/oem_images/shavisonsmps.jpeg" alt="Shavison SMPS Power Supply" class="card-img-top" style="aspect-ratio:16/10; object-fit:cover;">
-                <div class="p-3">
-                  <span class="text-warning font-monospace tracking-wider small text-uppercase fw-bold d-block mb-1">Power Supplies</span>
-                  <h4 class="h6 fw-bold text-white mb-2">Shavison BL2450</h4>
-                  <p class="text-light opacity-75 small mb-0">Professional switched-mode power supply module engineered for minimal electrical noise outputs.</p>
-                </div>
-              </div>
-              <div class="p-3 pt-0">
-                <a href="oem-products.html?category=smps" class="text-warning small text-decoration-none fw-bold">View Power SMPS »</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- OEM Sub-Product 4: Network Systems -->
-          <div class="col-xl-3 col-md-6">
-            <div class="card h-100 bg-dark border-secondary overflow-hidden d-flex flex-column justify-content-between text-start" style="border-radius: 12px;">
-              <div>
-                <img src="./static/Images/oem_images/fl switch.jpeg" alt="Phoenix Contact FL Switch" class="card-img-top" style="aspect-ratio:16/10; object-fit:cover;">
-                <div class="p-3">
-                  <span class="text-warning font-monospace tracking-wider small text-uppercase fw-bold d-block mb-1">Network Systems</span>
-                  <h4 class="h6 fw-bold text-white mb-2">Phoenix Contact 1005N</h4>
-                  <p class="text-light opacity-75 small mb-0">Narrow-form unmanaged network switch infrastructure block for low-latency routing loops.</p>
-                </div>
-              </div>
-              <div class="p-3 pt-0">
-                <a href="oem-products.html?category=fl-switch" class="text-warning small text-decoration-none fw-bold">View Network Links »</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-end">
-          <a href="oem-products.html" class="btn btn-warning fw-bold px-4 py-2">Browse Full OEM Catalog <i class="fa-solid fa-arrow-right ms-1"></i></a>
-        </div>
-      </div>
-
-      <!-- ================= MAIN SECTION 2: CUSTOM PROJECTS & R&D ================= -->
-      <div class="p-4 rounded-4 bg-secondary bg-opacity-10 border border-info border-opacity-25 shadow">
-        <div class="d-flex align-items-center gap-3 mb-4">
-          <div class="bg-info text-dark rounded-3 px-3 py-2 fs-4"><i class="fa-solid fa-gears"></i></div>
-          <div>
-            <h3 class="text-info fw-bold fs-4 mb-0">Custom Projects & R&D</h3>
-            <p class="text-muted small mb-0">Bespoke electronics design layout, custom engineering loops, and tailored instrumentation solutions.</p>
-          </div>
-        </div>
-        
-        <div class="row g-4 mb-4">
-          <!-- Custom Sub-Product 1: Power Systems -->
-          <div class="col-xl-3 col-md-6">
-            <div class="card h-100 bg-dark border-secondary overflow-hidden d-flex flex-column justify-content-between text-start" style="border-radius: 12px; border-color: rgba(0, 180, 216, 0.25) !important;">
-              <div>
-                <img src="./static/Images/power factor image.png" alt="Power Factor Correction System" class="card-img-top" style="aspect-ratio:16/10; object-fit:cover;">
-                <div class="p-3">
-                  <span class="text-info font-monospace tracking-wider small text-uppercase fw-bold d-block mb-1">Power Systems</span>
-                  <h4 class="h6 fw-bold text-white mb-2">Power Factor Correction System</h4>
-                  <p class="text-light opacity-75 small mb-0">Custom reactive hardware solutions to optimize heavy load line efficiency and electrical outputs.</p>
-                </div>
-              </div>
-              <div class="p-3 pt-0">
-                <a href="custom-projects.html?category=power-systems" class="text-info small text-decoration-none fw-bold">Explore Power R&D »</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Custom Sub-Product 2: Automation -->
-          <div class="col-xl-3 col-md-6">
-            <div class="card h-100 bg-dark border-secondary overflow-hidden d-flex flex-column justify-content-between text-start" style="border-radius: 12px; border-color: rgba(0, 180, 216, 0.25) !important;">
-              <div>
-                <img src="./static/Images/Solar Panel Cleaning Robot.png" alt="Solar Panel Cleaning Automation Robot" class="card-img-top" style="aspect-ratio:16/10; object-fit:cover;">
-                <div class="p-3">
-                  <span class="text-info font-monospace tracking-wider small text-uppercase fw-bold d-block mb-1">Automation</span>
-                  <h4 class="h6 fw-bold text-white mb-2">Solar Panel Cleaning Robot</h4>
-                  <p class="text-light opacity-75 small mb-0">Self-guided crawl track mechanics maximizing field cell yield ratios via smart edge-alignment software loops.</p>
-                </div>
-              </div>
-              <div class="p-3 pt-0">
-                <a href="custom-projects.html?category=automation" class="text-info small text-decoration-none fw-bold">Explore Automation »</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Custom Sub-Product 3: IoT Telemetry -->
-          <div class="col-xl-3 col-md-6">
-            <div class="card h-100 bg-dark border-secondary overflow-hidden d-flex flex-column justify-content-between text-start" style="border-radius: 12px; border-color: rgba(0, 180, 216, 0.25) !important;">
-              <div>
-                <img src="./static/Images/API and GSM based IOT Alert System.png" alt="IoT Alert Telemetry System" class="card-img-top" style="aspect-ratio:16/10; object-fit:cover;">
-                <div class="p-3">
-                  <span class="text-info font-monospace tracking-wider small text-uppercase fw-bold d-block mb-1">IoT Telemetry</span>
-                  <h4 class="h6 fw-bold text-white mb-2">GSM Based IoT Alert System</h4>
-                  <p class="text-light opacity-75 small mb-0">Distributed warning frameworks transmitting telemetry errors directly into text grids via cell transceivers.</p>
-                </div>
-              </div>
-              <div class="p-3 pt-0">
-                <a href="custom-projects.html?category=iot-sys" class="text-info small text-decoration-none fw-bold">Explore Telemetry »</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Custom Sub-Product 4: Industrial Safety -->
-          <div class="col-xl-3 col-md-6">
-            <div class="card h-100 bg-dark border-secondary overflow-hidden d-flex flex-column justify-content-between text-start" style="border-radius: 12px; border-color: rgba(0, 180, 216, 0.25) !important;">
-              <div>
-                <img src="./static/Images/Emergency Talk back unit.png" alt="Emergency Talkback Safety System" class="card-img-top" style="aspect-ratio:16/10; object-fit:cover;">
-                <div class="p-3">
-                  <span class="text-info font-monospace tracking-wider small text-uppercase fw-bold d-block mb-1">Industrial Safety</span>
-                  <h4 class="h6 fw-bold text-white mb-2">Emergency Talk-Back Unit</h4>
-                  <p class="text-light opacity-75 small mb-0">Duplex resilient voice networks parsing high-clarity filtering inside heavy ambient noise factory fields.</p>
-                </div>
-              </div>
-              <div class="p-3 pt-0">
-                <a href="custom-projects.html?category=industrial-safety" class="text-info small text-decoration-none fw-bold">Explore Protection »</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-end">
-          <a href="custom-projects.html" class="btn btn-outline-info fw-bold px-4 py-2 text-info border-info">Explore Custom R&D Hub <i class="fa-solid fa-arrow-right ms-1"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5 bg-dark border-top border-secondary">
-    <div class="container text-white">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center mb-4">
-          <h2 class="fw-bold text-white">Quick Business Enquiry</h2>
-          <p class="text-warning">Drop your details below for a fast engineering assessment sent to <a href="mailto:sales@tantronicsindustries.com" class="text-warning text-decoration-none fw-semibold">sales@tantronicsindustries.com</a></p>
-        </div>
-        <div class="col-lg-8">
-          <div class="card bg-secondary bg-opacity-10 border-0 p-4 shadow-lg rounded-4">
-            <form id="homeEnquiryForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-              <input type="hidden" name="access_key" value="7c3d528d-a304-47bf-a8ce-eeff35098a3a">
-              <input type="hidden" name="redirect" value="https://tantronicsindustries.com/thankyou.html">
-              
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label text-warning small fw-bold">Full Name</label>
-                  <input type="text" name="name" class="form-control bg-dark text-white border-secondary" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label text-warning small fw-bold">Company Name</label>
-                  <input type="text" name="company" class="form-control bg-dark text-white border-secondary">
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label text-warning small fw-bold">Phone Number</label>
-                  <input type="tel" name="phone" class="form-control bg-dark text-white border-secondary" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label text-warning small fw-bold">Email Address</label>
-                  <input type="email" name="email" class="form-control bg-dark text-white border-secondary" required>
-                </div>
-                <div class="col-12">
-                  <label class="form-label text-warning small fw-bold">Product or Project Category Requirement</label>
-                  <select name="product_category" class="form-select bg-dark text-white border-secondary" required>
-                    <option value="" selected disabled>-- Select a Supply Component or R&D Vertical --</option>
-                    <optgroup label="OEM Hardware Supply Portfolio">
-                      <option value="OEM: Mitsubishi Servo Motor">Mitsubishi Servo Motor</option>
-                      <option value="OEM: Mitsubishi VFD">Mitsubishi VFD</option>
-                      <option value="OEM: Delta VFD">Delta VFD</option>
-                      <option value="OEM: Servo Drives">Servo Drives</option>
-                      <option value="OEM: Mitsubishi PLC">Mitsubishi PLC</option>
-                      <option value="OEM: Delta PLC">Delta PLC</option>
-                      <option value="OEM: Delta HMI">Delta HMI</option>
-                      <option value="OEM: Mitsubishi HMI">Mitsubishi HMI</option>
-                      <option value="OEM: Power Supply (SMPS)">Power Supply (SMPS)</option>
-                      <option value="OEM: Siemens Servo Motors">Siemens Servo Motors</option>
-                      <option value="OEM: FL Switch">FL Switch</option>
-                      <option value="OEM: High Voltage Circuit Breakers">High Voltage Circuit Breakers</option>
-                      <option value="OEM: Shavison SMPS">Shavison SMPS</option>
-                      <option value="OEM: Mean Well Switch Mode Power Supply">Mean Well Switch Mode Power Supply</option>
-                      <option value="OEM: Relay">Relay</option>
-                      <option value="OEM: Signal Isolator">Signal Isolator</option>
-                      <option value="OEM: Industrial Wireless Devices">Industrial Wireless Devices</option>
-                    </optgroup>
-                    <optgroup label="Custom Electronics R&D Verticals">
-                      <option value="R&D: Product Design">Product Design & Development</option>
-                      <option value="R&D: Industrial Automation">Industrial Automation Projects</option>
-                      <option value="R&D: IoT Monitoring Systems">IoT-Based Monitoring Systems</option>
-                      <option value="R&D: Climate Solutions">Temperature & Humidity Monitoring Solutions</option>
-                      <option value="R&D: Cloud-Based Data Logging">Data Logging & Cloud-Based Monitoring Systems</option>
-                      <option value="R&D: Custom HW/SW Engineering">Customized Electronic Hardware & Software Development</option>
-                      <option value="R&D: Panel Solutions">Industrial Control Panel Solutions</option>
-                      <option value="R&D: Power & Charger Configurations">Power & Charger Configurations</option>
-                      <option value="R&D: Industrial Safety & Protection">Industrial Safety & Protection Systems</option>
-                      <option value="R&D: Motion & Actuation Architectures">Motion & Actuation Architectures</option>
-                    </optgroup>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label text-warning small fw-bold">Requirements / Project Brief</label>
-                  <textarea name="message" class="form-control bg-dark text-white border-secondary" rows="4" required></textarea>
-                </div>
-                <div class="col-12 mt-4">
-                  <button type="submit" class="btn btn-warning w-100 fw-bold py-2 rounded-3">Submit Inquiry</button>
-                </div>
-              </div>
-              <div id="homeFormStatus" class="mt-3 text-center small fw-bold"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="bg-dark border-top border-secondary text-warning">
-  <div class="container py-4">
-    <div class="row gy-4 align-items-start">
-      <div class="col-md-7">
-        <h2 class="fw-bold h4 text-warning">Tantronics Industries LLP</h2>
-        <p class="text-light opacity-90 mb-2 lh-lg">
-          Specialists in Electronics, Embedded Systems, Power Electronics & R&D. We design and manufacture intelligent automation and industrial solutions engineered for reliability and performance.
+  <!-- Main Content Body -->
+  <main class="relative z-10 pt-20">
+    
+    <!-- Hero Section -->
+    <section class="relative py-24 sm:py-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <span class="inline-block py-1.5 px-4 rounded-full bg-[#ff7f2a]/10 border border-[#ff7f2a]/20 text-xs font-bold tracking-widest text-[#ff7f2a] uppercase mb-6 shadow-sm">
+          Electronics • Automation • Embedded Systems • Power Electronics • R&D
+        </span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+          Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff7f2a] to-amber-400">Intelligent Automation</span> Solutions
+        </h1>
+        <p class="text-lg sm:text-xl text-zinc-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+          From standard OEM components to complete custom electronics research and development, we build reliable, scalable systems engineered for optimal industrial performance.
         </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="oem-products.html" class="bg-gradient-to-r from-[#ff7f2a] to-[#e0681a] text-zinc-950 font-bold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-all duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-microchip"></i> OEM Supply Catalog
+          </a>
+          <a href="custom-projects.html" class="bg-zinc-900/80 border border-cyan-500/40 text-cyan-400 font-bold px-8 py-4 rounded-xl shadow-xl hover:bg-cyan-950/30 hover:scale-105 transition-all duration-200 flex items-center gap-2">
+            <i class="fa-solid fa-gears"></i> Custom R&D Engineering
+          </a>
+        </div>
       </div>
-      <div class="col-md-5">
-        <h3 class="fw-bold mb-3 h4 text-warning">Quick Links</h3>
-        <div class="row">
-          <div class="col-6">
-            <ul class="list-unstyled mb-0">
-              <li class="mb-2"><a href="index.html" class="text-warning text-decoration-none footer-link">» Home</a></li>
-              <li class="mb-2"><a href="about.html" class="text-warning text-decoration-none footer-link">» About</a></li>
-              <li class="mb-2"><a href="oem-products.html" class="text-warning text-decoration-none footer-link">» OEM Products</a></li>
-            </ul>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="py-20 bg-zinc-950/80 border-t border-zinc-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-cyan-400 text-xs font-bold tracking-widest uppercase">Real-world systems operation roadmap</span>
+          <h2 class="text-3xl font-extrabold text-white mt-2">Our Capabilities in Action</h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="glass-card rounded-3xl overflow-hidden shadow-2xl relative">
+            <button onclick="prevVideoPlayer2()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-zinc-900/80 border border-zinc-700 text-white flex items-center justify-center hover:bg-[#ff7f2a] hover:text-black transition-all shadow-lg">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="aspect-video w-full bg-black">
+              <div id="systemPlayer2" class="w-full h-full"></div>
+            </div>
+            <button onclick="nextVideoPlayer2()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-zinc-900/80 border border-zinc-700 text-white flex items-center justify-center hover:bg-[#ff7f2a] hover:text-black transition-all shadow-lg">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
-          <div class="col-6">
-            <ul class="list-unstyled mb-0">
-              <li class="mb-2"><a href="custom-projects.html" class="text-warning text-decoration-none footer-link">» Custom Projects</a></li>
-              <li class="mb-2"><a href="about.html#director" class="text-warning text-decoration-none footer-link">» Leadership</a></li>
-              <li class="mb-2"><a href="contact.html" class="text-warning text-decoration-none footer-link">» Contact</a></li>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Ecosystem Section -->
+    <section class="py-24 border-t border-zinc-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Our Product Ecosystem</h2>
+          <p class="text-[#ff7f2a] italic mt-2">A deep look at our industrial inventory lines and R&D capability frameworks</p>
+        </div>
+
+        <!-- OEM Product Supply Grid Block -->
+        <div class="mb-16 p-6 sm:p-8 rounded-3xl bg-zinc-900/40 border border-[#ff7f2a]/20 shadow-2xl">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="bg-[#ff7f2a] text-zinc-950 p-4 rounded-2xl text-2xl shadow-md">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-[#ff7f2a]">OEM Product Supply</h3>
+              <p class="text-sm text-zinc-400">High-precision industrial hardware distributed directly to your systems framework.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Card 1 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+              <div>
+                <img src="./static/Images/oem_images/mitsubishi servo motor.jpg" alt="Mitsubishi HG-KN13 Servo Motor" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="p-5">
+                  <span class="text-xs font-bold font-mono tracking-wider text-[#ff7f2a] uppercase block mb-1">Servo Motors</span>
+                  <h4 class="text-base font-bold text-white mb-2">Mitsubishi HG-KN13</h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed">100W low-inertia AC rotary servo motor engineered for high-response precision systems.</p>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="oem-products.html?category=servo-motor" class="text-xs font-bold text-[#ff7f2a] hover:underline flex items-center gap-1">View Motors Supply &raquo;</a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+              <div>
+                <img src="./static/Images/oem_images/mitsubishi vfd.png" alt="Mitsubishi FR-D720S VFD" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="p-5">
+                  <span class="text-xs font-bold font-mono tracking-wider text-[#ff7f2a] uppercase block mb-1">PLCs & VFDs</span>
+                  <h4 class="text-base font-bold text-white mb-2">Mitsubishi FR-D720S</h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed">Compact single-phase 200V variable frequency changer modules built for rapid speed scaling.</p>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="oem-products.html?category=mitsubishi-vfd" class="text-xs font-bold text-[#ff7f2a] hover:underline flex items-center gap-1">View VFD Modules &raquo;</a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+              <div>
+                <img src="./static/Images/oem_images/shavisonsmps.jpeg" alt="Shavison SMPS Power Supply" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="p-5">
+                  <span class="text-xs font-bold font-mono tracking-wider text-[#ff7f2a] uppercase block mb-1">Power Supplies</span>
+                  <h4 class="text-base font-bold text-white mb-2">Shavison BL2450</h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed">Professional switched-mode power supply module engineered for minimal electrical noise outputs.</p>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="oem-products.html?category=smps" class="text-xs font-bold text-[#ff7f2a] hover:underline flex items-center gap-1">View Power SMPS &raquo;</a>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+              <div>
+                <img src="./static/Images/oem_images/fl switch.jpeg" alt="Phoenix Contact FL Switch" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="p-5">
+                  <span class="text-xs font-bold font-mono tracking-wider text-[#ff7f2a] uppercase block mb-1">Network Systems</span>
+                  <h4 class="text-base font-bold text-white mb-2">Phoenix Contact 1005N</h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed">Narrow-form unmanaged network switch infrastructure block for low-latency routing loops.</p>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="oem-products.html?category=fl-switch" class="text-xs font-bold text-[#ff7f2a] hover:underline flex items-center gap-1">View Network Links &raquo;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-right">
+            <a href="oem-products.html" class="inline-flex items-center gap-2 bg-[#ff7f2a] text-zinc-950 font-bold px-6 py-3 rounded-xl shadow-md hover:bg-[#e0681a] transition-all">
+              Browse Full OEM Catalog <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Custom Projects & R&D Grid Block -->
+        <div class="p-6 sm:p-8 rounded-3xl bg-zinc-900/40 border border-cyan-500/20 shadow-2xl">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="bg-cyan-500 text-zinc-950 p-4 rounded-2xl text-2xl shadow-md">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-cyan-400">Custom Projects & R&D</h3>
+              <p class="text-sm text-zinc-400">Bespoke electronics design layout, custom engineering loops, and tailored instrumentation solutions.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Custom Card 1 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group border-cyan-500/20">
+              <div>
+                <img src="./static/Images/power factor image.png" alt="Power Factor Correction System" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="p-5">
+                  <span class="text-xs font-bold font-mono tracking-wider text-cyan-400 uppercase block mb-1">Power Systems</span>
+                  <h4 class="text-base font-bold text-white mb-2">Power Factor Correction System</h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed">Custom reactive hardware solutions to optimize heavy load line efficiency and electrical outputs.</p>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="custom-projects.html?category=power-systems" class="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1">Explore Power R&D &raquo;</a>
+              </div>
+            </div>
+
+            <!-- Custom Card 2 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group border-cyan-500/20">
+              <div>
+                <img src="./static/Images/Solar Panel Cleaning Robot.png" alt="Solar Panel Cleaning Automation Robot" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="p-5">
+                  <span class="text-xs font-bold font-mono tracking-wider text-cyan-400 uppercase block mb-1">Automation</span>
+                  <h4 class="text-base font-bold text-white mb-2">Solar Panel Cleaning Robot</h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed">Self-guided crawl track mechanics maximizing field cell yield ratios via smart edge-alignment software loops.</p>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="custom-projects.html?category=automation" class="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1">Explore Automation &raquo;</a>
+              </div>
+            </div>
+
+            <!-- Custom Card 3 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group border-cyan-500/20">
+              <div>
+                <img src="./static/Images/API and GSM based IOT Alert System.png" alt="IoT Alert Telemetry System" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="p-5">
+                  <span class="text-xs font-bold font-mono tracking-wider text-cyan-400 uppercase block mb-1">IoT Telemetry</span>
+                  <h4 class="text-base font-bold text-white mb-2">GSM Based IoT Alert System</h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed">Distributed warning frameworks transmitting telemetry errors directly into text grids via cell transceivers.</p>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="custom-projects.html?category=iot-sys" class="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1">Explore Telemetry &raquo;</a>
+              </div>
+            </div>
+
+            <!-- Custom Card 4 -->
+            <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group border-cyan-500/20">
+              <div>
+                <img src="./static/Images/Emergency Talk back unit.png" alt="Emergency Talkback Safety System" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="p-5">
+                  <span class="text-xs font-bold font-mono tracking-wider text-cyan-400 uppercase block mb-1">Industrial Safety</span>
+                  <h4 class="text-base font-bold text-white mb-2">Emergency Talk-Back Unit</h4>
+                  <p class="text-xs text-zinc-400 leading-relaxed">Duplex resilient voice networks parsing high-clarity filtering inside heavy ambient noise factory fields.</p>
+                </div>
+              </div>
+              <div class="p-5 pt-0">
+                <a href="custom-projects.html?category=industrial-safety" class="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1">Explore Protection &raquo;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-right">
+            <a href="custom-projects.html" class="inline-flex items-center gap-2 border border-cyan-500 text-cyan-400 font-bold px-6 py-3 rounded-xl shadow-md hover:bg-cyan-500/10 transition-all">
+              Explore Custom R&D Hub <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Quick Business Enquiry Section -->
+    <section class="py-24 bg-zinc-950/60 border-t border-zinc-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-white">Quick Business Enquiry</h2>
+          <p class="text-[#ff7f2a] mt-2">Drop your details below for a fast engineering assessment sent to <a href="mailto:sales@tantronicsindustries.com" class="underline font-semibold">sales@tantronicsindustries.com</a></p>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl shadow-2xl">
+          <form id="homeEnquiryForm" action="https://api.web3forms.com/submit" method="POST" novalidate class="space-y-6">
+            <input type="hidden" name="access_key" value="7c3d528d-a304-47bf-a8ce-eeff35098a3a">
+            <input type="hidden" name="redirect" value="https://tantronicsindustries.com/thankyou.html">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#ff7f2a] mb-2">Full Name</label>
+                <input type="text" name="name" required class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff7f2a] transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#ff7f2a] mb-2">Company Name</label>
+                <input type="text" name="company" class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff7f2a] transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#ff7f2a] mb-2">Phone Number</label>
+                <input type="tel" name="phone" required class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff7f2a] transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#ff7f2a] mb-2">Email Address</label>
+                <input type="email" name="email" required class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff7f2a] transition-colors">
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#ff7f2a] mb-2">Product or Project Category Requirement</label>
+                <select name="product_category" required class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff7f2a] transition-colors">
+                  <option value="" selected disabled>-- Select a Supply Component or R&D Vertical --</option>
+                  <optgroup label="OEM Hardware Supply Portfolio">
+                    <option value="OEM: Mitsubishi Servo Motor">Mitsubishi Servo Motor</option>
+                    <option value="OEM: Mitsubishi VFD">Mitsubishi VFD</option>
+                    <option value="OEM: Delta VFD">Delta VFD</option>
+                    <option value="OEM: Servo Drives">Servo Drives</option>
+                    <option value="OEM: Mitsubishi PLC">Mitsubishi PLC</option>
+                    <option value="OEM: Delta PLC">Delta PLC</option>
+                    <option value="OEM: Delta HMI">Delta HMI</option>
+                    <option value="OEM: Mitsubishi HMI">Mitsubishi HMI</option>
+                    <option value="OEM: Power Supply (SMPS)">Power Supply (SMPS)</option>
+                    <option value="OEM: Siemens Servo Motors">Siemens Servo Motors</option>
+                    <option value="OEM: FL Switch">FL Switch</option>
+                  </optgroup>
+                  <optgroup label="Custom Electronics R&D Verticals">
+                    <option value="R&D: Product Design">Product Design & Development</option>
+                    <option value="R&D: Industrial Automation">Industrial Automation Projects</option>
+                    <option value="R&D: IoT Monitoring Systems">IoT-Based Monitoring Systems</option>
+                    <option value="R&D: Climate Solutions">Temperature & Humidity Monitoring Solutions</option>
+                    <option value="R&D: Cloud-Based Data Logging">Data Logging & Cloud-Based Monitoring Systems</option>
+                    <option value="R&D: Custom HW/SW Engineering">Customized Electronic Hardware & Software Development</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-bold uppercase tracking-wider text-[#ff7f2a] mb-2">Requirements / Project Brief</label>
+                <textarea name="message" rows="4" required class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-[#ff7f2a] transition-colors"></textarea>
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="w-full bg-gradient-to-r from-[#ff7f2a] to-[#e0681a] text-zinc-950 font-bold py-4 rounded-xl shadow-xl hover:opacity-95 transition-opacity">
+                Submit Inquiry
+              </button>
+            </div>
+            <div id="homeFormStatus" class="text-center text-sm font-bold"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-zinc-950 border-t border-zinc-800 text-zinc-400 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-7">
+          <h2 class="text-xl font-bold text-[#ff7f2a] mb-3">Tantronics Industries LLP</h2>
+          <p class="text-sm leading-relaxed text-zinc-400 max-w-xl">
+            Specialists in Electronics, Embedded Systems, Power Electronics & R&D. We design and manufacture intelligent automation and industrial solutions engineered for reliability and performance.
+          </p>
+        </div>
+        <div class="md:col-span-5">
+          <h3 class="text-base font-bold text-[#ff7f2a] mb-4">Quick Links</h3>
+          <div class="grid grid-cols-2 gap-2 text-sm">
+            <ul class="space-y-2">
+              <li><a href="index.html" class="hover:text-[#ff7f2a] transition-colors">&raquo; Home</a></li>
+              <li><a href="about.html" class="hover:text-[#ff7f2a] transition-colors">&raquo; About</a></li>
+              <li><a href="oem-products.html" class="hover:text-[#ff7f2a] transition-colors">&raquo; OEM Products</a></li>
+            </ul>
+            <ul class="space-y-2">
+              <li><a href="custom-projects.html" class="hover:text-[#ff7f2a] transition-colors">&raquo; Custom Projects</a></li>
+              <li><a href="about.html#director" class="hover:text-[#ff7f2a] transition-colors">&raquo; Leadership</a></li>
+              <li><a href="contact.html" class="hover:text-[#ff7f2a] transition-colors">&raquo; Contact</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="bg-secondary bg-opacity-10 py-3 text-center small border-top border-secondary border-opacity-10">
-    <!-- Social Links -->
-    <div class="d-flex justify-content-center gap-4 mb-2 fs-5">
-      <a href="https://www.linkedin.com/company/tantronics-industries-llp/" target="_blank" rel="noopener noreferrer" class="text-warning text-decoration-none opacity-75 footer-social" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://www.youtube.com/@TantronicsIndustries" target="_blank" rel="noopener noreferrer" class="text-warning text-decoration-none opacity-75 footer-social" aria-label="YouTube">
-        <i class="fa-brands fa-youtube"></i>
-      </a>
-      <a href="https://www.instagram.com/tantronicsindustries/" target="_blank" rel="noopener noreferrer" class="text-warning text-decoration-none opacity-75 footer-social" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
+    
+    <!-- Copyright & Social Links Bar -->
+    <div class="bg-zinc-900/60 border-t border-zinc-800 py-6 text-center text-sm">
+      <div class="flex justify-center gap-6 mb-3 text-lg">
+        <a href="https://www.linkedin.com/company/tantronics-industries-llp/" target="_blank" rel="noopener noreferrer" class="text-[#ff7f2a] hover:opacity-100 opacity-75 transition-opacity" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/@TantronicsIndustries" target="_blank" rel="noopener noreferrer" class="text-[#ff7f2a] hover:opacity-100 opacity-75 transition-opacity" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/tantronicsindustries/" target="_blank" rel="noopener noreferrer" class="text-[#ff7f2a] hover:opacity-100 opacity-75 transition-opacity" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <div class="text-zinc-500">&copy; <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
     </div>
-    <!-- Copyright -->
-    <div class="text-light opacity-75">© <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./js/main.js"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
-<script src="./js/video_script.js"></script>
+  <!-- Scripts -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./js/video_script.js"></script>
+  <script>
+    // Footer Year Update
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Web3Forms Asynchronous AJAX Form Processing
+    const formNode = document.getElementById('homeEnquiryForm');
+    const statusNode = document.getElementById('homeFormStatus');
+    formNode?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!this.checkValidity()) {
+        statusNode.className = "text-center text-red-400 text-sm font-bold mt-3";
+        statusNode.textContent = "Please fill in all required fields correctly.";
+        return;
+      }
+      statusNode.className = "text-center text-[#ff7f2a] text-sm font-bold mt-3";
+      statusNode.textContent = "Processing technical parameters transmission...";
+
+      const formData = new FormData(this);
+      fetch(this.action, {
+        method: this.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(async (response) => {
+        if (response.status === 200) {
+          statusNode.className = "text-center text-green-400 text-sm font-bold mt-3";
+          statusNode.textContent = "Success! Forwarding to confirmation page...";
+          const redirectTarget = formNode.querySelector('input[name="redirect"]')?.value;
+          if (redirectTarget) {
+            window.location.href = redirectTarget;
+          } else {
+            formNode.reset();
+          }
+        } else {
+          const json = await response.json();
+          statusNode.className = "text-center text-red-400 text-sm font-bold mt-3";
+          statusNode.textContent = json.message || "Transmission network anomaly encountered.";
+        }
+      })
+      .catch(() => {
+        statusNode.className = "text-center text-red-400 text-sm font-bold mt-3";
+        statusNode.textContent = "Error establishing gateway link.";
+      });
+    });
+
+    // Three.js 3D WebGL Background Animation Engine (Fast, Lightweight Particle Matrix & Rings)
+    const container = document.getElementById('webgl-container');
+    if (container) {
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      // Create Particle Cluster representing electronic nodes
+      const particlesGeometry = new THREE.BufferGeometry();
+      const particlesCount = 700;
+      const posArray = new Float32Array(particlesCount * 3);
+
+      for(let i = 0; i < particlesCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 15;
+      }
+
+      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+      const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.025,
+        color: 0xff7f2a,
+        transparent: true,
+        opacity: 0.8
+      });
+
+      const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+      scene.add(particlesMesh);
+
+      // Create rotating tech torus wireframe ring
+      const torusGeometry = new THREE.TorusGeometry(3.5, 0.02, 16, 100);
+      const torusMaterial = new THREE.MeshBasicMaterial({ color: 0x00b4d8, wireframe: true, transparent: true, opacity: 0.3 });
+      const torusMesh = new THREE.Mesh(torusGeometry, torusMaterial);
+      scene.add(torusMesh);
+
+      camera.position.z = 5;
+
+      // Mouse interactive movement variables
+      let mouseX = 0;
+      let mouseY = 0;
+      window.addEventListener('mousemove', (event) => {
+        mouseX = (event.clientX / window.innerWidth) - 0.5;
+        mouseY = (event.clientY / window.innerHeight) - 0.5;
+      });
+
+      // Animation Loop
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const elapsedTime = clock.getElapsedTime();
+
+        particlesMesh.rotation.y = elapsedTime * 0.05 + (mouseX * 0.5);
+        particlesMesh.rotation.x = elapsedTime * 0.03 + (mouseY * 0.5);
+
+        torusMesh.rotation.z = elapsedTime * 0.1;
+        torusMesh.rotation.y = elapsedTime * 0.15;
+
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      // Window Resize Listener
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    }
+  </script>
 </body>
 </html>

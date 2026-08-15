@@ -1,477 +1,665 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Advanced SEO Meta Tags -->
   <title>Custom Projects & R&D – Tantronics Industries LLP</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./static/style.css">
-</head>
-<body>
+  <meta name="description" content="Explore custom electronics research, product design, industrial automation projects, IoT monitoring, cloud-based data logging, and power systems by Tantronics Industries LLP." />
+  <meta name="keywords" content="Custom Projects, Electronics R&D, Industrial Automation, IoT Monitoring, Product Design Prototyping, Cloud Data Logging, Control Panels, Tantronics Industries LLP" />
+  <meta name="author" content="Tantronics Industries LLP" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://tantronicsindustries.com/custom-projects.html" />
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-secondary navbar-glass">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
-        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="header-logo" style="height:46px;">
-        <span class="brand-text">Tantronics Industries LLP</span>
+  <!-- Open Graph / Social SEO -->
+  <meta property="og:site_name" content="Tantronics Industries LLP" />
+  <meta property="og:title" content="Custom Projects & R&D – Tantronics Industries LLP" />
+  <meta property="og:description" content="Engineering tailored embedded infrastructures and integrated control architectures." />
+  <meta property="og:image" content="https://tantronicsindustries.com/static/Tantronics%20Logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tantronicsindustries.com/custom-projects.html" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card SEO -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Custom Projects & R&D – Tantronics Industries LLP" />
+  <meta name="twitter:description" content="Engineering tailored embedded infrastructures and integrated control architectures." />
+  <meta name="twitter:image" content="https://tantronicsindustries.com/static/Tantronics%20Logo.png" />
+
+  <meta name="theme-color" content="#09090b" />
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="./static/Tantronics Logo.png">
+  
+  <!-- Tailwind CSS v4 Play CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <!-- Three.js CDN for High-Performance 3D WebGL Background Processing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #ff7f2a;
+      --color-brand-dark: #e0681a;
+      --color-surface: #18181b;
+      --color-cardbg: #202024;
+      --color-darkbg: #09090b;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #09090b;
+      color: #f4f4f5;
+    }
+    .glass-nav {
+      background: rgba(9, 9, 11, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .glass-card {
+      background: rgba(32, 32, 36, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 180, 216, 0.2);
+    }
+    .glass-card:hover {
+      border-color: rgba(0, 180, 216, 0.5);
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; background: #09090b; }
+    ::-webkit-scrollbar-thumb { background: #00b4d8; border-radius: 4px; }
+  </style>
+
+  <!-- Structured Data (JSON-LD) for Enhanced SEO & Knowledge Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Custom Projects & R&D – Tantronics Industries LLP",
+    "url": "https://tantronicsindustries.com/custom-projects.html",
+    "description": "Engineering tailored embedded infrastructures and integrated control architectures, including product design, industrial automation, and IoT monitoring.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tantronics Industries LLP",
+      "logo": "https://tantronicsindustries.com/static/Tantronics%20Logo.png"
+    }
+  }
+  </script>
+</head>
+<body class="bg-[#09090b] text-zinc-100 antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- 3D WebGL Canvas Container Background Layer -->
+  <div id="webgl-container" class="fixed inset-0 pointer-events-none z-0 opacity-40"></div>
+
+  <!-- Header & Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <img src="./static/Tantronics logo icon-06.png" alt="Tantronics Logo" class="h-11 w-auto transition-transform duration-300 group-hover:scale-105">
+        <span class="text-lg font-bold tracking-tight text-[#ff7f2a]">Tantronics Industries LLP</span>
       </a>
 
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="text-sm font-medium text-zinc-300 hover:text-[#ff7f2a] transition-colors">Home</a>
+        <a href="about.html" class="text-sm font-medium text-zinc-300 hover:text-[#ff7f2a] transition-colors">About</a>
+        
+        <!-- Products Dropdown Menu -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 group-hover:text-[#ff7f2a] transition-colors focus:outline-none">
+            Products <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          
+          <div class="absolute top-full left-0 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+            <div class="glass-card rounded-2xl p-3 shadow-2xl border border-zinc-700/50 max-h-[420px] overflow-y-auto">
+              <a href="oem-products.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-[#ff7f2a] hover:bg-zinc-800/80 transition-colors">
+                <i class="fa-solid fa-microchip"></i> OEM Products Supply
+              </a>
+              <div class="my-1 border-t border-zinc-800"></div>
+              <a href="oem-products.html?category=servo-motor" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Mitsubishi Servo Motors</a>
+              <a href="oem-products.html?category=mitsubishi-vfd" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Mitsubishi VFDs</a>
+              <a href="oem-products.html?category=delta-vfd" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Delta VFDs</a>
+              <a href="oem-products.html?category=servo-drives" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Servo Drives</a>
+              <a href="oem-products.html?category=mitsubishi-plc" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Mitsubishi PLCs</a>
+              <a href="oem-products.html?category=delta-plc" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Delta PLCs</a>
+              <a href="oem-products.html?category=delta-hmi" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Delta HMIs</a>
+              <a href="oem-products.html?category=mitsubishi-hmi" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Mitsubishi HMIs</a>
+              <a href="oem-products.html?category=smps" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Power Supplies (SMPS)</a>
+              <a href="oem-products.html?category=siemens-servo" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Siemens Servo Motors</a>
+              <a href="oem-products.html?category=fl-switch" class="block px-3 py-1.5 rounded-lg text-xs text-zinc-400 hover:text-[#ff7f2a] hover:bg-zinc-800/50 transition-colors">» Industrial FL Switches</a>
+              
+              <div class="my-2 border-t border-zinc-800"></div>
+              <a href="custom-projects.html" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-cyan-400 hover:bg-zinc-800/80 transition-colors">
+                <i class="fa-solid fa-gears"></i> Custom Projects & R&D
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="contact.html" class="text-sm font-medium text-zinc-300 hover:text-[#ff7f2a] transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA Quote Button -->
+      <div class="hidden lg:flex items-center">
+        <a href="contact.html" class="bg-gradient-to-r from-[#ff7f2a] to-[#e0681a] text-zinc-950 font-bold px-6 py-2.5 rounded-full shadow-lg hover:shadow-[#ff7f2a]/20 hover:scale-105 transition-all duration-200">
+          Get a Quote
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobileMenuBtn" class="lg:hidden text-zinc-300 hover:text-[#ff7f2a] focus:outline-none p-2">
+        <i class="fa-solid fa-bars text-2xl"></i>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-        <ul class="navbar-nav align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
-          
-          <li class="nav-item dropdown hover-dropdown">
-            <a class="nav-link dropdown-toggle nav-modern" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Products
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark border-secondary shadow-lg py-3 dropdown-scrollable" aria-labelledby="productDropdown">
-              <li><a class="dropdown-item fw-bold text-warning text-uppercase tracking-wider small" href="oem-products.html"><i class="fa-solid fa-microchip me-2"></i>OEM Products Supply</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-motor">» Mitsubishi Servo Motors</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-vfd">» Mitsubishi VFDs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-vfd">» Delta VFDs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=servo-drives">» Servo Drives</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-plc">» Mitsubishi PLCs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-plc">» Delta PLCs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=delta-hmi">» Delta HMIs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=mitsubishi-hmi">» Mitsubishi HMIs</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=smps">» Power Supplies (SMPS)</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=siemens-servo">» Siemens Servo Motors</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="oem-products.html?category=fl-switch">» Industrial FL Switches</a></li>
-              
-              <li><hr class="dropdown-divider border-secondary my-2 opacity-50"></li>
-              
-              <li><a class="dropdown-item fw-bold text-info text-uppercase tracking-wider small" href="custom-projects.html"><i class="fa-solid fa-gears me-2"></i>Custom Projects & R&D</a></li>
-              <!--<li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=design">» Product Design & Prototyping</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=automation">» Industrial Automation Projects</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=iot-sys">» IoT-Based Monitoring Systems</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=env">» Temperature & Humidity Tracking</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=cloud">» Data Logging & Cloud Systems</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=dev">» Custom Hardware & Software Dev</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=panel">» Industrial Control Panel Solutions</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=power-systems">» Power & Charger Configurations</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=industrial-safety">» Industrial Safety & Protection</a></li>
-              <li><a class="dropdown-item sub-indent text-muted" href="custom-projects.html?category=motion-control">» Motion & Actuation Architectures</a></li>
-            --></ul>
-          </li>
+    </div>
 
-          <li class="nav-item"><a class="nav-link nav-modern" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-2">
-            <a class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow-sm nav-cta" href="contact.html">Get a Quote</a>
-          </li>
-        </ul>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden glass-nav border-b border-zinc-800 px-6 py-5 space-y-4 shadow-2xl">
+      <a href="index.html" class="block text-base font-semibold text-zinc-300 hover:text-[#ff7f2a]">Home</a>
+      <a href="about.html" class="block text-base font-semibold text-zinc-300 hover:text-[#ff7f2a]">About</a>
+      <div class="space-y-2 pt-2 border-t border-zinc-800">
+        <span class="text-xs font-bold tracking-wider text-[#ff7f2a] uppercase">Products & Services</span>
+        <a href="oem-products.html" class="block pl-3 text-sm text-zinc-300 hover:text-[#ff7f2a]">» OEM Products Supply Catalog</a>
+        <a href="custom-projects.html" class="block pl-3 text-sm text-cyan-400">» Custom R&D Engineering Hub</a>
+      </div>
+      <a href="contact.html" class="block text-base font-semibold text-zinc-300 hover:text-[#ff7f2a]">Contact</a>
+      <div class="pt-2">
+        <a href="contact.html" class="block text-center bg-gradient-to-r from-[#ff7f2a] to-[#e0681a] text-zinc-950 font-bold py-3 rounded-xl shadow-md">
+          Get a Quote
+        </a>
       </div>
     </div>
-  </nav>
-</header>
+  </header>
 
-<main class="py-5">
-  <section class="products py-5 bg-dark" id="custom-projects">
-    <div class="container">
-      <div class="mb-5 text-center">
-        <h1 class="fw-bold text-white display-6 text-info">Custom Electronics Research & Development</h1>
-        <p class="text-info opacity-75 fst-italic">Engineering Tailored Embedded Infrastructures & Integrated Control Architectures</p>
+  <!-- Main Content Body -->
+  <main class="relative z-10 pt-28 pb-24">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-cyan-400 tracking-tight mb-3">Custom Electronics Research & Development</h1>
+        <p class="text-cyan-300/80 italic text-lg">Engineering Tailored Embedded Infrastructures & Integrated Control Architectures</p>
       </div>
 
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" role="tablist">
-        <button class="btn btn-outline-info filter-btn active" data-filter="all">All R&D Services</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="design">Product Design</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="automation">Automation Projects</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="iot-sys">IoT Monitoring</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="env">Climate/TH Tracking</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="cloud">Cloud Base Logging</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="dev">Hardware & Software</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="panel">Control Panels</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="power-systems">Power Systems</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="industrial-safety">Industrial Safety</button>
-        <button class="btn btn-outline-info filter-btn" data-filter="motion-control">Motion Control</button>
+      <!-- Filter Buttons Bar -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12" role="tablist">
+        <button class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cyan-500 text-zinc-950 shadow-md transition-all cursor-pointer" data-filter="all">All R&D Services</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="design">Product Design</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="automation">Automation Projects</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="iot-sys">IoT Monitoring</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="env">Climate/TH Tracking</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="cloud">Cloud Base Logging</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="dev">Hardware & Software</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="panel">Control Panels</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="power-systems">Power Systems</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="industrial-safety">Industrial Safety</button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer" data-filter="motion-control">Motion Control</button>
       </div>
 
-      <div class="row g-4 d-flex align-items-stretch" id="productGrid">
+      <!-- Product Grid Matrix -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid">
         
-        <div class="col-md-6 col-lg-4 product-item" data-category="design">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <img src="./static/Images/customOEM.jpg" alt="Product Design Development" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-            <div class="card-body">
-              <span class="badge bg-info text-dark mb-2">R&D Design</span>
-              <h3 class="text-info fw-bold fs-5">Product Design & Development</h3>
-              <p class="text-light opacity-90">End-to-end prototyping transforming proprietary concept schematics into production multi-layer multi-trace PCB track modules.</p>
+        <!-- Item 1 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="design">
+          <div>
+            <img src="./static/Images/customOEM.jpg" alt="Product Design Development" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">R&D Design</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Product Design & Development</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed">End-to-end prototyping transforming proprietary concept schematics into production multi-layer multi-trace PCB track modules.</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="power-systems">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/power factor image.png" alt="Power Factor" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Power Systems</span>
-                <h3 class="text-info fw-bold fs-5">Power Factor Correction System</h3>
-                <p class="text-light opacity-90">Industrial solutions to enhance power efficiency and optimize electrical performance.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Reactive power optimization</li>
-                  <li>Improved energy efficiency</li>
-                  <li>Industrial-grade reliability</li>
-                </ul>
-              </div>
+        <!-- Item 2 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="power-systems">
+          <div>
+            <img src="./static/Images/power factor image.png" alt="Power Factor" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Power Systems</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Power Factor Correction System</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Industrial solutions to enhance power efficiency and optimize electrical performance.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Reactive power optimization</li>
+                <li>• Improved energy efficiency</li>
+                <li>• Industrial-grade reliability</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="power-systems">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Battery Charger Systems.png" alt="Battery Chargers" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Power Systems</span>
-                <h3 class="text-info fw-bold fs-5">Battery Charger Systems</h3>
-                <p class="text-light opacity-90">Efficient charging solutions for industrial and backup power applications.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Intelligent charging algorithms</li>
-                  <li>Protection against overcharge</li>
-                  <li>Supports multiple battery types</li>
-                </ul>
-              </div>
+        <!-- Item 3 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="power-systems">
+          <div>
+            <img src="./static/Images/Battery Charger Systems.png" alt="Battery Chargers" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Power Systems</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Battery Charger Systems</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Efficient charging solutions for industrial and backup power applications.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Intelligent charging algorithms</li>
+                <li>• Protection against overcharge</li>
+                <li>• Supports multiple battery types</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="power-systems">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Industrial SMPS (12V24V).png" alt="Industrial SMPS" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Power Systems</span>
-                <h3 class="text-info fw-bold fs-5">Industrial SMPS</h3>
-                <p class="text-light opacity-90">High-efficiency power supplies for industrial electronic systems.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Stable DC output (12V/24V Execution)</li>
-                  <li>Advanced hardware protection</li>
-                  <li>Continuous-duty layout framework</li>
-                </ul>
-              </div>
+        <!-- Item 4 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="power-systems">
+          <div>
+            <img src="./static/Images/Industrial SMPS (12V24V).png" alt="Industrial SMPS" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Power Systems</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Industrial SMPS</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">High-efficiency power supplies for industrial electronic systems.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Stable DC output (12V/24V Execution)</li>
+                <li>• Advanced hardware protection</li>
+                <li>• Continuous-duty layout framework</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="motion-control">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/ACDC Servo and Stepper Motor Drivers.png" alt="Servo Drivers" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Motion Control</span>
-                <h3 class="text-info fw-bold fs-5">AC/DC Servo & Stepper Drivers</h3>
-                <p class="text-light opacity-90">Precision motor control solutions for automation and robotics configurations.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Accurate speed and torque processing</li>
-                  <li>PLC loop compatibility</li>
-                  <li>Reliable thermals performance</li>
-                </ul>
-              </div>
+        <!-- Item 5 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="motion-control">
+          <div>
+            <img src="./static/Images/ACDC Servo and Stepper Motor Drivers.png" alt="Servo Drivers" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Motion Control</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">AC/DC Servo & Stepper Drivers</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Precision motor control solutions for automation and robotics configurations.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Accurate speed and torque processing</li>
+                <li>• PLC loop compatibility</li>
+                <li>• Reliable thermals performance</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="motion-control">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Single phase Ball Screw Actuators.png" alt="Actuators" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Motion Control</span>
-                <h3 class="text-info fw-bold fs-5">Ball Screw Actuators</h3>
-                <p class="text-light opacity-90">Precision linear motion hardware frameworks for heavy positioning arrays.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Sub-millimeter micro accuracy</li>
-                  <li>Smooth operational translation profile</li>
-                  <li>Compact integrated mechanical footprint</li>
-                </ul>
-              </div>
+        <!-- Item 6 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="motion-control">
+          <div>
+            <img src="./static/Images/Single phase Ball Screw Actuators.png" alt="Actuators" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Motion Control</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Ball Screw Actuators</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Precision linear motion hardware frameworks for heavy positioning arrays.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Sub-millimeter micro accuracy</li>
+                <li>• Smooth operational translation profile</li>
+                <li>• Compact integrated mechanical footprint</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="motion-control">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Electronic Throttle Body.png" alt="Throttle Body" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Motion Control</span>
-                <h3 class="text-info fw-bold fs-5">Electronic Throttle Body</h3>
-                <p class="text-light opacity-90">Electronically managed fluidic valve actuation modules for engine dynamics.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Precise airflow response optimization</li>
-                  <li>Embedded sensor array ECU links</li>
-                  <li>Robust structural shell casing</li>
-                </ul>
-              </div>
+        <!-- Item 7 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="motion-control">
+          <div>
+            <img src="./static/Images/Electronic Throttle Body.png" alt="Throttle Body" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Motion Control</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Electronic Throttle Body</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Electronically managed fluidic valve actuation modules for engine dynamics.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Precise airflow response optimization</li>
+                <li>• Embedded sensor array ECU links</li>
+                <li>• Robust structural shell casing</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="industrial-safety">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Earth Leakage detector.png" alt="Leakage Detector" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Industrial Safety</span>
-                <h3 class="text-info fw-bold fs-5">Earth Leakage Detector</h3>
-                <p class="text-light opacity-90">Advanced isolation failure monitoring architectures for critical protection loops.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Ultra-fast circuit interruption</li>
-                  <li>Enhanced personnel safety metrics</li>
-                  <li>Regulatory standards compliance</li>
-                </ul>
-              </div>
+        <!-- Item 8 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="industrial-safety">
+          <div>
+            <img src="./static/Images/Earth Leakage detector.png" alt="Leakage Detector" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Industrial Safety</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Earth Leakage Detector</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Advanced isolation failure monitoring architectures for critical protection loops.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Ultra-fast circuit interruption</li>
+                <li>• Enhanced personnel safety metrics</li>
+                <li>• Regulatory standards compliance</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="industrial-safety">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Emergency Talk back unit.png" alt="Talkback" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Industrial Safety</span>
-                <h3 class="text-info fw-bold fs-5">Emergency Talk Back System</h3>
-                <p class="text-light opacity-90">Duplex resilient audio networks optimized for heavy ambient noise processing zones.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>High-clarity isolated line voice filtering</li>
-                  <li>Rugged design footprint metrics</li>
-                  <li>Instant connection fallback properties</li>
-                </ul>
-              </div>
+        <!-- Item 9 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="industrial-safety">
+          <div>
+            <img src="./static/Images/Emergency Talk back unit.png" alt="Talkback" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Industrial Safety</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Emergency Talk Back System</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Duplex resilient audio networks optimized for heavy ambient noise processing zones.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• High-clarity isolated line voice filtering</li>
+                <li>• Rugged design footprint metrics</li>
+                <li>• Instant connection fallback properties</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="industrial-safety">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/public announcement and public information systems.png" alt="PA System" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Industrial Safety</span>
-                <h3 class="text-info fw-bold fs-5">Public Announcement Systems</h3>
-                <p class="text-light opacity-90">Centralized broadcast matrices integrated with dynamic informational feed nodes.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Clean sound distribution matching</li>
-                  <li>Multi-zone dynamic digital matrix array</li>
-                  <li>Scalable architecture linking components</li>
-                </ul>
-              </div>
+        <!-- Item 10 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="industrial-safety">
+          <div>
+            <img src="./static/Images/public announcement and public information systems.png" alt="PA System" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Industrial Safety</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Public Announcement Systems</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Centralized broadcast matrices integrated with dynamic informational feed nodes.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Clean sound distribution matching</li>
+                <li>• Multi-zone dynamic digital matrix array</li>
+                <li>• Scalable architecture linking components</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="dev">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/led scrolling display.png" alt="LED Ticker" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Custom Dev</span>
-                <h3 class="text-info fw-bold fs-5">LED/LCD Rolling Displays</h3>
-                <p class="text-light opacity-90">Dynamic messaging boards parsing serial or wireless dynamic buffer arrays.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Real-time content string updating loops</li>
-                  <li>Flexible font configuration parameters</li>
-                  <li>High-lumen day visibility matrix</li>
-                </ul>
-              </div>
+        <!-- Item 11 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="dev">
+          <div>
+            <img src="./static/Images/led scrolling display.png" alt="LED Ticker" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Custom Dev</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">LED/LCD Rolling Displays</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Dynamic messaging boards parsing serial or wireless dynamic buffer arrays.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Real-time content string updating loops</li>
+                <li>• Flexible font configuration parameters</li>
+                <li>• High-lumen day visibility matrix</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="dev">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/TFT LCD real-time information display.png" alt="TFT LCD" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Custom Dev</span>
-                <h3 class="text-info fw-bold fs-5">TFT LCD Display</h3>
-                <p class="text-light opacity-90">High-resolution dynamic screens supporting real-time hardware logging parameters rendering.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Rich visualization dashboard matrix</li>
-                  <li>High-refresh bus timing processing</li>
-                  <li>Tailored user viewport formats</li>
-                </ul>
-              </div>
+        <!-- Item 12 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="dev">
+          <div>
+            <img src="./static/Images/TFT LCD real-time information display.png" alt="TFT LCD" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Custom Dev</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">TFT LCD Display</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">High-resolution dynamic screens supporting real-time hardware logging parameters rendering.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Rich visualization dashboard matrix</li>
+                <li>• High-refresh bus timing processing</li>
+                <li>• Tailored user viewport formats</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="automation">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/inflatingdeflating machine for industrial purposes.png" alt="Pressure" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Industrial Automation</span>
-                <h3 class="text-info fw-bold fs-5">Inflating / Deflating Machine</h3>
-                <p class="text-light opacity-90">Microprocessor-regulated pressure systems tailored for repetitive precision process lines loop.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Closed-loop transducer parsing feedback</li>
-                  <li>Long-life cycle valve manifold execution</li>
-                  <li>Heavy manufacturing structural frame</li>
-                </ul>
-              </div>
+        <!-- Item 13 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="automation">
+          <div>
+            <img src="./static/Images/inflatingdeflating machine for industrial purposes.png" alt="Pressure" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Industrial Automation</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Inflating / Deflating Machine</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Microprocessor-regulated pressure systems tailored for repetitive precision process lines loop.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Closed-loop transducer parsing feedback</li>
+                <li>• Long-life cycle valve manifold execution</li>
+                <li>• Heavy manufacturing structural frame</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="iot-sys">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/API and GSM based IOT Alert System.png" alt="IoT Alert" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">IoT Monitoring</span>
-                <h3 class="text-info fw-bold fs-5">IoT Alert System</h3>
-                <p class="text-light opacity-90">Distributed warning architectures interfacing using GSM cellular transceivers and cloud REST endpoint hooks.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Instant text message warning dispatches</li>
-                  <li>Low-latency telemetry API layers</li>
-                  <li>Secure encrypted remote parameters</li>
-                </ul>
-              </div>
+        <!-- Item 14 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="iot-sys">
+          <div>
+            <img src="./static/Images/API and GSM based IOT Alert System.png" alt="IoT Alert" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">IoT Monitoring</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">IoT Alert System</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Distributed warning architectures interfacing using GSM cellular transceivers and cloud REST endpoint hooks.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Instant text message warning dispatches</li>
+                <li>• Low-latency telemetry API layers</li>
+                <li>• Secure encrypted remote parameters</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="cloud">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Data Monitoring system (hardwarecloudbase) for industry.png" alt="Data Logger" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Cloud Systems</span>
-                <h3 class="text-info fw-bold fs-5">Data Monitoring System</h3>
-                <p class="text-light opacity-90">Integrated local sensor aggregations channeling parameter matrix sets directly into live databases platforms.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Continuous parameter track visualizations</li>
-                  <li>Secure cloud infrastructure pipelines</li>
-                  <li>Custom automated trend parsing triggers</li>
-                </ul>
-              </div>
+        <!-- Item 15 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="cloud">
+          <div>
+            <img src="./static/Images/Data Monitoring system (hardwarecloudbase) for industry.png" alt="Data Logger" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Cloud Systems</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Data Monitoring System</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Integrated local sensor aggregations channeling parameter matrix sets directly into live databases platforms.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Continuous parameter track visualizations</li>
+                <li>• Secure cloud infrastructure pipelines</li>
+                <li>• Custom automated trend parsing triggers</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="env">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/ACDC VOLAMP monitoring system using OLED Display.png" alt="VoltAmp" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Tracking & Analytics</span>
-                <h3 class="text-info fw-bold fs-5">Voltage & Current Monitoring</h3>
-                <p class="text-light opacity-90">High-precision diagnostic tracking networks reading concurrent lines flow via crystal sharp screen outputs.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>True RMS tracking calculations loop</li>
-                  <li>Luminescent wide-angle display panel</li>
-                  <li>Bi-directional AC & isolated DC sampling</li>
-                </ul>
-              </div>
+        <!-- Item 16 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="env">
+          <div>
+            <img src="./static/Images/ACDC VOLAMP monitoring system using OLED Display.png" alt="VoltAmp" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Tracking & Analytics</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Voltage & Current Monitoring</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">High-precision diagnostic tracking networks reading concurrent lines flow via crystal sharp screen outputs.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• True RMS tracking calculations loop</li>
+                <li>• Luminescent wide-angle display panel</li>
+                <li>• Bi-directional AC & isolated DC sampling</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="automation">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Solar Panel Cleaning Robot.png" alt="Solar Robot" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Industrial Automation</span>
-                <h3 class="text-info fw-bold fs-5">Solar Panel Cleaning Robot</h3>
-                <p class="text-light opacity-90">Self-guided crawl track hardware maximizing field panel yield ratios without abrasive contact risks.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Intelligent edge alignment algorithms</li>
-                  <li>Waterless clean brush configurations</li>
-                  <li>Wireless diagnostic telemetry nodes</li>
-                </ul>
-              </div>
+        <!-- Item 17 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="automation">
+          <div>
+            <img src="./static/Images/Solar Panel Cleaning Robot.png" alt="Solar Robot" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Industrial Automation</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Solar Panel Cleaning Robot</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Self-guided crawl track hardware maximizing field panel yield ratios without abrasive contact risks.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Intelligent edge alignment algorithms</li>
+                <li>• Waterless clean brush configurations</li>
+                <li>• Wireless diagnostic telemetry nodes</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="env">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Smart Energy Meter.png" alt="Energy Meter" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Tracking & Analytics</span>
-                <h3 class="text-info fw-bold fs-5">Smart Energy Meter</h3>
-                <p class="text-light opacity-90">Next-gen instrumentation tracing real-time wattage usages, power harmonics factors, and line analytics.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Non-volatile internal memory storage</li>
-                  <li>Integrated system transceiver buses</li>
-                  <li>Precise compliance calibration logging</li>
-                </ul>
-              </div>
+        <!-- Item 18 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="env">
+          <div>
+            <img src="./static/Images/Smart Energy Meter.png" alt="Energy Meter" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Tracking & Analytics</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Smart Energy Meter</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Next-gen instrumentation tracing real-time wattage usages, power harmonics factors, and line analytics.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Non-volatile internal memory storage</li>
+                <li>• Integrated system transceiver buses</li>
+                <li>• Precise compliance calibration logging</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="panel">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/waterlevel1.jpg" alt="Water Controller" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Panel Solutions</span>
-                <h3 class="text-info fw-bold fs-5">Automatic Water Level Controller</h3>
-                <p class="text-light opacity-90">Smart pump management mechanisms preventing dry-cycling over-runs and overflow reservoir waste loops.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>Automated relational state switching</li>
-                  <li>Thermal load current buffers</li>
-                  <li>Robust terminal isolation switch design</li>
-                </ul>
-              </div>
+        <!-- Item 19 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="panel">
+          <div>
+            <img src="./static/Images/waterlevel1.jpg" alt="Water Controller" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Panel Solutions</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Automatic Water Level Controller</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Smart pump management mechanisms preventing dry-cycling over-runs and overflow reservoir waste loops.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• Automated relational state switching</li>
+                <li>• Thermal load current buffers</li>
+                <li>• Robust terminal isolation switch design</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 product-item" data-category="panel">
-          <div class="card h-100 shadow-sm bg-dark border-0 product-card d-flex flex-column justify-content-between" style="border: 1px solid rgba(0, 180, 216, 0.2) !important;">
-            <div>
-              <img src="./static/Images/Microcontroller Based Programmable Timer.png" alt="Timer Relay" loading="lazy" class="card-img-top" style="aspect-ratio:4/3; object-fit:cover;">
-              <div class="card-body">
-                <span class="badge bg-info text-dark mb-2">Panel Solutions</span>
-                <h3 class="text-info fw-bold fs-5">Programmable Timer</h3>
-                <p class="text-light opacity-90">Microcontroller timekeeping relay matrices executing customized cycling instructions safely.</p>
-                <ul class="ps-3 text-light small mb-0 lh-lg">
-                  <li>High accuracy quartz clock counting</li>
-                  <li>Flexible trigger profile selections</li>
-                  <li>Heavy contact isolation protection</li>
-                </ul>
-              </div>
+        <!-- Item 20 -->
+        <div class="product-item glass-card rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="panel">
+          <div>
+            <img src="./static/Images/Microcontroller Based Programmable Timer.png" alt="Timer Relay" loading="lazy" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="p-6">
+              <span class="inline-block px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-bold font-mono uppercase tracking-wider mb-2">Panel Solutions</span>
+              <h3 class="text-lg font-bold text-cyan-400 mb-2">Programmable Timer</h3>
+              <p class="text-xs text-zinc-300 leading-relaxed mb-3">Microcontroller timekeeping relay matrices executing customized cycling instructions safely.</p>
+              <ul class="space-y-1 text-xs text-zinc-400 pl-2">
+                <li>• High accuracy quartz clock counting</li>
+                <li>• Flexible trigger profile selections</li>
+                <li>• Heavy contact isolation protection</li>
+              </ul>
             </div>
           </div>
         </div>
 
       </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-zinc-950 border-t border-zinc-800 text-zinc-400 relative z-10 py-6 text-center text-sm">
+    <div class="flex justify-center gap-6 mb-3 text-lg">
+      <a href="https://www.linkedin.com/company/tantronics-industries-llp/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:opacity-100 opacity-75 transition-opacity" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://www.youtube.com/@TantronicsIndustries" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:opacity-100 opacity-75 transition-opacity" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/tantronicsindustries/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:opacity-100 opacity-75 transition-opacity" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
     </div>
-  </section>
-</main>
+    <div class="text-zinc-500">&copy; <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
+  </footer>
 
-<footer class="bg-dark border-top border-secondary text-warning py-3 text-center small">
-  <!-- Social Links -->
-  <div class="d-flex justify-content-center gap-4 mb-2 fs-5">
-    <a href="https://www.linkedin.com/company/tantronics-industries-llp/" target="_blank" rel="noopener noreferrer" class="text-warning text-decoration-none opacity-75 footer-social" aria-label="LinkedIn">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://www.youtube.com/@TantronicsIndustries" target="_blank" rel="noopener noreferrer" class="text-warning text-decoration-none opacity-75 footer-social" aria-label="YouTube">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
-    <a href="https://www.instagram.com/tantronicsindustries/" target="_blank" rel="noopener noreferrer" class="text-warning text-decoration-none opacity-75 footer-social" aria-label="Instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-  </div>
-  <!-- Copyright -->
-  <div class="text-light opacity-75">© <span id="year"></span> Tantronics Industries LLP. All rights reserved.</div>
-</footer>
+  <!-- Scripts -->
+  <script>
+    // Footer Year Update
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./js/main.js"></script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Dynamic Category Filtering Engine & URL Parameters Parser
+    const productGrid = document.getElementById("productGrid");
+
+    function applyProductFilter(filterValue) {
+      const targetButton = document.querySelector(`.filter-btn[data-filter="${filterValue}"]`);
+      if (!targetButton) return;
+
+      document.querySelectorAll(".filter-btn").forEach(b => {
+        b.className = "filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 border border-zinc-700 text-zinc-300 hover:border-cyan-400 transition-all cursor-pointer";
+      });
+      targetButton.className = "filter-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cyan-500 text-zinc-950 shadow-md transition-all cursor-pointer";
+
+      document.querySelectorAll(".product-item").forEach(item => {
+        if (filterValue === "all" || item.dataset.category === filterValue) {
+          item.style.display = "flex";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+
+    if (productGrid) {
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+          applyProductFilter(filter);
+        });
+      });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const targetCategory = urlParams.get('category');
+      if (targetCategory) {
+        applyProductFilter(targetCategory);
+      }
+    }
+
+    // Three.js 3D WebGL Background Animation Engine
+    const container = document.getElementById('webgl-container');
+    if (container) {
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      const particlesGeometry = new THREE.BufferGeometry();
+      const particlesCount = 700;
+      const posArray = new Float32Array(particlesCount * 3);
+      for(let i = 0; i < particlesCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 15;
+      }
+      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+      const particlesMaterial = new THREE.PointsMaterial({ size: 0.025, color: 0x00b4d8, transparent: true, opacity: 0.8 });
+      const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+      scene.add(particlesMesh);
+
+      const torusGeometry = new THREE.TorusGeometry(3.5, 0.02, 16, 100);
+      const torusMaterial = new THREE.MeshBasicMaterial({ color: 0xff7f2a, wireframe: true, transparent: true, opacity: 0.3 });
+      const torusMesh = new THREE.Mesh(torusGeometry, torusMaterial);
+      scene.add(torusMesh);
+
+      camera.position.z = 5;
+
+      let mouseX = 0, mouseY = 0;
+      window.addEventListener('mousemove', (event) => {
+        mouseX = (event.clientX / window.innerWidth) - 0.5;
+        mouseY = (event.clientY / window.innerHeight) - 0.5;
+      });
+
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const elapsedTime = clock.getElapsedTime();
+        particlesMesh.rotation.y = elapsedTime * 0.05 + (mouseX * 0.5);
+        particlesMesh.rotation.x = elapsedTime * 0.03 + (mouseY * 0.5);
+        torusMesh.rotation.z = elapsedTime * 0.1;
+        torusMesh.rotation.y = elapsedTime * 0.15;
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    }
+  </script>
 </body>
 </html>
