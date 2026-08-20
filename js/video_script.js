@@ -3,7 +3,7 @@
  * Fully integrated for Tailwind & WebGL multi-page architecture.
  */
 const playlistSection1 = ['04JqvGE2R2I', 'NUmsNhCrySc', 'JvsuX5kTEnE'];
-const playlistSection2 = ['kuA6cqfg9zk', 'AC8NVjzxGSk', 'dAUUQtMtDrk'];
+const playlistSection2 = ['kuA6cqfg9zk', 'AC8NVjzxGSk', 'dAUUQtMtDrk', 'SZxE9WxK8V0', 'tzpOx9LivS4', '19pxjo5yCF4', 'zJcpAx_f3oM', 'xHt2Hw4_OEU', '5Vgrn5bRQq0', 'v8fGhTyvd6Y', 'f3A0oU-ZvVY', '4CYNvXUUsQg', 'ROpujg8du2A', 'U9apR-4fMyI', 'eaaseC2XhIU', 'T8ZDMF9Z5FM', '-dNZdoL_75I', 'dNnB4Xpp8Zc', 'vKH2V1TmJQA'];
 
 let indexPlayer1 = 0, indexPlayer2 = 0;
 let player1, player2;
